@@ -1,0 +1,13 @@
+# Backend (BFF)
+BFF/node_modules/
+BFF/.env
+
+# Frontend
+frontend/node_modules/
+frontend/.next/
+frontend/.env.local
+
+# Optional (good practice)
+node_modules/
+.env
+.env.*
