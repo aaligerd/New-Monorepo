@@ -120,7 +120,7 @@ const wpService = {
                         }
                     }
                     }
-                    }
+                }
                 }
             }
         `;
@@ -142,7 +142,18 @@ const wpService = {
                         node { name avatar { url } }
                     }
                     categories {
-                        nodes { name slug }
+                    nodes {
+                        id
+                        slug
+                        name
+                        ancestors {
+                        nodes {
+                            id
+                            slug
+                            name
+                        }
+                        }
+                    }
                     }
                     # This is your Rank Math SEO shield
                     seo {

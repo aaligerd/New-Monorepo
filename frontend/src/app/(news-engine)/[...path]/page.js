@@ -1,3 +1,4 @@
+import { getHierarchicalCategories } from "../../../lib/util";
 import { notFound } from "next/navigation";
 import ArticlePage from "@/components/article/ArticlePage";
 import L1CategoryPage from "@/components/category/L1CategoryPage";
@@ -88,37 +89,146 @@ export async function generateMetadata({ params }) {
 
 // ── Page ──────────────────────────────────────────────
 
+// export default async function NewsEnginePage({ params }) {
+//   const { path } = await params;
+//   const [l1slug, second, third] = path;
+//   // ── 3 segments: /india/bihar/biharnews1 → always L2 article
+//   if (third) {
+//     const post = await fetchPost(third);
+//     if (!post) return notFound();
+//     return <ArticlePage post={post} l1slug={l1slug} l2slug={second} />;
+//   }
+
+//   // ── 2 segments: /india/something
+//   if (second) {
+//     // Try as a post slug first (L1 article: /india/indianews)
+//     const post = await fetchPost(second);
+//     if (post) {
+//       return <ArticlePage post={post} l1slug={l1slug} />;
+//     }
+//     // Not a post → L2 category page: /india/bihar
+//     const categoryData = await fetchL2Category(l1slug, second);
+//     return (
+//       <L2CategoryPage
+//         l1slug={l1slug}
+//         l2slug={second}
+//         data={categoryData}
+//       />
+//     );
+//   }
+
+//   // ── 1 segment: /india → L1 category page
+//   if (l1slug) {
+//     const categoryData = await fetchL1Category(l1slug);
+//     return <L1CategoryPage l1slug={l1slug} data={categoryData} />;
+//   }
+
+//   return notFound();
+// }
+
+// export default async function NewsEnginePage({ params }) {
+//   const { path } = await params;
+//   const [l1slug, second, third] = path;
+
+//   // ── 3 segments: /india/national-trends/article-slug
+//   if (third) {
+//     const post = await fetchPost(third);
+//     if (!post) return notFound();
+
+//     // VALIDATION: Get the real categories from the post data
+//     const { l1, l2 } = getHierarchicalCategories(post.categories?.nodes);
+    
+
+//     // If the URL segments don't match the actual WordPress data, 404
+//     if (l1?.slug !== l1slug || l2?.slug !== second) {
+//       return notFound();
+//     }
+
+//     return <ArticlePage post={post} l1slug={l1slug} l2slug={second} />;
+//   }
+
+//   // ── 2 segments: /india/article-slug OR /india/subcategory
+//   if (second) {
+//     const post = await fetchPost(second);
+    
+//     if (post) {
+//       // VALIDATION: For an L1 article, l1 must match and l2 must be null
+//       const { l1, l2 } = getHierarchicalCategories(post.categories?.nodes);
+      
+//       if (l1?.slug !== l1slug || l2 !== null) {
+//         return notFound();
+//       }
+//       return <ArticlePage post={post} l1slug={l1slug} />;
+//     }
+
+//     // Not a post → Treat as L2 category
+//     const categoryData = await fetchL2Category(l1slug, second);
+//     if (!categoryData) return notFound();
+    
+//     // VALIDATION: Ensure this L2 actually belongs to the L1 parent
+//     // Depending on your BFF, you might check if categoryData.parent.slug === l1slug
+    
+//     return <L2CategoryPage l1slug={l1slug} l2slug={second} data={categoryData} />;
+//   }
+
+//   // ── 1 segment: /india
+//   if (l1slug) {
+//     const categoryData = await fetchL1Category(l1slug);
+//     if (!categoryData) return notFound();
+//     return <L1CategoryPage l1slug={l1slug} data={categoryData} />;
+//   }
+
+//   return notFound();
+// }
+
 export default async function NewsEnginePage({ params }) {
   const { path } = await params;
+  
+  // ── 1. STRICT LENGTH CHECK ──────────────────────────
+  // If the path has more than 3 segments, it's an invalid URL.
+  if (path.length > 3) {
+    return notFound();
+  }
+
   const [l1slug, second, third] = path;
-  // ── 3 segments: /india/bihar/biharnews1 → always L2 article
-  if (third) {
+
+  // ── 2. THREE SEGMENTS: /l1/l2/post-slug ─────────────
+  if (path.length === 3) {
     const post = await fetchPost(third);
     if (!post) return notFound();
+
+    // Structural Validation (from previous step)
+    const { l1, l2 } = getHierarchicalCategories(post.categories?.nodes);
+    if (l1?.slug !== l1slug || l2?.slug !== second) {
+      return notFound();
+    }
+
     return <ArticlePage post={post} l1slug={l1slug} l2slug={second} />;
   }
 
-  // ── 2 segments: /india/something
-  if (second) {
-    // Try as a post slug first (L1 article: /india/indianews)
+  // ── 3. TWO SEGMENTS: /l1/post-slug OR /l1/l2-category
+  if (path.length === 2) {
     const post = await fetchPost(second);
+    
     if (post) {
+      const { l1, l2 } = getHierarchicalCategories(post.categories?.nodes);
+      // Ensure it's an L1 article (no L2 category assigned)
+      if (l1?.slug !== l1slug || l2 !== null) {
+        return notFound();
+      }
       return <ArticlePage post={post} l1slug={l1slug} />;
     }
-    // Not a post → L2 category page: /india/bihar
+
+    // Fallback to L2 Category Page
     const categoryData = await fetchL2Category(l1slug, second);
-    return (
-      <L2CategoryPage
-        l1slug={l1slug}
-        l2slug={second}
-        data={categoryData}
-      />
-    );
+    if (!categoryData) return notFound();
+    return <L2CategoryPage l1slug={l1slug} l2slug={second} data={categoryData} />;
   }
 
-  // ── 1 segment: /india → L1 category page
-  if (l1slug) {
+  // ── 4. ONE SEGMENT: /l1-category
+  if (path.length === 1) {
     const categoryData = await fetchL1Category(l1slug);
+    if (!categoryData) return notFound();
     return <L1CategoryPage l1slug={l1slug} data={categoryData} />;
   }
 
