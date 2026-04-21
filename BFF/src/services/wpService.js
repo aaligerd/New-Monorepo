@@ -18,31 +18,109 @@ const wpService = {
     getHomepageData: async () => {
         const query = `
             query GetHomepage {
-                # Hero Section
                 heroPosts: posts(first: 4) {
                     nodes {
-                        title
+                    title
+                    slug
+                    excerpt
+                    categories {
+                        nodes {
+                        id
                         slug
-                        excerpt
-                        categories {
-                        edges {
-                          node {
+                        name
+                        ancestors {
+                            nodes {
+                            id
                             slug
-                          }
+                            name
+                            }
                         }
-                      }
-                        featuredImage { node { sourceUrl } }
+                        }
+                    }
+                    featuredImage {
+                        node {
+                        sourceUrl
+                        }
+                    }
                     }
                 }
-                # Category Sections
-                west_bengal_elections_2026: posts(first: 4, where: { categoryName: "West Bengal Elections 2026" }) {
-                    nodes { title slug featuredImage { node { sourceUrl } } }
+                west_bengal_elections_2026: posts(
+                    first: 4
+                    where: {categoryName: "West Bengal Elections 2026"}
+                ) {
+                    nodes {
+                    title
+                    slug
+                    featuredImage {
+                        node {
+                        sourceUrl
+                        }
+                    }
+                    categories {
+                        nodes {
+                        id
+                        slug
+                        name
+                        ancestors {
+                            nodes {
+                            id
+                            slug
+                            name
+                            }
+                        }
+                        }
+                    }
+                    }
                 }
-                sports: posts(first: 4, where: { categoryName: "sports" }) {
-                    nodes { title slug featuredImage { node { sourceUrl } } }
+                sports: posts(first: 4, where: {categoryName: "sports"}) {
+                    nodes {
+                    title
+                    slug
+                    featuredImage {
+                        node {
+                        sourceUrl
+                        }
+                    }
+                    categories {
+                        nodes {
+                        id
+                        slug
+                        name
+                        ancestors {
+                            nodes {
+                            id
+                            slug
+                            name
+                            }
+                        }
+                        }
+                    }
+                    }
                 }
-                entertainment: posts(first: 4, where: { categoryName: "Entertainment" }) {
-                    nodes { title slug featuredImage { node { sourceUrl } } }
+                entertainment: posts(first: 4, where: {categoryName: "Entertainment"}) {
+                    nodes {
+                    title
+                    slug
+                    featuredImage {
+                        node {
+                        sourceUrl
+                        }
+                    }
+                    categories {
+                    nodes {
+                        id
+                        slug
+                        name
+                        ancestors {
+                        nodes {
+                            id
+                            slug
+                            name
+                        }
+                        }
+                    }
+                    }
+                    }
                 }
             }
         `;
