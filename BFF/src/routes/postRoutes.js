@@ -9,5 +9,7 @@ router.get('/detail/:slug', postController.getPostDetail);
 router.get('/author/:slug', postController.getAuthorDetail);
 router.get('/topic/:slug', postController.getTagDetail);
 router.get('/category/:slug', postController.getCategoryDetail);
+router.get('/topmenu/', postController.getTopMenuData);
+router.get('/homepagesections/', postController.getHomePageSection);
 
 module.exports = router;

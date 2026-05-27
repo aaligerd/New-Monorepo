@@ -108,6 +108,40 @@ const postController = {
             console.error('BFF Tag Detail Error:', error);
             res.status(500).json({ success: false, message: 'Error fetching topic data' });
         }
+    },
+    getTopMenuData: async(req,res)=>{
+        try {
+            const topMenuItems = await wpService.getTopMenu();
+
+            if (!topMenuItems) {
+                return res.status(404).json({ success: false, message: 'top menu items' });
+            }
+
+            res.status(200).json({
+                success: true,
+                data: topMenuItems
+            });
+        } catch (error) {
+            console.error('BFF Top Menu Detail Error:', error);
+            res.status(500).json({ success: false, message: 'Error fetching top menu data' });
+        }
+    },
+    getHomePageSection: async(req,res)=>{
+      try {
+            const topMenuItems = await wpService.getHomePageSectionData();
+
+            if (!topMenuItems) {
+                return res.status(404).json({ success: false, message: 'top menu items' });
+            }
+
+            res.status(200).json({
+                success: true,
+                data: topMenuItems
+            });
+        } catch (error) {
+            console.error('BFF Top Menu Detail Error:', error);
+            res.status(500).json({ success: false, message: 'Error fetching top menu data' });
+        }  
     }
 };
 

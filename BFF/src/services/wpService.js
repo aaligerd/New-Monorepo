@@ -8,6 +8,20 @@ const wpService = {
                         title
                         slug
                         date
+                        categories {
+                            nodes {
+                                id
+                                slug
+                                name
+                                ancestors {
+                                    nodes {
+                                        id
+                                        slug
+                                        name
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -18,109 +32,157 @@ const wpService = {
     getHomepageData: async () => {
         const query = `
             query GetHomepage {
-                heroPosts: posts(first: 4) {
+                heroPosts: posts(first: 5) {
                     nodes {
-                    title
-                    slug
-                    excerpt
-                    categories {
-                        nodes {
-                        id
+                        title
                         slug
-                        name
-                        ancestors {
+                        excerpt
+                        date
+                        categories {
                             nodes {
-                            id
-                            slug
-                            name
+                                id
+                                slug
+                                name
+                                ancestors {
+                                    nodes {
+                                        id
+                                        slug
+                                        name
+                                    }
+                                }
                             }
                         }
+                        featuredImage {
+                            node {
+                                sourceUrl
+                            }
                         }
-                    }
-                    featuredImage {
-                        node {
-                        sourceUrl
+                        author {
+                            node {
+                                name
+                            }
                         }
-                    }
                     }
                 }
-                west_bengal_elections_2026: posts(
-                    first: 4
-                    where: {categoryName: "West Bengal Elections 2026"}
+                india: posts(
+                    first: 10
+                    where: {categoryName: "India"}
                 ) {
                     nodes {
-                    title
-                    slug
-                    featuredImage {
-                        node {
-                        sourceUrl
-                        }
-                    }
-                    categories {
-                        nodes {
-                        id
+                        title
                         slug
-                        name
-                        ancestors {
-                            nodes {
-                            id
-                            slug
-                            name
+                        date
+                        excerpt
+                        featuredImage {
+                            node {
+                                sourceUrl
                             }
                         }
-                        }
-                    }
-                    }
-                }
-                sports: posts(first: 4, where: {categoryName: "sports"}) {
-                    nodes {
-                    title
-                    slug
-                    featuredImage {
-                        node {
-                        sourceUrl
-                        }
-                    }
-                    categories {
-                        nodes {
-                        id
-                        slug
-                        name
-                        ancestors {
+                        categories {
                             nodes {
-                            id
-                            slug
-                            name
+                                id
+                                slug
+                                name
+                                ancestors {
+                                    nodes {
+                                        id
+                                        slug
+                                        name
+                                    }
+                                }
                             }
                         }
-                        }
-                    }
                     }
                 }
-                entertainment: posts(first: 4, where: {categoryName: "Entertainment"}) {
+                world: posts(
+                    first: 10
+                    where: {categoryName: "World"}
+                ) {
                     nodes {
-                    title
-                    slug
-                    featuredImage {
-                        node {
-                        sourceUrl
-                        }
-                    }
-                    categories {
-                    nodes {
-                        id
+                        title
                         slug
-                        name
-                        ancestors {
-                        nodes {
-                            id
-                            slug
-                            name
+                        date
+                        excerpt
+                        featuredImage {
+                            node {
+                                sourceUrl
+                            }
                         }
+                        categories {
+                            nodes {
+                                id
+                                slug
+                                name
+                                ancestors {
+                                    nodes {
+                                        id
+                                        slug
+                                        name
+                                    }
+                                }
+                            }
                         }
-                    }
                     }
                 }
+                entertainment: posts(
+                    first: 10
+                    where: {categoryName: "Entertainment"}
+                ) {
+                    nodes {
+                        title
+                        slug
+                        date
+                        excerpt
+                        featuredImage {
+                            node {
+                                sourceUrl
+                            }
+                        }
+                        categories {
+                            nodes {
+                                id
+                                slug
+                                name
+                                ancestors {
+                                    nodes {
+                                        id
+                                        slug
+                                        name
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                sports: posts(
+                    first: 10
+                    where: {categoryName: "sports"}
+                ) {
+                    nodes {
+                        title
+                        slug
+                        date
+                        excerpt
+                        featuredImage {
+                            node {
+                                sourceUrl
+                            }
+                        }
+                        categories {
+                            nodes {
+                                id
+                                slug
+                                name
+                                ancestors {
+                                    nodes {
+                                        id
+                                        slug
+                                        name
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         `;
@@ -232,44 +294,66 @@ const wpService = {
     },
     getCategoryDetail: async (slug) => {
         const query = `
-    query GetCategoryBySlug($slug: ID!) {
-      category(id: $slug, idType: SLUG) {
-        name
-        description
-        count
-        slug
-        seo {
-          title
-          description
-          fullHead
-        }
-        posts(first: 20, where: { orderby: { field: DATE, order: DESC } }) {
-          nodes {
-            title
-            slug
-            date
-            featuredImage {
-              node {
-                sourceUrl
-              }
-            }
-            categories {
-              nodes {
+            query GetCategoryBySlug($slug: ID!) {
+            category(id: $slug, idType: SLUG) {
+                name
+                description
+                count
                 slug
-              }
+                seo {
+                title
+                description
+                fullHead
+                }
+                posts(first: 20, where: { orderby: { field: DATE, order: DESC } }) {
+                nodes {
+                    title
+                    slug
+                    date
+                    featuredImage {
+                    node {
+                        sourceUrl
+                    }
+                    }
+                    categories {
+                    nodes {
+                        slug
+                    }
+                    }
+                }
+                }
             }
-          }
-        }
-      }
-    }
-  `;
+            }
+        `;
 
         // Fix 1: Pass 'slug' as the variable name to match the GraphQL definition
         const data = await wpClient(query, { slug: slug });
 
         // Fix 2: Return 'category' instead of 'tag' to match the query field
         return data?.category || null;
-    }
+    },
+    getTopMenu: async () => {
+        const query = `
+            query GetMenus {
+                topMenu: menuItems(where: {location: TOP_NAV}) {
+                    nodes {
+                    key: id
+                    label
+                    parentId
+                    path
+                    childItems{
+                        nodes{
+                        label
+                        path
+                        }
+                    }
+                    }
+                }
+            }
+        `;
+        const data = await wpClient(query);
+        return data?.topMenu || null;
+    },
 };
 
 module.exports = wpService;

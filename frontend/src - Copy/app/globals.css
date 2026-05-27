@@ -127,31 +127,3 @@ body {
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
-
-/* Drop-cap for editorial print look */
-.article-body p:first-of-type::first-letter {
-  float: left;
-  font-family: var(--font-playfair);
-  font-size: 3.5rem;
-  line-height: 0.85;
-  font-weight: 700;
-  margin-right: 0.5rem;
-  margin-top: 0.2rem;
-  color: #b91c1c; /* Accent red */
-}
-
-/* Toast animations */
-@keyframes slide-in-up {
-  from {
-    transform: translateY(1rem) scale(0.95);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-  }
-}
-
-.animate-slide-in-up {
-  animation: slide-in-up 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
