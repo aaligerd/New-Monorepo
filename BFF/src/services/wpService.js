@@ -29,166 +29,139 @@ const wpService = {
         const data = await wpClient(query, { count });
         return data.posts.nodes;
     },
+
     getHomepageData: async () => {
-        const query = `
-            query GetHomepage {
-                heroPosts: posts(first: 5) {
-                    nodes {
-                        title
-                        slug
-                        excerpt
-                        date
-                        categories {
-                            nodes {
-                                id
-                                slug
-                                name
-                                ancestors {
-                                    nodes {
-                                        id
-                                        slug
-                                        name
-                                    }
-                                }
-                            }
-                        }
-                        featuredImage {
-                            node {
-                                sourceUrl
-                            }
-                        }
-                        author {
-                            node {
-                                name
-                            }
+    // ── STEP 1: INITIAL GRAPHQL CALL (LATEST POSTS + THE CONTROL MAP) ──
+    const initialQuery = `
+        query GetBFFHomeBaselines {
+            latestPosts: posts(first: 15, where: { orderby: { field: DATE, order: DESC } }) {
+                nodes {
+                    title
+                    slug
+                    excerpt
+                    date
+                  	author{
+                      node{
+                        firstName
+                        lastName
+                      }
+                    }
+                    featuredImage {
+                        node {
+                            sourceUrl
                         }
                     }
-                }
-                india: posts(
-                    first: 10
-                    where: {categoryName: "India"}
-                ) {
-                    nodes {
-                        title
-                        slug
-                        date
-                        excerpt
-                        featuredImage {
-                            node {
-                                sourceUrl
-                            }
-                        }
-                        categories {
-                            nodes {
-                                id
-                                slug
-                                name
-                                ancestors {
-                                    nodes {
-                                        id
-                                        slug
-                                        name
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                world: posts(
-                    first: 10
-                    where: {categoryName: "World"}
-                ) {
-                    nodes {
-                        title
-                        slug
-                        date
-                        excerpt
-                        featuredImage {
-                            node {
-                                sourceUrl
-                            }
-                        }
-                        categories {
-                            nodes {
-                                id
-                                slug
-                                name
-                                ancestors {
-                                    nodes {
-                                        id
-                                        slug
-                                        name
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                entertainment: posts(
-                    first: 10
-                    where: {categoryName: "Entertainment"}
-                ) {
-                    nodes {
-                        title
-                        slug
-                        date
-                        excerpt
-                        featuredImage {
-                            node {
-                                sourceUrl
-                            }
-                        }
-                        categories {
-                            nodes {
-                                id
-                                slug
-                                name
-                                ancestors {
-                                    nodes {
-                                        id
-                                        slug
-                                        name
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                sports: posts(
-                    first: 10
-                    where: {categoryName: "sports"}
-                ) {
-                    nodes {
-                        title
-                        slug
-                        date
-                        excerpt
-                        featuredImage {
-                            node {
-                                sourceUrl
-                            }
-                        }
-                        categories {
-                            nodes {
-                                id
-                                slug
-                                name
-                                ancestors {
-                                    nodes {
-                                        id
-                                        slug
-                                        name
-                                    }
+                    categories {
+                        nodes {
+                            id
+                            slug
+                            name
+                            ancestors {
+                                nodes {
+                                    id
+                                    slug
+                                    name
                                 }
                             }
                         }
                     }
                 }
             }
-        `;
-        const data = await wpClient(query);
-        return data;
-    },
+            page(id: "homepage-settings", idType: URI) {
+                homepageLayoutConfig {
+                    homepageSections {
+                        nodes {
+                            id
+                            name
+                            slug
+                        }
+                    }
+                }
+            }
+        }
+    `;
+
+    const initialData = await wpClient(initialQuery);
+
+    const latestPosts = initialData?.latestPosts?.nodes || [];
+    const layoutConfig = initialData?.page?.homepageLayoutConfig?.homepageSections?.nodes || [];
+
+    // If no dynamic categories are selected, return early with just the latest posts
+    if (!layoutConfig.length) {
+        return { latestPosts, dynamicSections: [] };
+    }
+
+    // ── STEP 2: FIXED REUSABLE ROOT POSTS QUERY USING CATEGORYNAME ──
+    const categoryQuery = `
+        query GetBFFCategoryPosts($categoryName: String!) {
+            posts(first: 10, where: { categoryName: $categoryName, orderby: { field: DATE, order: DESC } }) {
+                nodes {
+                    title
+                    slug
+                    date
+                    author{
+                      node{
+                        firstName
+                        lastName
+                      }
+                    }
+                    featuredImage {
+                        node {
+                            sourceUrl
+                        }
+                    }
+                    categories {
+                        nodes {
+                            id
+                            slug
+                            name
+                            ancestors {
+                                nodes {
+                                    id
+                                    slug
+                                    name
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    `;
+
+    // ── STEP 3: EXECUTE PARALLEL CONCURRENT CALLS VIA PROMISE.ALL ──
+    const dynamicSections = await Promise.all(
+        layoutConfig.map(async (category) => {
+            try {
+                // Query using categoryName instead of the slug identifier
+                const categoryData = await wpClient(categoryQuery, { categoryName: category.name });
+                const posts = categoryData?.posts?.nodes || [];
+
+                return {
+                    id: category.id,
+                    name: category.name,
+                    slug: category.slug,
+                    posts: posts
+                };
+            } catch (error) {
+                console.error(`Failed loading section data for block: ${category.name}`, error);
+                return {
+                    id: category.id,
+                    name: category.name,
+                    slug: category.slug,
+                    posts: []
+                };
+            }
+        })
+    );
+
+    // ── STEP 4: RETURN THE INTEGRATED PAYLOAD PACKAGE ──
+    return {
+        latestPosts,
+        dynamicSections
+    };
+},
+
     getPostBySlug: async (slug) => {
         const query = `
             query GetPost($id: ID!) {
@@ -293,49 +266,79 @@ const wpService = {
         return data.tag;
     },
     getCategoryDetail: async (slug) => {
-        const query = `
-            query GetCategoryBySlug($slug: ID!) {
-            category(id: $slug, idType: SLUG) {
+        const metaQuery = `
+            query GetCategoryMetaOnly($slug: ID!) {
+              category(id: $slug, idType: SLUG) {
                 name
                 description
                 count
                 slug
                 seo {
-                title
-                description
-                fullHead
+                  title
+                  description
+                  fullHead
                 }
-                posts(first: 20, where: { orderby: { field: DATE, order: DESC } }) {
-                nodes {
-                    title
-                    slug
-                    date
-                    featuredImage {
-                    node {
-                        sourceUrl
-                    }
-                    }
-                    categories {
-                    nodes {
-                        slug
-                    }
-                    }
-                }
-                }
-            }
+              }
             }
         `;
 
-        // Fix 1: Pass 'slug' as the variable name to match the GraphQL definition
-        const data = await wpClient(query, { slug: slug });
+        const postsQuery = `
+            query GetPostsByResolvedName($categoryName: String!) {
+              posts(first: 20, where: { categoryName: $categoryName, orderby: { field: DATE, order: DESC } }) {
+                nodes {
+                  title
+                  slug
+                  date
+                  featuredImage {
+                    node {
+                      sourceUrl
+                    }
+                  }
+                  categories {
+                    nodes {
+                      id
+                      slug
+                      name
+                      ancestors {
+                        nodes {
+                          id
+                          slug
+                          name
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+        `;
 
-        // Fix 2: Return 'category' instead of 'tag' to match the query field
-        return data?.category || null;
+        try {
+            // 1. Fetch metadata
+            const metaData = await wpClient(metaQuery, { slug });
+            const category = metaData?.category;
+
+            if (!category) return null;
+
+            // 2. Fetch posts by resolved category name
+            try {
+                const postsData = await wpClient(postsQuery, { categoryName: category.name });
+                category.posts = postsData?.posts || { nodes: [] };
+            } catch (postError) {
+                console.error(`Failed to fetch posts for resolved category name: ${category.name}`, postError);
+                category.posts = { nodes: [] };
+            }
+
+            return category;
+        } catch (error) {
+            console.error(`Failed to fetch category details for slug: ${slug}`, error);
+            return null;
+        }
     },
     getTopMenu: async () => {
         const query = `
             query GetMenus {
-                topMenu: menuItems(where: {location: TOP_NAV}) {
+                topMenu: menuItems(first: 100, where: {location: TOP_NAV}) {
                     nodes {
                     key: id
                     label

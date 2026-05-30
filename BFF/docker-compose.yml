@@ -2,7 +2,9 @@ version: '3.8'
 
 services:
   bff:
-    image: aaligerd/test-bff:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: news-bff-test
     ports:
       - "9595:9595"

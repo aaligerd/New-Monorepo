@@ -6,7 +6,7 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faEnvelope, faLink, faCheck, faShareNodes } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faTwitter, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import { getPostUrl, getHierarchicalCategories, stripHtml } from "../../lib/util";
+import { getPostUrl, getHierarchicalCategories, stripHtml, getAuthorName } from "../../lib/util";
 import WpContentRenderer from "../wordpress/WpContentRenderer";
 import AdSlot from "../ads/AdSlot";
 
@@ -161,22 +161,27 @@ export default function ArticlePage({ post, l1slug, l2slug }) {
               </div>
             )}
 
-            {/* Author / Date Meta Section */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 py-4 mb-6 border-y border-gray-100">
-              <div className="flex items-center gap-2.5">
-                {/* Initials fallback for author profile */}
-                <div className="w-9 h-9 rounded-full bg-red-50 border border-red-100 flex items-center justify-center text-red-600 font-bold uppercase text-xs select-none">
-                  {post.author?.node?.name ? post.author.node.name.charAt(0) : "S"}
-                </div>
-                <div>
-                  <span className="text-[9px] text-gray-400 block uppercase tracking-wider font-bold">
-                    Written By
-                  </span>
-                  <span className="text-xs font-bold text-gray-800 hover:text-red-600 transition-colors">
-                    {post.author?.node?.name || "Staff Writer"}
-                  </span>
-                </div>
-              </div>
+              {(() => {
+                const authorName = getAuthorName(post.author?.node);
+                const initial = authorName ? authorName.charAt(0) : "S";
+                return (
+                  <div className="flex items-center gap-2.5">
+                    {/* Initials fallback for author profile */}
+                    <div className="w-9 h-9 rounded-full bg-red-50 border border-red-100 flex items-center justify-center text-red-600 font-bold uppercase text-xs select-none">
+                      {initial}
+                    </div>
+                    <div>
+                      <span className="text-[9px] text-gray-400 block uppercase tracking-wider font-bold">
+                        Written By
+                      </span>
+                      <span className="text-xs font-bold text-gray-800 hover:text-red-600 transition-colors">
+                        {authorName}
+                      </span>
+                    </div>
+                  </div>
+                );
+              })()}
               <div className="flex items-center gap-4 text-xs text-gray-500">
                 <div className="flex items-center gap-1.5">
                   <FontAwesomeIcon icon={faClock} className="text-gray-400" />

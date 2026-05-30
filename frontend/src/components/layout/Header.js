@@ -6,6 +6,5 @@ import HeaderClient from "./HeaderClient";
 
 export default async function Header() {
   const menuItems = await fetchTopMenu();
-  console.log(menuItems);
   return <HeaderClient menuItems={menuItems} />;
 }

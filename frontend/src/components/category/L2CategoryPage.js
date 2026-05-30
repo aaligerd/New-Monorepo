@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { getPostUrl } from "../../lib/util";
 
 export default function L2CategoryPage({ l1slug, l2slug, data }) {
   const posts = data?.posts?.nodes ?? [];
@@ -36,7 +37,7 @@ export default function L2CategoryPage({ l1slug, l2slug, data }) {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {posts.map((post) => (
-            <Link key={post.slug} href={`/${l1slug}/${l2slug}/${post.slug}`} className="group flex flex-col gap-3">
+            <Link key={post.slug} href={getPostUrl(post, `${l1slug}/${l2slug}`)} className="group flex flex-col gap-3">
               {post.featuredImage?.node?.sourceUrl && (
                 <Image
                   src={post.featuredImage.node.sourceUrl}

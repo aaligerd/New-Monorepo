@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { getPostUrl } from "../../lib/util";
 
-export default function CategorySection({ title, posts = [] }) {
+export default function CategorySection({ title, categorySlug, posts = [] }) {
   if (!posts || posts.length === 0) return null;
 
   // 1 Lead post and up to 9 list posts
@@ -26,7 +26,7 @@ export default function CategorySection({ title, posts = [] }) {
         {leadPost && (
           <div className="lg:col-span-6 group">
             <Link
-              href={getPostUrl(leadPost)}
+              href={getPostUrl(leadPost, categorySlug)}
               className="relative block aspect-[4/3] rounded-2xl overflow-hidden bg-gray-900 shadow-sm border border-gray-100"
             >
               {leadPost.featuredImage?.node?.sourceUrl ? (
@@ -76,7 +76,7 @@ export default function CategorySection({ title, posts = [] }) {
               {listPosts.map((post) => (
                 <Link
                   key={post.slug}
-                  href={getPostUrl(post)}
+                  href={getPostUrl(post, categorySlug)}
                   className="group flex gap-4 py-3.5 first:pt-0 last:pb-0"
                 >
                   {/* Small Left Thumbnail */}

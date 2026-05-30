@@ -1,0 +1,58 @@
+{
+    "success": true,
+    "data": {
+        "name": "Lifestyle",
+        "description": null,
+        "count": 2,
+        "slug": "lifestyle",
+        "seo": {
+            "title": "Lifestyle - The Eastern Gazette",
+            "description": null,
+            "fullHead": "<meta name=\"robots\" content=\"noindex, nofollow\"/>\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Lifestyle - The Eastern Gazette\" />\n<meta property=\"og:url\" content=\"http://72.61.224.143:8080/category/lifestyle/\" />\n<meta property=\"og:site_name\" content=\"The Eastern Gazette\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<meta name=\"twitter:title\" content=\"Lifestyle - The Eastern Gazette\" />\n<meta name=\"twitter:label1\" content=\"Items\" />\n<meta name=\"twitter:data1\" content=\"2\" />\n<script type=\"application/ld+json\" class=\"rank-math-schema\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Person\",\"@id\":\"http://72.61.224.143:8080/#person\",\"name\":\"The Eastern Gazette\"},{\"@type\":\"WebSite\",\"@id\":\"http://72.61.224.143:8080/#website\",\"url\":\"http://72.61.224.143:8080\",\"name\":\"The Eastern Gazette\",\"publisher\":{\"@id\":\"http://72.61.224.143:8080/#person\"},\"inLanguage\":\"en-US\"},{\"@type\":\"CollectionPage\",\"@id\":\"http://72.61.224.143:8080/category/lifestyle/#webpage\",\"url\":\"http://72.61.224.143:8080/category/lifestyle/\",\"name\":\"Lifestyle - The Eastern Gazette\",\"isPartOf\":{\"@id\":\"http://72.61.224.143:8080/#website\"},\"inLanguage\":\"en-US\"}]}</script>\n"
+        },
+        "posts": {
+            "nodes": [
+                {
+                    "title": "Heartbreak in love? Numerology says these root numbers get betrayed easily",
+                    "slug": "heartbreak-in-love-numerology-says-these-root-numbers-get-betrayed-easily",
+                    "date": "2026-05-30T08:46:37",
+                    "featuredImage": {
+                        "node": {
+                            "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/05/30084552/e8b861800d09b880f4b928804223a363.webp"
+                        }
+                    },
+                    "categories": {
+                        "nodes": [
+                            {
+                                "slug": "astrology"
+                            },
+                            {
+                                "slug": "lifestyle"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Why are people sexting? The answer isn’t what you think",
+                    "slug": "why-are-people-sexting-the-answer-isnt-what-you-think",
+                    "date": "2026-05-30T07:44:13",
+                    "featuredImage": {
+                        "node": {
+                            "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/05/30073832/a40f349dbee12d20c76445a95e02fe5a.webp"
+                        }
+                    },
+                    "categories": {
+                        "nodes": [
+                            {
+                                "slug": "lifestyle"
+                            },
+                            {
+                                "slug": "relationships"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

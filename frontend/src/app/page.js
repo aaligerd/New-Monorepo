@@ -36,19 +36,14 @@ export default async function HomePage() {
     );
   }
 
-  const { heroPosts, ...sections } = data;
-  const carouselPosts = heroPosts?.nodes ?? [];
+  const latestPosts = data.latestPosts || [];
+  const dynamicSections = data.dynamicSections || [];
 
-  // Resilient fallbacks in case the backend hasn't been updated to the new categories yet
-  const latestNewsPosts =
-    sections.latest?.nodes ||
-    sections.india?.nodes?.slice(0, 4) ||
-    sections.west_bengal_elections_2026?.nodes?.slice(0, 4) ||
-    carouselPosts.slice(1, 5);
+  // First 5 articles for the Hero Carousel
+  const carouselPosts = latestPosts.slice(0, 5);
 
-  const indiaPosts = sections.india?.nodes || sections.west_bengal_elections_2026?.nodes || [];
-  const worldPosts = sections.world?.nodes || sections.sports?.nodes || [];
-  const entertainmentPosts = sections.entertainment?.nodes || [];
+  // Next 10 articles for the Latest News Cards grid
+  const latestNewsPosts = latestPosts.slice(5, 15);
 
   return (
     <main className="max-w-7xl mx-auto px-4 py-6 font-sans bg-[#f7f6f2]">
@@ -72,7 +67,8 @@ export default async function HomePage() {
             </span>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Symmetrical 5-column grid for 10 cards (2 rows of 5 on desktop) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {latestNewsPosts.map((post) => (
               <Link
                 key={post.slug}
@@ -87,7 +83,7 @@ export default async function HomePage() {
                       alt={post.title}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      sizes="(max-w-640px) 100vw, 25vw"
+                      sizes="(max-w-640px) 100vw, 20vw"
                     />
                   ) : (
                     <div className="w-full h-full bg-red-50 text-red-650 flex items-center justify-center font-bold text-xs select-none">
@@ -113,23 +109,18 @@ export default async function HomePage() {
 
       {/* ── DYNAMIC CATEGORY SECTIONS (1 + 9 Layout) ──────────────────── */}
       <div className="space-y-4">
-        {/* India Section */}
-        {indiaPosts.length > 0 && (
-          <CategorySection title="India" posts={indiaPosts} />
-        )}
-
-        {/* Mid-content Banner Ad */}
-        <AdSlot type="leaderboard" id="homepage-mid" />
-
-        {/* World Section */}
-        {worldPosts.length > 0 && (
-          <CategorySection title="World" posts={worldPosts} />
-        )}
-
-        {/* Entertainment Section */}
-        {entertainmentPosts.length > 0 && (
-          <CategorySection title="Entertainment" posts={entertainmentPosts} />
-        )}
+        {dynamicSections.map((section, idx) => (
+          <div key={section.id || idx}>
+            <CategorySection title={section.name} categorySlug={section.slug} posts={section.posts} />
+            
+            {/* Render a mid-page ad slot directly after the first category section */}
+            {idx === 0 && (
+              <div className="py-4">
+                <AdSlot type="leaderboard" id={`homepage-mid-${section.id || idx}`} />
+              </div>
+            )}
+          </div>
+        ))}
       </div>
     </main>
   );

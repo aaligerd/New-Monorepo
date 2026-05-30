@@ -32,7 +32,7 @@ function NavItem({ item }) {
             onClick={() => setOpen((v) => !v)}
             onMouseEnter={() => setOpen(true)}
             onMouseLeave={() => setOpen(false)}
-            className="flex items-center gap-1 px-4 py-3 text-[13px] font-semibold tracking-wide text-gray-300 hover:text-white hover:bg-red-700 transition-colors uppercase whitespace-nowrap cursor-pointer"
+            className="flex items-center gap-1 px-2.5 xl:px-4 py-3 text-[13px] xl:text-[15px] 2xl:text-[17px] font-bold tracking-wide text-gray-300 hover:text-white hover:bg-red-700 transition-colors uppercase whitespace-nowrap cursor-pointer"
           >
             <Link
               href={item.path}
@@ -81,7 +81,7 @@ function NavItem({ item }) {
       ) : (
         <Link
           href={item.path}
-          className="block px-4 py-3 text-[13px] font-semibold tracking-wide text-gray-300 hover:text-white hover:bg-red-700 transition-colors uppercase whitespace-nowrap"
+          className="block px-2.5 xl:px-4 py-3 text-[13px] xl:text-[15px] 2xl:text-[17px] font-bold tracking-wide text-gray-300 hover:text-white hover:bg-red-700 transition-colors uppercase whitespace-nowrap"
         >
           {item.label}
         </Link>
@@ -141,43 +141,45 @@ export default function HeaderClient({ menuItems }) {
       </div>
 
       {/* ── Center-Logo Masthead ─────────────────────────────────── */}
-      <div className="bg-white border-b border-gray-100 py-6 md:py-8">
-        <div className="max-w-7xl mx-auto px-4 relative flex items-center justify-center">
-          {/* Hamburger / Menu icon (Left for Mobile) */}
-          <div className="absolute left-4 top-1/2 -translate-y-1/2 flex items-center gap-2 lg:hidden">
+      <div className="bg-white border-b border-gray-100 py-4 md:py-8">
+        <div className="max-w-7xl mx-auto px-4 relative flex flex-row items-center justify-between md:justify-center">
+          {/* Site Title Logo (Left-aligned on mobile, Centered in flow on tablet/desktop) */}
+          <Link
+            href="/"
+            className="flex flex-col items-start text-left md:items-center md:text-center group leading-none"
+          >
+            <span
+              className="text-2xl sm:text-3xl md:text-5xl lg:text-[52px] font-black tracking-tight text-[#111111] group-hover:text-red-700 transition-colors"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
+              THE EASTERN GAZETTE
+            </span>
+            <span className="text-[8px] md:text-[10px] tracking-[0.25em] uppercase text-gray-400 mt-1 md:mt-2 md:mb-1 font-semibold select-none">
+              Truth · Integrity · Eastern India
+            </span>
+          </Link>
+
+          {/* Mobile Right Controls: Hamburger + Search. (Separated absolute on tablet/desktop) */}
+          <div className="flex items-center gap-1 md:contents">
+            {/* Search Option */}
+            <Link
+              href="/search"
+              className="p-2 text-gray-600 hover:text-red-650 transition-colors flex items-center justify-center md:absolute md:right-4 md:top-1/2 md:-translate-y-1/2 order-1 md:order-none"
+              aria-label="Search"
+            >
+              <FontAwesomeIcon icon={faMagnifyingGlass} className="text-base sm:text-lg" />
+            </Link>
+
+            {/* Hamburger / Menu icon */}
             <button
               onClick={() => setMobileOpen(true)}
-              className="flex flex-col gap-[5px] p-2 group"
+              className="flex flex-col gap-[5px] p-2 group md:absolute md:left-4 md:top-1/2 md:-translate-y-1/2 lg:hidden order-2 md:order-none"
               aria-label="Open menu"
             >
               <span className="block w-4 h-0.5 bg-gray-700 group-hover:bg-red-600 transition-colors" />
               <span className="block w-5 h-0.5 bg-gray-700 group-hover:bg-red-600 transition-colors" />
               <span className="block w-6 h-0.5 bg-gray-700 group-hover:bg-red-600 transition-colors" />
             </button>
-          </div>
-
-          {/* Centered Site Title Logo */}
-          <Link href="/" className="flex flex-col items-center justify-center text-center group leading-none">
-            <span
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-black tracking-tight text-[#111111] group-hover:text-red-700 transition-colors"
-              style={{ fontFamily: "var(--font-playfair)" }}
-            >
-              The Eastern Gazette
-            </span>
-            <span className="text-[9px] md:text-[10px] tracking-[0.25em] uppercase text-gray-400 mt-2 font-semibold select-none">
-              Truth · Integrity · Eastern India
-            </span>
-          </Link>
-
-          {/* Search Button (Right for All Screens) */}
-          <div className="absolute right-4 top-1/2 -translate-y-1/2">
-            <Link
-              href="/search"
-              className="p-2 text-gray-600 hover:text-red-650 transition-colors flex items-center justify-center"
-              aria-label="Search"
-            >
-              <FontAwesomeIcon icon={faMagnifyingGlass} className="text-base sm:text-lg" />
-            </Link>
           </div>
         </div>
       </div>
@@ -188,7 +190,7 @@ export default function HeaderClient({ menuItems }) {
           }`}
       >
         <div className="max-w-7xl mx-auto px-4">
-          <ul className="flex items-center justify-center">
+          <ul className="flex flex-wrap items-center justify-center w-full">
             {menuItems && menuItems.length > 0 ? (
               menuItems.map((item) => (
                 <NavItem key={item.key} item={item} />

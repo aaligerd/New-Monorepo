@@ -43,9 +43,11 @@ export async function generateMetadata({ params }) {
 
   if (!author) return { title: "Author Not Found" };
 
+  const authorName = author.name || `${author.firstName || ""} ${author.lastName || ""}`.trim() || "Staff Writer";
+
   return {
-    title: `${author.name} | The Eastern Gazette`,
-    description: author.description || `Read the latest articles by ${author.name}`,
+    title: `${authorName} | The Eastern Gazette`,
+    description: author.description || `Read the latest articles by ${authorName}`,
   };
 }
 
@@ -56,6 +58,8 @@ export default async function AuthorPage({ params }) {
 
   if (!author) return notFound();
 
+  const authorName = author.name || `${author.firstName || ""} ${author.lastName || ""}`.trim() || "Staff Writer";
+
   return (
     <main className="container mx-auto px-4 py-10 max-w-6xl">
       {/* Profile Header */}
@@ -63,13 +67,13 @@ export default async function AuthorPage({ params }) {
         <div className="relative w-32 h-32 md:w-40 md:h-40 shrink-0">
           <img
             src={author.avatar?.url}
-            alt={author.name}
+            alt={authorName}
             className="rounded-full object-cover w-full h-full border-4 border-white shadow-md"
           />
         </div>
         <div className="text-center md:text-left">
           <h1 className="text-3xl md:text-5xl font-black text-slate-900 mb-4 tracking-tight">
-            {author.name}
+            {authorName}
           </h1>
           {author.description && (
             <p className="text-lg text-slate-600 leading-relaxed font-serif italic">

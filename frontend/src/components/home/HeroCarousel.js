@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { getPostUrl, getHierarchicalCategories } from "../../lib/util";
+import { getPostUrl, getHierarchicalCategories, getAuthorName } from "../../lib/util";
 
 export default function HeroCarousel({ posts = [] }) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -104,25 +104,30 @@ export default function HeroCarousel({ posts = [] }) {
           )}
 
           {/* Byline and metadata */}
-          <div className="flex items-center gap-3 pt-4 border-t border-gray-100 mt-auto">
-            <div className="w-8 h-8 rounded-full bg-red-50 border border-red-155 flex items-center justify-center text-red-600 font-bold uppercase text-[11px] select-none">
-              {currentPost.author?.node?.name ? currentPost.author.node.name.charAt(0) : "S"}
-            </div>
-            <div>
-              <span className="text-[10px] font-bold text-gray-700 block leading-tight">
-                {currentPost.author?.node?.name || "Staff Writer"}
-              </span>
-              <span className="text-[9px] text-gray-400 block uppercase tracking-wider mt-0.5 select-none">
-                {new Date(currentPost.date).toLocaleDateString("en-IN", {
-                  day: "numeric",
-                  month: "long",
-                  year: "numeric",
-                })}
-              </span>
-            </div>
-          </div>
+          {(() => {
+            const authorName = getAuthorName(currentPost.author?.node);
+            const initial = authorName ? authorName.charAt(0) : "S";
+            return (
+              <div className="flex items-center gap-3 pt-4 border-t border-gray-100 mt-auto">
+                <div className="w-8 h-8 rounded-full bg-red-50 border border-red-155 flex items-center justify-center text-red-600 font-bold uppercase text-[11px] select-none">
+                  {initial}
+                </div>
+                <div>
+                  <span className="text-[10px] font-bold text-gray-700 block leading-tight">
+                    {authorName}
+                  </span>
+                  <span className="text-[9px] text-gray-400 block uppercase tracking-wider mt-0.5 select-none">
+                    {new Date(currentPost.date).toLocaleDateString("en-IN", {
+                      day: "numeric",
+                      month: "long",
+                      year: "numeric",
+                    })}
+                  </span>
+                </div>
+              </div>
+            );
+          })()}
         </div>
-
       </div>
 
       <style jsx global>{`

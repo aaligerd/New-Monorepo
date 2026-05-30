@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { getPostUrl } from "../../lib/util";
 
 export default function L1CategoryPage({ l1slug, data }) {
   const posts = data?.posts?.nodes ?? [];
@@ -35,7 +36,7 @@ export default function L1CategoryPage({ l1slug, data }) {
           {posts.map((post) => (
             <Link
               key={post.slug}
-              href={`/${l1slug}/${post.slug}`}
+              href={getPostUrl(post, l1slug)}
               className="group flex flex-col gap-3"
             >
               {post.featuredImage?.node?.sourceUrl && (

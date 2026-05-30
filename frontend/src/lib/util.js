@@ -16,10 +16,15 @@ export const getHierarchicalCategories = (categoryNodes) => {
 /**
  * Generates the full SEO-friendly URL: /l1/l2/slug or /l1/slug
  */
-export const getPostUrl = (post) => {
+export const getPostUrl = (post, fallbackCategorySlug) => {
   const nodes = post.categories?.nodes || [];
   const { l1, l2 } = getHierarchicalCategories(nodes);
-  if (!l1) return `/news/${post.slug}`;
+  if (!l1) {
+    if (fallbackCategorySlug) {
+      return `/${fallbackCategorySlug}/${post.slug}`;
+    }
+    return `/news/${post.slug}`;
+  }
   
   const segments = l2 ? [l1.slug, l2.slug] : [l1.slug];
   return "/" + [...segments, post.slug].join("/");
@@ -31,4 +36,12 @@ export const stripHtml = (html = "") => {
 
 export const formatSectionTitle = (key) => {
   return key.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+};
+
+export const getAuthorName = (authorNode) => {
+  if (!authorNode) return "Staff Writer";
+  if (authorNode.firstName || authorNode.lastName) {
+    return `${authorNode.firstName || ""} ${authorNode.lastName || ""}`.trim();
+  }
+  return authorNode.name || "Staff Writer";
 };

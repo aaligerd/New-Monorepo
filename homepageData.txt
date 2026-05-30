@@ -1,0 +1,853 @@
+{
+    "success": true,
+    "data": {
+        "latestPosts": [
+            {
+                "title": "Why are people sexting? The answer isn’t what you think",
+                "slug": "why-are-people-sexting-the-answer-isnt-what-you-think",
+                "excerpt": "<p>Why do people really sexting? A new study challenges common assumptions and uncovers surprising reasons behind this increasingly common relationship behavior.</p>\n",
+                "date": "2026-05-30T07:44:13",
+                "author": {
+                    "node": {
+                        "firstName": "Subhradip",
+                        "lastName": "Majumder"
+                    }
+                },
+                "featuredImage": {
+                    "node": {
+                        "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/05/30073832/a40f349dbee12d20c76445a95e02fe5a.webp"
+                    }
+                },
+                "categories": {
+                    "nodes": [
+                        {
+                            "id": "dGVybTozNQ==",
+                            "slug": "lifestyle",
+                            "name": "Lifestyle",
+                            "ancestors": null
+                        },
+                        {
+                            "id": "dGVybTo0MA==",
+                            "slug": "relationships",
+                            "name": "Relationships",
+                            "ancestors": {
+                                "nodes": [
+                                    {
+                                        "id": "dGVybTozNQ==",
+                                        "slug": "lifestyle",
+                                        "name": "Lifestyle"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Japan bans Indian mango imports after 20 years over pest-control concerns",
+                "slug": "japan-bans-indian-mango-imports-after-20-years-over-pest-control-concerns",
+                "excerpt": "<p>Japan has suspended imports of Indian mangoes after detecting lapses in pest-control procedures, ending a trade arrangement that had been in place for nearly two decades.</p>\n",
+                "date": "2026-05-30T07:35:41",
+                "author": {
+                    "node": {
+                        "firstName": "Subhradip",
+                        "lastName": "Majumder"
+                    }
+                },
+                "featuredImage": {
+                    "node": {
+                        "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/05/30073210/829bcfa50311018f4c52296055c02188.webp"
+                    }
+                },
+                "categories": {
+                    "nodes": [
+                        {
+                            "id": "dGVybTo0MQ==",
+                            "slug": "business",
+                            "name": "Business",
+                            "ancestors": null
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Iran trolls Donald Trump with Minions-style video over Hormuz, sparks global buzz",
+                "slug": "iran-trolls-donald-trump-with-minions-style-video-over-hormuz-sparks-global-buzz",
+                "excerpt": "<p>In a mix of politics and humour, Iran shared an AI-made video making fun of US President Donald Trump over his claims about reopening the Strait of Hormuz released by the Iranian Embassy in Russia on Wednesday. The clip is inspired by the animated film Despicable Me and quickly went viral, catching global attention. The [&hellip;]</p>\n",
+                "date": "2026-05-29T14:46:37",
+                "author": {
+                    "node": {
+                        "firstName": "Subrata",
+                        "lastName": "Majumder"
+                    }
+                },
+                "featuredImage": {
+                    "node": {
+                        "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/05/29144619/37251e68b662e218f2f839698b389549.webp"
+                    }
+                },
+                "categories": {
+                    "nodes": [
+                        {
+                            "id": "dGVybToyNA==",
+                            "slug": "gulf-news",
+                            "name": "Gulf News",
+                            "ancestors": {
+                                "nodes": [
+                                    {
+                                        "id": "dGVybTo2",
+                                        "slug": "world",
+                                        "name": "World"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "dGVybTo2",
+                            "slug": "world",
+                            "name": "World",
+                            "ancestors": null
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Canada makes immigration easier but costlier—key changes explained",
+                "slug": "canada-makes-immigration-easier-but-costlier-key-changes-explained",
+                "excerpt": "<p>Starting April 1, 2026, Canada has made several changes to its immigration rules for citizens, permanent residents, and visa applicants. These changes are meant to make immigration processes faster and easier to handle. Passport and citizenship fees have gone up, but families can now benefit from longer stays through relaxed super visa rules. The government [&hellip;]</p>\n",
+                "date": "2026-05-29T14:27:15",
+                "author": {
+                    "node": {
+                        "firstName": "Subrata",
+                        "lastName": "Majumder"
+                    }
+                },
+                "featuredImage": {
+                    "node": {
+                        "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/05/29142644/c74941f6f685d5920ca528f9118db4ac.webp"
+                    }
+                },
+                "categories": {
+                    "nodes": [
+                        {
+                            "id": "dGVybToyMw==",
+                            "slug": "canada-news",
+                            "name": "Canada News",
+                            "ancestors": {
+                                "nodes": [
+                                    {
+                                        "id": "dGVybTo2",
+                                        "slug": "world",
+                                        "name": "World"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "dGVybTo2",
+                            "slug": "world",
+                            "name": "World",
+                            "ancestors": null
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Google-backed robot cars trapped on dead-end roads leave Londoners sleepless",
+                "slug": "google-backed-robot-cars-trapped-on-dead-end-roads-leave-londoners-sleepless",
+                "excerpt": "<p>esidents of a quiet East London neighbourhood say self-driving cars operated by Waymo have become an unexpected late-night disturbance after repeatedly getting trapped on a narrow dead-end street and sounding loud reversing alarms in the early hours of the morning. According to a report by The Times, the issue is unfolding on Elder Street in [&hellip;]</p>\n",
+                "date": "2026-05-29T14:07:08",
+                "author": {
+                    "node": {
+                        "firstName": "Subrata",
+                        "lastName": "Majumder"
+                    }
+                },
+                "featuredImage": {
+                    "node": {
+                        "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/05/29140604/a11168966e5085754a9cc699044f901c.webp"
+                    }
+                },
+                "categories": {
+                    "nodes": [
+                        {
+                            "id": "dGVybToyMg==",
+                            "slug": "uk-news-world",
+                            "name": "UK News",
+                            "ancestors": {
+                                "nodes": [
+                                    {
+                                        "id": "dGVybTo2",
+                                        "slug": "world",
+                                        "name": "World"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "dGVybTo2",
+                            "slug": "world",
+                            "name": "World",
+                            "ancestors": null
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "US and Iran reach tentative 60-day truce extension awaiting Trump approval",
+                "slug": "us-and-iran-reach-tentative-60-day-truce-extension-awaiting-trump-approval",
+                "excerpt": "<p>The United States and Iran have reached a tentative agreement to extend their ceasefire by 60 days, according to multiple reports on Thursday, but the deal is not yet final because it still awaits Donald Trump’s approval. Reuters said four sources familiar with the matter confirmed a memorandum of understanding (MoU) had been reached. The [&hellip;]</p>\n",
+                "date": "2026-05-29T13:50:10",
+                "author": {
+                    "node": {
+                        "firstName": "Subrata",
+                        "lastName": "Majumder"
+                    }
+                },
+                "featuredImage": {
+                    "node": {
+                        "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/05/29134941/a9493d510e9b07814b6944eb9c508bd0.webp"
+                    }
+                },
+                "categories": {
+                    "nodes": [
+                        {
+                            "id": "dGVybTo3",
+                            "slug": "us-news",
+                            "name": "US News",
+                            "ancestors": {
+                                "nodes": [
+                                    {
+                                        "id": "dGVybTo2",
+                                        "slug": "world",
+                                        "name": "World"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "dGVybTo2",
+                            "slug": "world",
+                            "name": "World",
+                            "ancestors": null
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "West Bengal raises age ceiling for Group A, B, C and D state posts",
+                "slug": "west-bengal-raises-age-ceiling-for-group-a-b-c-and-d-state-posts",
+                "excerpt": "<p>The West Bengal government has revised the upper age limit for recruitment to state services by amending the West Bengal Services (Raising of Age Limit) Rules, 1981. In a notification issued by the Finance Department’s Audit Branch on May 16, the state said the cap for Group A posts “shall be raised to 41 years,&#8221; [&hellip;]</p>\n",
+                "date": "2026-05-29T13:44:00",
+                "author": {
+                    "node": {
+                        "firstName": "Subrata",
+                        "lastName": "Majumder"
+                    }
+                },
+                "featuredImage": {
+                    "node": {
+                        "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/05/29134324/fc54c3d1ed127d8c2320e3aba6401a2b.webp"
+                    }
+                },
+                "categories": {
+                    "nodes": [
+                        {
+                            "id": "dGVybToyMA==",
+                            "slug": "others-west-bengal",
+                            "name": "Others",
+                            "ancestors": {
+                                "nodes": [
+                                    {
+                                        "id": "dGVybToxNQ==",
+                                        "slug": "west-bengal",
+                                        "name": "West Bengal"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "dGVybToxNQ==",
+                            "slug": "west-bengal",
+                            "name": "West Bengal",
+                            "ancestors": null
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Kolkata police busts fake call centre racket, social media reacts as six arrested",
+                "slug": "kolkata-police-busts-fake-call-centre-racket-social-media-reacts-as-six-arrested",
+                "excerpt": "<p>The Cyber Crime Wing of Kolkata Police identified suspicious activity linked to several mobile numbers following intelligence inputs. Technical analysis and field verification confirmed the existence of a fraudulent call centre targeting unsuspecting citizens through deceptive means. Raid conducted After sustained surveillance, a raid was carried out on April 23, 2026, in the Sammilani Park [&hellip;]</p>\n",
+                "date": "2026-05-29T10:06:58",
+                "author": {
+                    "node": {
+                        "firstName": "Subrata",
+                        "lastName": "Majumder"
+                    }
+                },
+                "featuredImage": null,
+                "categories": {
+                    "nodes": [
+                        {
+                            "id": "dGVybToxOQ==",
+                            "slug": "crime-west-bengal",
+                            "name": "Crime",
+                            "ancestors": {
+                                "nodes": [
+                                    {
+                                        "id": "dGVybToxNQ==",
+                                        "slug": "west-bengal",
+                                        "name": "West Bengal"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "dGVybToxNQ==",
+                            "slug": "west-bengal",
+                            "name": "West Bengal",
+                            "ancestors": null
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "West Bengal flags 30 lakh Lakshmir Bhandar beneficiaries as ineligible for Annapurna",
+                "slug": "west-bengal-flags-30-lakh-lakshmir-bhandar-beneficiaries-as-ineligible-for-annapurna",
+                "excerpt": "<p>West Bengal Chief Minister Suvendu Adhikari said on Wednesday that around 30 lakh beneficiaries of the earlier Lakshmir Bhandar scheme were ineligible for the new Annapurna Bhandar scheme, alleging that they were either non-Indian citizens or had been permanently removed from the voter list. He made the remarks at a press conference at Nabanna, the [&hellip;]</p>\n",
+                "date": "2026-05-29T09:45:12",
+                "author": {
+                    "node": {
+                        "firstName": "Subrata",
+                        "lastName": "Majumder"
+                    }
+                },
+                "featuredImage": {
+                    "node": {
+                        "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/05/29094410/bcf76d039de9a537dd8897dcabbe3b97.webp"
+                    }
+                },
+                "categories": {
+                    "nodes": [
+                        {
+                            "id": "dGVybToxOA==",
+                            "slug": "politics-west-bengal",
+                            "name": "Politics",
+                            "ancestors": {
+                                "nodes": [
+                                    {
+                                        "id": "dGVybToxNQ==",
+                                        "slug": "west-bengal",
+                                        "name": "West Bengal"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "dGVybToxNQ==",
+                            "slug": "west-bengal",
+                            "name": "West Bengal",
+                            "ancestors": null
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "India-Bhutan, Bangladesh borders shut before vote counting to maintain law and order",
+                "slug": "india-bhutan-bangladesh-borders-shut-before-vote-counting-to-maintain-law-and-order",
+                "excerpt": "<p>International borders in parts of North Bengal were sealed on Monday, a day before the counting of votes for the state assembly elections, to maintain law and order. The closures affected key entry points along the India-Bhutan and India-Bangladesh borders, with cross-border movement and trade temporarily suspended. The Kalchini-Bhutan border gate at Banarhat, the Jaigaon-Bhutan [&hellip;]</p>\n",
+                "date": "2026-05-29T09:39:19",
+                "author": {
+                    "node": {
+                        "firstName": "Subrata",
+                        "lastName": "Majumder"
+                    }
+                },
+                "featuredImage": {
+                    "node": {
+                        "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/05/29093828/8d562c88de43558aac139b26a6f9bd45.webp"
+                    }
+                },
+                "categories": {
+                    "nodes": [
+                        {
+                            "id": "dGVybToxNw==",
+                            "slug": "district",
+                            "name": "District",
+                            "ancestors": {
+                                "nodes": [
+                                    {
+                                        "id": "dGVybToxNQ==",
+                                        "slug": "west-bengal",
+                                        "name": "West Bengal"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "dGVybToxNQ==",
+                            "slug": "west-bengal",
+                            "name": "West Bengal",
+                            "ancestors": null
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Annapurna Yojana form fill-up begins June 1: Here’s what Lakshmir Bhandar beneficiaries must know",
+                "slug": "annapurna-yojana-form-fill-up-begins-june-1-heres-what-lakshmir-bhandar-beneficiaries-must-know",
+                "excerpt": "<p>Annapurna Yojana applications begin June 1 with online, offline and door-to-door support across Bengal.</p>\n",
+                "date": "2026-05-29T08:48:58",
+                "author": {
+                    "node": {
+                        "firstName": "Subrata",
+                        "lastName": "Majumder"
+                    }
+                },
+                "featuredImage": {
+                    "node": {
+                        "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/05/29084750/c82fa8116a83883b24bb5d9d76c0cb02.webp"
+                    }
+                },
+                "categories": {
+                    "nodes": [
+                        {
+                            "id": "dGVybToxNg==",
+                            "slug": "kolkata",
+                            "name": "Kolkata",
+                            "ancestors": {
+                                "nodes": [
+                                    {
+                                        "id": "dGVybToxNQ==",
+                                        "slug": "west-bengal",
+                                        "name": "West Bengal"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "dGVybToxNQ==",
+                            "slug": "west-bengal",
+                            "name": "West Bengal",
+                            "ancestors": null
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Legendary ghazal poet Bashir Badr dies; leaves behind his immortal verses",
+                "slug": "legendary-ghazal-poet-bashir-badr-dies-leaves-behind-his-immortal-verses",
+                "excerpt": "<p>Bashir Badr, the celebrated Urdu poet, Padma Shri awardee and one of the most influential voices of modern Ghazal poetry, passed away in Bhopal today after a prolonged illness. His death has triggered an outpouring of grief across literary and cultural circles in India and abroad, with admirers mourning the loss of a poet whose [&hellip;]</p>\n",
+                "date": "2026-05-29T08:32:29",
+                "author": {
+                    "node": {
+                        "firstName": "Subrata",
+                        "lastName": "Majumder"
+                    }
+                },
+                "featuredImage": {
+                    "node": {
+                        "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/05/29083104/37809b9549a96de51fd1f9bc13eebf9b.webp"
+                    }
+                },
+                "categories": {
+                    "nodes": [
+                        {
+                            "id": "dGVybToz",
+                            "slug": "india",
+                            "name": "India",
+                            "ancestors": null
+                        },
+                        {
+                            "id": "dGVybToxNA==",
+                            "slug": "others",
+                            "name": "Others",
+                            "ancestors": {
+                                "nodes": [
+                                    {
+                                        "id": "dGVybToz",
+                                        "slug": "india",
+                                        "name": "India"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Bengaluru retiree duped of ₹24 crore in massive ‘digital arrest’ cyber fraud case",
+                "slug": "bengaluru-retiree-duped-of-₹24-crore-in-massive-digital-arrest-cyber-fraud-case",
+                "excerpt": "<p>An elderly Bengaluru woman was allegedly cheated out of nearly ₹24 crore in an elaborate cyber fraud operation where scammers posed as officials from the Central Bureau of Investigation and kept her under what they called a “digital arrest” for almost five months. The Central Crime Branch’s cybercrime unit has arrested five people in connection [&hellip;]</p>\n",
+                "date": "2026-05-29T08:14:56",
+                "author": {
+                    "node": {
+                        "firstName": "Subrata",
+                        "lastName": "Majumder"
+                    }
+                },
+                "featuredImage": {
+                    "node": {
+                        "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/05/29081218/6d2efbb8e5a4bb41c91ef0f2e8e643ca.webp"
+                    }
+                },
+                "categories": {
+                    "nodes": [
+                        {
+                            "id": "dGVybTo1MA==",
+                            "slug": "cybercrime",
+                            "name": "Cybercrime",
+                            "ancestors": {
+                                "nodes": [
+                                    {
+                                        "id": "dGVybTo0Ng==",
+                                        "slug": "technology",
+                                        "name": "Technology"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "dGVybTo0Ng==",
+                            "slug": "technology",
+                            "name": "Technology",
+                            "ancestors": null
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "What next for Siddaramaiah? Ex-Karnataka CM reveals political plans",
+                "slug": "what-next-for-siddaramaiah-ex-karnataka-cm-reveals-political-plans",
+                "excerpt": "<p>After resigning as Karnataka CM, Siddaramaiah rules out a Delhi shift and signals he is far from done in state politics.</p>\n",
+                "date": "2026-05-29T07:58:17",
+                "author": {
+                    "node": {
+                        "firstName": "Subrata",
+                        "lastName": "Majumder"
+                    }
+                },
+                "featuredImage": {
+                    "node": {
+                        "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/05/29075614/910d87ca8a44127308c4ae2839f283a6.webp"
+                    }
+                },
+                "categories": {
+                    "nodes": [
+                        {
+                            "id": "dGVybToz",
+                            "slug": "india",
+                            "name": "India",
+                            "ancestors": null
+                        },
+                        {
+                            "id": "dGVybToxMg==",
+                            "slug": "politics",
+                            "name": "Politics",
+                            "ancestors": {
+                                "nodes": [
+                                    {
+                                        "id": "dGVybToz",
+                                        "slug": "india",
+                                        "name": "India"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Himachal forest fire: IAF deploys ‘Bambi Bucket’ helicopters in Kasauli operation",
+                "slug": "himachal-forest-fire-iaf-deploys-bambi-bucket-helicopters-in-kasauli-operation",
+                "excerpt": "<p>The Indian Air Force (IAF) stepped in with specialised helicopters equipped with “Bambi Bucket” systems to help control a major forest fire in Himachal Pradesh’s Kasauli region, as the state continues to witness a sharp rise in wildfire incidents amid soaring temperatures. The aerial firefighting mission was launched after authorities sought urgent support to contain [&hellip;]</p>\n",
+                "date": "2026-05-28T14:20:37",
+                "author": {
+                    "node": {
+                        "firstName": "Subrata",
+                        "lastName": "Majumder"
+                    }
+                },
+                "featuredImage": {
+                    "node": {
+                        "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/05/28141921/909bdf1558f03e500d7d2deab5f72963.webp"
+                    }
+                },
+                "categories": {
+                    "nodes": [
+                        {
+                            "id": "dGVybToz",
+                            "slug": "india",
+                            "name": "India",
+                            "ancestors": null
+                        },
+                        {
+                            "id": "dGVybTo0",
+                            "slug": "national-trends",
+                            "name": "National Trends",
+                            "ancestors": {
+                                "nodes": [
+                                    {
+                                        "id": "dGVybToz",
+                                        "slug": "india",
+                                        "name": "India"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ],
+        "dynamicSections": [
+            {
+                "id": "dGVybToz",
+                "name": "India",
+                "slug": "india",
+                "posts": [
+                    {
+                        "title": "Legendary ghazal poet Bashir Badr dies; leaves behind his immortal verses",
+                        "slug": "legendary-ghazal-poet-bashir-badr-dies-leaves-behind-his-immortal-verses",
+                        "date": "2026-05-29T08:32:29",
+                        "author": {
+                            "node": {
+                                "firstName": "Subrata",
+                                "lastName": "Majumder"
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/05/29083104/37809b9549a96de51fd1f9bc13eebf9b.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybToz",
+                                    "slug": "india",
+                                    "name": "India",
+                                    "ancestors": null
+                                },
+                                {
+                                    "id": "dGVybToxNA==",
+                                    "slug": "others",
+                                    "name": "Others",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybToz",
+                                                "slug": "india",
+                                                "name": "India"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "What next for Siddaramaiah? Ex-Karnataka CM reveals political plans",
+                        "slug": "what-next-for-siddaramaiah-ex-karnataka-cm-reveals-political-plans",
+                        "date": "2026-05-29T07:58:17",
+                        "author": {
+                            "node": {
+                                "firstName": "Subrata",
+                                "lastName": "Majumder"
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/05/29075614/910d87ca8a44127308c4ae2839f283a6.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybToz",
+                                    "slug": "india",
+                                    "name": "India",
+                                    "ancestors": null
+                                },
+                                {
+                                    "id": "dGVybToxMg==",
+                                    "slug": "politics",
+                                    "name": "Politics",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybToz",
+                                                "slug": "india",
+                                                "name": "India"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "Himachal forest fire: IAF deploys ‘Bambi Bucket’ helicopters in Kasauli operation",
+                        "slug": "himachal-forest-fire-iaf-deploys-bambi-bucket-helicopters-in-kasauli-operation",
+                        "date": "2026-05-28T14:20:37",
+                        "author": {
+                            "node": {
+                                "firstName": "Subrata",
+                                "lastName": "Majumder"
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/05/28141921/909bdf1558f03e500d7d2deab5f72963.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybToz",
+                                    "slug": "india",
+                                    "name": "India",
+                                    "ancestors": null
+                                },
+                                {
+                                    "id": "dGVybTo0",
+                                    "slug": "national-trends",
+                                    "name": "National Trends",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybToz",
+                                                "slug": "india",
+                                                "name": "India"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "Delhi plans stricter B&B rules with CCTV mandate, room cap and new gold-silver classification",
+                        "slug": "delhi-plans-stricter-bb-rules-with-cctv-mandate-room-cap-and-new-gold-silver-classification",
+                        "date": "2026-05-27T19:15:24",
+                        "author": {
+                            "node": {
+                                "firstName": "Subhradip",
+                                "lastName": "Majumder"
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/05/27190541/01ac13a9c072b48e597d868292351c00.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybToz",
+                                    "slug": "india",
+                                    "name": "India",
+                                    "ancestors": null
+                                },
+                                {
+                                    "id": "dGVybTo0",
+                                    "slug": "national-trends",
+                                    "name": "National Trends",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybToz",
+                                                "slug": "india",
+                                                "name": "India"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "dGVybTozNQ==",
+                "name": "Lifestyle",
+                "slug": "lifestyle",
+                "posts": [
+                    {
+                        "title": "Why are people sexting? The answer isn’t what you think",
+                        "slug": "why-are-people-sexting-the-answer-isnt-what-you-think",
+                        "date": "2026-05-30T07:44:13",
+                        "author": {
+                            "node": {
+                                "firstName": "Subhradip",
+                                "lastName": "Majumder"
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/05/30073832/a40f349dbee12d20c76445a95e02fe5a.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybTozNQ==",
+                                    "slug": "lifestyle",
+                                    "name": "Lifestyle",
+                                    "ancestors": null
+                                },
+                                {
+                                    "id": "dGVybTo0MA==",
+                                    "slug": "relationships",
+                                    "name": "Relationships",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybTozNQ==",
+                                                "slug": "lifestyle",
+                                                "name": "Lifestyle"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "dGVybTo0MQ==",
+                "name": "Business",
+                "slug": "business",
+                "posts": [
+                    {
+                        "title": "Japan bans Indian mango imports after 20 years over pest-control concerns",
+                        "slug": "japan-bans-indian-mango-imports-after-20-years-over-pest-control-concerns",
+                        "date": "2026-05-30T07:35:41",
+                        "author": {
+                            "node": {
+                                "firstName": "Subhradip",
+                                "lastName": "Majumder"
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/uploads/2026/05/30073210/829bcfa50311018f4c52296055c02188.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybTo0MQ==",
+                                    "slug": "business",
+                                    "name": "Business",
+                                    "ancestors": null
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}
