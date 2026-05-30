@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      # Client-side requests in the browser will query the BFF via localhost
+      - NEXT_PUBLIC_API_URL=http://localhost:9595/bff/api
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: always
