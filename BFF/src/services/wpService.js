@@ -1,3 +1,4 @@
+const { getTopMenuSecondary } = require('../controller/postController');
 const wpClient = require('../utils/wpClient');
 const wpService = {
     getLatestPosts: async (count = 5) => {
@@ -76,15 +77,18 @@ const wpService = {
                             slug
                         }
                     }
+                  firstImage,firstLink,firstText,
+                  secondLink,secondText,secondImage,
+                  thirdLink,thirdText,thirdImage
                 }
             }
         }
     `;
 
     const initialData = await wpClient(initialQuery);
-
     const latestPosts = initialData?.latestPosts?.nodes || [];
     const layoutConfig = initialData?.page?.homepageLayoutConfig?.homepageSections?.nodes || [];
+    const {firstImage,firstLink,firstText,secondLink,secondText,secondImage,thirdLink,thirdText,thirdImage}= initialData?.page?.homepageLayoutConfig;
 
     // If no dynamic categories are selected, return early with just the latest posts
     if (!layoutConfig.length) {
@@ -158,7 +162,7 @@ const wpService = {
     // ── STEP 4: RETURN THE INTEGRATED PAYLOAD PACKAGE ──
     return {
         latestPosts,
-        dynamicSections
+        dynamicSections,firstImage,firstLink,firstText,secondLink,secondText,secondImage,thirdLink,thirdText,thirdImage
     };
 },
 
@@ -339,6 +343,50 @@ const wpService = {
         const query = `
             query GetMenus {
                 topMenu: menuItems(first: 100, where: {location: TOP_NAV}) {
+                    nodes {
+                    key: id
+                    label
+                    parentId
+                    path
+                    childItems{
+                        nodes{
+                        label
+                        path
+                        }
+                    }
+                    }
+                }
+            }
+        `;
+        const data = await wpClient(query);
+        return data?.topMenu || null;
+    },
+    getTopMenuPrimary: async () => {
+        const query = `
+            query GetMenus {
+                topMenu: menuItems(first: 100, where: {location: PRIMARY_NAV}) {
+                    nodes {
+                    key: id
+                    label
+                    parentId
+                    path
+                    childItems{
+                        nodes{
+                        label
+                        path
+                        }
+                    }
+                    }
+                }
+            }
+        `;
+        const data = await wpClient(query);
+        return data?.topMenu || null;
+    },
+    getTopMenuSecondary: async () => {
+        const query = `
+            query GetMenus {
+                topMenu: menuItems(first: 100, where: {location: SECONDARY_NAV}) {
                     nodes {
                     key: id
                     label

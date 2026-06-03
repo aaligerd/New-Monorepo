@@ -10,6 +10,8 @@ router.get('/author/:slug', postController.getAuthorDetail);
 router.get('/topic/:slug', postController.getTagDetail);
 router.get('/category/:slug', postController.getCategoryDetail);
 router.get('/topmenu/', postController.getTopMenuData);
+router.get('/topmenu/primary', postController.getTopMenuPrimary);
+router.get('/topmenu/secondary', postController.getTopMenuSecondary);
 router.get('/homepagesections/', postController.getHomePageSection);
 
 module.exports = router;

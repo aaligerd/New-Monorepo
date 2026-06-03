@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Syne:wght@700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Playfair Display", serif;
+  --font-sans: "Outfit", sans-serif;
+  --font-brutal: "Syne", sans-serif;
+
+  --color-viewport: #e9c46a;
+  --color-canvas: #f8f9fa;
+  --color-accent-orange: #f4a261;
+  --color-accent-coral: #e76f51;
+  --color-accent-green: #2a9d8f;
+  --color-accent-red: #d00000;
+  --color-brutal-black: #111111;
+}
+
+body {
+  background-color: var(--color-viewport);
+  color: var(--color-brutal-black);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Neo-Brutalist Card Helper Utility */
+.brutal-card {
+  background-color: var(--color-canvas);
+  border: 3px solid var(--color-brutal-black);
+  box-shadow: 4px 4px 0px 0px var(--color-brutal-black);
+  border-radius: 16px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.brutal-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px var(--color-brutal-black);
+}
+
+/* Flat brutalist shadows */
+.shadow-brutal {
+  box-shadow: 4px 4px 0px 0px var(--color-brutal-black);
+}
+
+.shadow-brutal-lg {
+  box-shadow: 8px 8px 0px 0px var(--color-brutal-black);
+}
+
+/* Thick borders */
+.border-brutal {
+  border: 3px solid var(--color-brutal-black);
+}
+
+/* Custom Gutenberg Content Styles */
+.brutal-prose p {
+  font-family: var(--font-sans);
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+  color: #222222;
+  font-size: 1.05rem;
+}
+
+.brutal-prose a {
+  color: var(--color-accent-coral);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.brutal-prose a:hover {
+  color: var(--color-brutal-black);
+  background-color: var(--color-accent-orange);
+}
+
+.brutal-prose blockquote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.15rem;
+  border-left: 6px solid var(--color-brutal-black);
+  background-color: #ffe6a7;
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+  box-shadow: 4px 4px 0px 0px var(--color-brutal-black);
+  border: 3px solid var(--color-brutal-black);
+  border-left-width: 6px;
+  border-radius: 8px;
+}
+
+/* Gutenberg custom list style */
+.brutal-prose ul, .brutal-prose ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.brutal-prose li {
+  margin-bottom: 0.5rem;
+  list-style-type: square;
+}
+
+/* News ticker animation */
+@keyframes ticker-scroll {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.ticker-track {
+  animation: ticker-scroll 35s linear infinite;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
+}

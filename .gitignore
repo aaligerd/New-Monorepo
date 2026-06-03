@@ -11,3 +11,7 @@ frontend/.env.local
 node_modules/
 .env
 .env.*
+example_layout.png
+example_layout_1.png
+layout1.webp
+layout2.webp
