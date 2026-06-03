@@ -4,7 +4,7 @@ import ArticlePage from "@/components/article/ArticlePage";
 import L1CategoryPage from "@/components/category/L1CategoryPage";
 import L2CategoryPage from "@/components/category/L2CategoryPage";
 
-export const revalidate = 60;
+export const revalidate = 120;
 
 // -- Fetchers ------------------------------------------
 
@@ -12,7 +12,7 @@ async function fetchPost(slug) {
   try {
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_API_URL}/posts/detail/${slug}`,
-      { next: { revalidate: 60 } }
+      { next: { revalidate: 120 } }
     );
     if (!res.ok) return null;
     const json = await res.json();
@@ -26,7 +26,7 @@ async function fetchL1Category(l1slug) {
   try {
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_API_URL}/posts/category/${l1slug}`,
-      { next: { revalidate: 60 } }
+      { next: { revalidate: 120 } }
     );
     if (!res.ok) return null;
     const json = await res.json();
@@ -40,7 +40,7 @@ async function fetchL2Category(l1slug, l2slug) {
   try {
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_API_URL}/posts/category/${l2slug}`,
-      { next: { revalidate: 60 } }
+      { next: { revalidate: 120 } }
     );
     if (!res.ok) return null;
     const json = await res.json();
