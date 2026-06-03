@@ -7,11 +7,13 @@ import { getPostUrl } from "../lib/util";
 import SpotlightCarousel from "@/components/home/SpotlightCarousel";
 import NewsletterForm from "@/components/home/NewsletterForm";
 
+export const revalidate = 60;
+
 async function getHomeData() {
   try {
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_API_URL}/posts/home`,
-      { next: { revalidate: 300 } }
+      { next: { revalidate: 60 } }
     );
     if (!res.ok) throw new Error("Failed to fetch home data");
     const json = await res.json();

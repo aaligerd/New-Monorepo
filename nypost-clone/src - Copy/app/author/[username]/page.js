@@ -1,11 +1,13 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 
+export const revalidate = 60;
+
 async function getAuthorData(username) {
   const url = `${process.env.NEXT_PUBLIC_API_URL}/posts/author/${username}`;
   try {
     const res = await fetch(url, {
-      next: { revalidate: 300 },
+      next: { revalidate: 60 },
     });
     
     if (!res.ok) return null;

@@ -4,13 +4,15 @@ import ArticlePage from "@/components/article/ArticlePage";
 import L1CategoryPage from "@/components/category/L1CategoryPage";
 import L2CategoryPage from "@/components/category/L2CategoryPage";
 
+export const revalidate = 60;
+
 // -- Fetchers ------------------------------------------
 
 async function fetchPost(slug) {
   try {
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_API_URL}/posts/detail/${slug}`,
-      { next: { revalidate: 3600 } }
+      { next: { revalidate: 60 } }
     );
     if (!res.ok) return null;
     const json = await res.json();
@@ -24,7 +26,7 @@ async function fetchL1Category(l1slug) {
   try {
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_API_URL}/posts/category/${l1slug}`,
-      { next: { revalidate: 300 } }
+      { next: { revalidate: 60 } }
     );
     if (!res.ok) return null;
     const json = await res.json();
@@ -38,7 +40,7 @@ async function fetchL2Category(l1slug, l2slug) {
   try {
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_API_URL}/posts/category/${l2slug}`,
-      { next: { revalidate: 300 } }
+      { next: { revalidate: 60 } }
     );
     if (!res.ok) return null;
     const json = await res.json();
