@@ -24,6 +24,7 @@ function NavItem({ item }) {
 export default function HeaderClient({ primaryMenuItems = [], secondaryMenuItems = [] }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [edition, setEdition] = useState("EN");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -108,8 +109,8 @@ export default function HeaderClient({ primaryMenuItems = [], secondaryMenuItems
             </span>
           </Link>
 
-          {/* Search Icon (Absolute Right - Desktop & Mobile) */}
-          <div className="absolute right-4 top-1/2 -translate-y-1/2">
+          {/* Search Icon & Edition Toggle (Absolute Right - Desktop & Mobile) */}
+          <div className="absolute right-4 top-1/2 -translate-y-1/2 flex flex-col items-center gap-y-2 md:gap-y-3">
             <Link
               href="/search"
               className="text-white hover:text-black transition-all flex items-center justify-center cursor-pointer"
@@ -118,15 +119,57 @@ export default function HeaderClient({ primaryMenuItems = [], secondaryMenuItems
               }}
               aria-label="Search"
             >
-              <FontAwesomeIcon icon={faMagnifyingGlass} className="text-xl sm:text-3xl md:text-4xl" />
+              <FontAwesomeIcon icon={faMagnifyingGlass} className="text-xl sm:text-2xl md:text-3xl" />
             </Link>
+
+            {/* Edition Toggle */}
+            <div className="flex flex-row items-center gap-1.5 sm:gap-2">
+              <span className="text-white text-[10px] sm:text-xs font-black uppercase font-sans tracking-wide leading-none select-none">
+                Edition
+              </span>
+              <div className="flex flex-row items-center bg-black border border-zinc-700 rounded-full p-0.5 overflow-hidden select-none">
+                <button 
+                  onClick={() => setEdition("EN")} 
+                  className={`px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full cursor-pointer font-sans text-[9px] sm:text-[10px] md:text-[11px] transition-all flex items-center gap-1 leading-none ${
+                    edition === "EN" 
+                      ? "bg-zinc-700 text-white font-black" 
+                      : "text-zinc-400 hover:text-white bg-black"
+                  }`}
+                >
+                  {edition === "EN" && <span className="text-[8px] sm:text-[10px] leading-none">✓</span>}
+                  ENG
+                </button>
+                <button 
+                  onClick={() => setEdition("BN")} 
+                  className={`px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full cursor-pointer font-sans text-[9px] sm:text-[10px] md:text-[11px] transition-all flex items-center gap-1 border-l border-zinc-800 leading-none ${
+                    edition === "BN" 
+                      ? "bg-zinc-700 text-white font-black" 
+                      : "text-zinc-400 hover:text-white bg-black"
+                  }`}
+                >
+                  {edition === "BN" && <span className="text-[8px] sm:text-[10px] leading-none">✓</span>}
+                  BN
+                </button>
+                <button 
+                  onClick={() => setEdition("HI")} 
+                  className={`px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full cursor-pointer font-sans text-[9px] sm:text-[10px] md:text-[11px] transition-all flex items-center gap-1 border-l border-zinc-800 leading-none ${
+                    edition === "HI" 
+                      ? "bg-zinc-700 text-white font-black" 
+                      : "text-zinc-400 hover:text-white bg-black"
+                  }`}
+                >
+                  {edition === "HI" && <span className="text-[8px] sm:text-[10px] leading-none">✓</span>}
+                  HI
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       {/* -- Centered Primary Tabloid Navigation (Horizontal Scrollable on Mobile) -- */}
       <nav
-        className={`bg-black sticky top-0 z-40 transition-shadow border-b-2 border-zinc-800 overflow-x-auto scrollbar-none ${
+        className={`bg-[#593b1b] sticky top-0 z-40 transition-shadow border-b-2 border-[#2B1D0E] overflow-x-auto scrollbar-none ${
           scrolled ? "shadow-[0_4px_20px_rgba(0,0,0,0.15)]" : ""
         }`}
       >
@@ -169,6 +212,8 @@ export default function HeaderClient({ primaryMenuItems = [], secondaryMenuItems
         menuItems={secondaryMenuItems}
         open={mobileOpen}
         onClose={() => setMobileOpen(false)}
+        edition={edition}
+        setEdition={setEdition}
       />
     </>
   );

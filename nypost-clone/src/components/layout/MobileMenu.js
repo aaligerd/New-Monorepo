@@ -56,7 +56,7 @@ function MobileNavItem({ item, onClose }) {
   );
 }
 
-export default function MobileMenu({ menuItems = [], open, onClose }) {
+export default function MobileMenu({ menuItems = [], open, onClose, edition = "EN", setEdition }) {
   useEffect(() => {
     const handler = (e) => { if (e.key === "Escape") onClose(); };
     window.addEventListener("keydown", handler);
@@ -118,6 +118,46 @@ export default function MobileMenu({ menuItems = [], open, onClose }) {
               <FontAwesomeIcon icon={faMagnifyingGlass} className="w-4 h-4" />
             </button>
           </form>
+        </div>
+
+        {/* Edition Toggle in Mobile Menu */}
+        <div className="px-5 py-3 border-b border-zinc-800/80 bg-[#0c0c0c] flex items-center justify-between">
+          <span className="text-zinc-400 font-bold uppercase tracking-wider text-xs font-sans">Edition</span>
+          <div className="flex flex-row items-center bg-black border border-zinc-700 rounded-full p-0.5 overflow-hidden select-none">
+            <button 
+              onClick={() => setEdition && setEdition("EN")} 
+              className={`px-3 py-1.5 rounded-full cursor-pointer font-sans text-xs transition-all flex items-center gap-1 leading-none ${
+                edition === "EN" 
+                  ? "bg-zinc-700 text-white font-black" 
+                  : "text-zinc-400 hover:text-white bg-black"
+              }`}
+            >
+              {edition === "EN" && <span className="text-[10px]">✓</span>}
+              ENG
+            </button>
+            <button 
+              onClick={() => setEdition && setEdition("BN")} 
+              className={`px-3 py-1.5 rounded-full cursor-pointer font-sans text-xs transition-all flex items-center gap-1 border-l border-zinc-800 leading-none ${
+                edition === "BN" 
+                  ? "bg-zinc-700 text-white font-black" 
+                  : "text-zinc-400 hover:text-white bg-black"
+              }`}
+            >
+              {edition === "BN" && <span className="text-[10px]">✓</span>}
+              BN
+            </button>
+            <button 
+              onClick={() => setEdition && setEdition("HI")} 
+              className={`px-3 py-1.5 rounded-full cursor-pointer font-sans text-xs transition-all flex items-center gap-1 border-l border-zinc-800 leading-none ${
+                edition === "HI" 
+                  ? "bg-zinc-700 text-white font-black" 
+                  : "text-zinc-400 hover:text-white bg-black"
+              }`}
+            >
+              {edition === "HI" && <span className="text-[10px]">✓</span>}
+              HI
+            </button>
+          </div>
         </div>
 
         {/* Nav — scrollable */}

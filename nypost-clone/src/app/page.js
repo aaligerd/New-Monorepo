@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import CategorySection from "@/components/category/CategorySection";
+import CategoryLayout3 from "@/components/category/CategoryLayout3";
+import CategoryLayout5 from "@/components/category/CategoryLayout5";
 import AdSlot from "@/components/ads/AdSlot";
 import NewsTicker from "@/components/layout/NewsTicker";
 import { getPostUrl } from "../lib/util";
@@ -64,8 +66,9 @@ export default async function HomePage() {
   const heroTitle = heroPost?.title || "";
   const heroLink = heroPost ? getPostUrl(heroPost) : "#";
 
-  // Next 12 articles for the Latest News Cards grid (fits perfectly in 3-column layout)
-  const latestNewsPosts = latestPosts.slice(1, 13);
+  // Data slices for the new layout-x
+  const gridPosts = latestPosts.slice(1, 4); // 3 posts starting from index 1 (2nd element)
+  const bulletPosts = latestPosts.slice(-4); // last 4 posts
 
   return (
     <>
@@ -107,7 +110,7 @@ export default async function HomePage() {
                     {/* Right text description and orange link (Slightly larger font size on desktop & tablet) */}
                     <div className="flex-grow min-w-0 text-xs sm:text-base md:text-[17px] lg:text-[18px] font-black text-zinc-900 group-hover:text-black transition-colors leading-snug font-sans">
                       <span>{item.text} </span>
-                      <span className="text-[#f99d1b] font-black uppercase whitespace-nowrap ml-1 group-hover:underline">
+                      <span className="text-[#f99d1b] font-black uppercase whitespace-nowrap ml-1 group-hover:text-[#593b1b]">
                         WATCH NOW &gt;
                       </span>
                     </div>
@@ -146,7 +149,7 @@ export default async function HomePage() {
                     {/* Centered Kicker / Category */}
                     <div className="text-center mb-4">
                       <span
-                        className="text-4xl md:text-6xl font-black uppercase tracking-tight text-[#dc2626] font-display"
+                        className="text-4xl md:text-6xl font-black uppercase tracking-tight text-[#1B77F9] font-display hover:text-[#F99D1B]"
                         style={{ fontFamily: "var(--font-oswald)" }}
                       >
                         {heroCategoryName}
@@ -185,16 +188,16 @@ export default async function HomePage() {
                     </div>
 
                     {/* Exclusive Alert Badge */}
-                    <div className="flex justify-center mt-6 mb-3">
+                    {/* <div className="flex justify-center mt-6 mb-3">
                       <span className="bg-[#dc2626] text-white text-xs font-black uppercase tracking-widest px-4 py-1 select-none font-sans">
                         EXCLUSIVE
                       </span>
-                    </div>
+                    </div> */}
 
                     {/* Centered Headline */}
                     <Link href={heroLink} className="group block text-center max-w-4xl mx-auto">
                       <h2
-                        className="text-3xl sm:text-4xl md:text-5xl font-black text-black group-hover:text-[#dc2626] transition-colors leading-tight uppercase font-display"
+                        className="text-3xl sm:text-4xl md:text-5xl font-black text-black group-hover:text-[#F99D1B] transition-colors leading-tight uppercase font-display"
                         style={{ fontFamily: "var(--font-oswald)", lineHeight: "1.1" }}
                       >
                         {heroTitle}
@@ -202,65 +205,100 @@ export default async function HomePage() {
                     </Link>
 
                     {/* Excerpt under the headline for completeness and high readability */}
-                    {heroPost.excerpt && (
-                      <p className="text-zinc-650 text-xs sm:text-sm text-center leading-relaxed mt-4 max-w-3xl mx-auto font-medium">
-                        {heroPost.excerpt.replace(/<[^>]*>/g, "")}
-                      </p>
-                    )}
+                    <div id="layout-x" className="border-t border-zinc-200 pt-6 mt-6 text-left">
+                      {/* Top bullet list section */}
+                      {bulletPosts.length > 0 && (
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3.5 mb-6">
+                          {bulletPosts.map((post) => (
+                            <Link
+                              key={post.slug}
+                              href={getPostUrl(post)}
+                              className="group flex items-start gap-2"
+                            >
+                              <span className="text-[#F99D1B] font-black shrink-0 text-base md:text-lg select-none leading-none mt-0.5">&gt;</span>
+                              <span className="text-xl sm:text-base font-bold text-zinc-900 group-hover:text-[#F99D1B] leading-snug font-sans">
+                                {post.title}
+                              </span>
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+
+                      {/* Divider between bullet list and grid */}
+                      {bulletPosts.length > 0 && gridPosts.length > 0 && (
+                        <div className="border-b border-zinc-200 mb-6"></div>
+                      )}
+
+                      {/* Bottom 3-column grid section */}
+                      {gridPosts.length > 0 && (
+                        <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-zinc-200 gap-6 md:gap-0 pb-2">
+                          {gridPosts.map((post, idx) => {
+                            const postImage = post.featuredImage?.node?.sourceUrl;
+                            const postTitle = post.title || "";
+                            const postLink = getPostUrl(post);
+                            
+                            // Determine padding per column to align with dividers
+                            let colPadding = "";
+                            if (idx === 0) colPadding = "md:pr-6 pb-6 md:pb-0";
+                            else if (idx === 1) colPadding = "md:px-6 py-6 md:py-0";
+                            else colPadding = "md:pl-6 pt-6 md:pt-0";
+
+                            // Determine layout components (badges/categories/authors)
+                            const categoryName = post.categories?.nodes?.[0]?.name || "NEWS";
+                            const authorName = post.author?.node 
+                              ? `${post.author.node.firstName || ""} ${post.author.node.lastName || ""}`.trim()
+                              : "";
+
+                            return (
+                              <div key={post.slug} className={`flex flex-col gap-3 group ${colPadding}`}>
+                                <Link href={postLink} className="block relative w-full aspect-[16/10] md:aspect-none md:h-[130px] lg:h-[160px] xl:h-[190px] border border-zinc-100 bg-zinc-50 overflow-hidden">
+                                  {postImage ? (
+                                    <Image
+                                      src={postImage}
+                                      alt={postTitle}
+                                      fill
+                                      className="object-cover group-hover:scale-102 transition-transform duration-300"
+                                      sizes="(max-w-768px) 100vw, 30vw"
+                                    />
+                                  ) : (
+                                    <div className="w-full h-full flex items-center justify-center font-black text-xs text-zinc-400 select-none tracking-widest" style={{ fontFamily: "var(--font-oswald)" }}>
+                                      NO IMAGE
+                                    </div>
+                                  )}
+                                </Link>
+
+                                <div className="flex select-none">
+                                  <span className="inline-block border border-[#F99D1B] -skew-x-12 px-2 py-0.5">
+                                    <span className="inline-block skew-x-12 text-[#F99D1B] text-[15px] font-black italic uppercase tracking-wider font-sans leading-none">
+                                      {categoryName}
+                                    </span>
+                                  </span>
+                                </div>
+
+                                <Link href={postLink} className="block mt-1">
+                                  <h3 className="text-base sm:text-lg md:text-[20px] font-black text-black leading-snug group-hover:text-[#F99D1B] transition-colors font-sans">
+                                    {postTitle}
+                                  </h3>
+                                </Link>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      )}
+
+                      {/* Bottom line at the end of the entire layout */}
+                      {gridPosts.length > 0 && (
+                        <div className="border-b border-zinc-200 mt-6"></div>
+                      )}
+                    </div>
                   </div>
                 )}
 
-                {/* Latest Bulletins Card Grid */}
-                {latestNewsPosts.length > 0 && (
-                  <section className="mb-8">
-                    <div className="flex items-center justify-between border-b-4 border-black pb-1.5 mb-6">
-                      <h2 className="text-xl font-black uppercase tracking-tight text-black font-display" style={{ fontFamily: "var(--font-oswald)" }}>
-                        LATEST BULLETINS
-                      </h2>
-                      <span className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-[#f99d1b] bg-black px-2.5 py-0.5 select-none animate-pulse">
-                        LIVE FEED
-                      </span>
-                    </div>
+                {/* Ad slot after the total hero section */}
+                <div className="mb-10">
+                  <AdSlot type="rectangle" id="post-hero" />
+                </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                      {latestNewsPosts.map((post) => (
-                        <Link
-                          key={post.slug}
-                          href={getPostUrl(post)}
-                          className="group block bg-white border border-zinc-200 p-4 hover:border-[#f99d1b] hover:shadow-lg transition-all duration-300"
-                        >
-                          <div className="aspect-video relative overflow-hidden mb-4 bg-zinc-50 border border-zinc-100">
-                            {post.featuredImage?.node?.sourceUrl ? (
-                              <Image
-                                src={post.featuredImage.node.sourceUrl}
-                                alt={post.title}
-                                fill
-                                className="object-cover group-hover:scale-105 transition-transform duration-500"
-                                sizes="(max-w-640px) 100vw, 30vw"
-                              />
-                            ) : (
-                              <div className="w-full h-full bg-zinc-100 flex items-center justify-center font-black text-xs select-none tracking-widest" style={{ fontFamily: "var(--font-oswald)" }}>
-                                NE
-                              </div>
-                            )}
-                          </div>
-
-                          <span className="text-[9px] font-black uppercase text-[#f99d1b] tracking-wider block mb-1">
-                            {post.categories?.nodes?.[0]?.name || "NEWS"}
-                          </span>
-                          <h3 className="text-sm font-bold text-zinc-900 group-hover:text-[#f99d1b] transition-colors leading-snug line-clamp-2 uppercase">
-                            {post.title}
-                          </h3>
-                          {post.excerpt && (
-                            <p className="text-zinc-500 text-[11px] leading-relaxed line-clamp-2 mt-1.5">
-                              {post.excerpt.replace(/<[^>]*>/g, "")}
-                            </p>
-                          )}
-                        </Link>
-                      ))}
-                    </div>
-                  </section>
-                )}
 
                 {/* Mobile Spotlight Carousel */}
                 {spotlightItems.length > 0 && (
@@ -273,7 +311,13 @@ export default async function HomePage() {
                 <div className="space-y-4">
                   {dynamicSections.map((section, idx) => (
                     <div key={section.id || idx}>
-                      <CategorySection title={section.name} categorySlug={section.slug} posts={section.posts} />
+                      {idx === 0 ? (
+                        <CategoryLayout3 title={section.name} categorySlug={section.slug} posts={section.posts} />
+                      ) : idx === 1 ? (
+                        <CategoryLayout5 title={section.name} categorySlug={section.slug} posts={section.posts} />
+                      ) : (
+                        <CategorySection title={section.name} categorySlug={section.slug} posts={section.posts} />
+                      )}
                       {idx === 0 && (
                         <div className="py-4">
                           <AdSlot type="leaderboard" id={`homepage-mid-${section.id || idx}`} />
