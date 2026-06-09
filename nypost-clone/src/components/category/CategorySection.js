@@ -12,13 +12,13 @@ export default function CategorySection({ title, categorySlug, posts = [] }) {
   return (
     <section className="py-6 border-b-2 border-zinc-200 last:border-0 font-sans">
       {/* Section Title Header */}
-      <div className="flex items-center justify-between border-b-4 border-black pb-1.5 mb-6">
-        <h2 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-black font-display" style={{ fontFamily: "var(--font-oswald)" }}>
+      <div className="flex items-center justify-between border-b-4 border-[#f99d1b] pb-1.5 mb-6">
+        <h2 className="text-xl sm:text-4xl font-black uppercase tracking-tight text-[#f99d1b] font-display" style={{ fontFamily: "var(--font-oswald)" }}>
           {title}
         </h2>
-        <span className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-[#f99d1b] bg-black px-2.5 py-0.5 select-none">
+        {/* <span className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-[#f99d1b] bg-black px-2.5 py-0.5 select-none">
           LATEST
-        </span>
+        </span> */}
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">

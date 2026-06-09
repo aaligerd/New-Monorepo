@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import CategorySection from "@/components/category/CategorySection";
 import CategoryLayout3 from "@/components/category/CategoryLayout3";
+import CategoryLayout4 from "@/components/category/CategoryLayout4";
 import CategoryLayout5 from "@/components/category/CategoryLayout5";
 import AdSlot from "@/components/ads/AdSlot";
 import NewsTicker from "@/components/layout/NewsTicker";
@@ -149,7 +150,7 @@ export default async function HomePage() {
                     {/* Centered Kicker / Category */}
                     <div className="text-center mb-4">
                       <span
-                        className="text-4xl md:text-6xl font-black uppercase tracking-tight text-[#1B77F9] font-display hover:text-[#F99D1B]"
+                        className="text-4xl md:text-6xl font-black uppercase tracking-tight text-[#dc8b1a] font-display hover:text-[#F99D1B]"
                         style={{ fontFamily: "var(--font-oswald)" }}
                       >
                         {heroCategoryName}
@@ -315,6 +316,8 @@ export default async function HomePage() {
                         <CategoryLayout3 title={section.name} categorySlug={section.slug} posts={section.posts} />
                       ) : idx === 1 ? (
                         <CategoryLayout5 title={section.name} categorySlug={section.slug} posts={section.posts} />
+                      ) : idx === 2 ? (
+                        <CategoryLayout4 title={section.name} categorySlug={section.slug} posts={section.posts} />
                       ) : (
                         <CategorySection title={section.name} categorySlug={section.slug} posts={section.posts} />
                       )}

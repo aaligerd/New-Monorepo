@@ -13,7 +13,7 @@ const splitTitle = (title) => {
   return { lead, rest };
 };
 
-export default function CategoryLayout3({ title, categorySlug, posts = [] }) {
+export default function CategoryLayout4({ title, categorySlug, posts = [] }) {
   if (!posts || posts.length === 0) return null;
 
   const leadPost = posts[0];
@@ -29,8 +29,46 @@ export default function CategoryLayout3({ title, categorySlug, posts = [] }) {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-        {/* Left Column: Stacked Side Stories (1/3 width on desktop) */}
-        <div className="order-2 md:order-1 md:col-span-4 md:border-r md:border-zinc-200 md:pr-8 pb-6 md:pb-0">
+        {/* Left Column: Lead Story (2/3 width on desktop) */}
+        <div className="md:col-span-8 md:border-r md:border-zinc-200 md:pr-8 pb-6 md:pb-0">
+          {leadPost && (
+            <div className="group flex flex-col gap-4">
+              {/* Large Split Headline */}
+              {(() => {
+                const { lead, rest } = splitTitle(leadPost.title);
+                return (
+                  <Link href={getPostUrl(leadPost, categorySlug)} className="block">
+                    <h3 className="text-2xl sm:text-3xl md:text-[32px] font-black text-black leading-tight transition-colors font-sans">
+                      <span className="text-[#F99D1B]">{lead} </span>
+                      <span>{rest}</span>
+                    </h3>
+                  </Link>
+                );
+              })()}
+
+              {/* Large image below the headline */}
+              <Link href={getPostUrl(leadPost, categorySlug)} className="block relative aspect-[4/3] w-full border border-zinc-200 overflow-hidden bg-zinc-50">
+                {leadPost.featuredImage?.node?.sourceUrl ? (
+                  <Image
+                    src={leadPost.featuredImage.node.sourceUrl}
+                    alt={leadPost.title}
+                    fill
+                    className="object-cover group-hover:scale-102 transition-transform duration-500"
+                    sizes="(max-w-1024px) 100vw, 55vw"
+                    priority
+                  />
+                ) : (
+                  <div className="absolute inset-0 bg-zinc-100 flex items-center justify-center text-zinc-400 font-black text-lg select-none uppercase tracking-widest" style={{ fontFamily: "var(--font-oswald)" }}>
+                    NO IMAGE
+                  </div>
+                )}
+              </Link>
+            </div>
+          )}
+        </div>
+
+        {/* Right Column: Stacked Side Stories (1/3 width on desktop) */}
+        <div className="md:col-span-4 md:pl-8 pt-6 md:pt-0">
           {sidePosts.length > 0 ? (
             <div className="flex flex-col gap-6 divide-y divide-zinc-200">
               {sidePosts.map((post, idx) => {
@@ -66,53 +104,6 @@ export default function CategoryLayout3({ title, categorySlug, posts = [] }) {
           ) : (
             <div className="text-zinc-400 text-xs italic py-4 select-none">
               No additional stories in this section.
-            </div>
-          )}
-        </div>
-
-        {/* Right Column: Lead Story (2/3 width on desktop) */}
-        <div className="order-1 md:order-2 md:col-span-8 md:pl-8 pt-6 md:pt-0">
-          {leadPost && (
-            <div className="group flex flex-col gap-4">
-              {/* Skewed EXCLUSIVE badge */}
-              {/* <div className="flex select-none">
-                <span className="inline-block bg-[#dc2626] -skew-x-12 px-3 py-1">
-                  <span className="inline-block skew-x-12 text-white text-[11px] font-black italic uppercase tracking-wider font-sans leading-none">
-                    EXCLUSIVE
-                  </span>
-                </span>
-              </div> */}
-
-              {/* Large Split Headline */}
-              {(() => {
-                const { lead, rest } = splitTitle(leadPost.title);
-                return (
-                  <Link href={getPostUrl(leadPost, categorySlug)} className="block">
-                    <h3 className="text-2xl sm:text-3xl md:text-[32px] font-black text-black leading-tight transition-colors font-sans">
-                      <span className="text-[#F99D1B]">{lead} </span>
-                      <span>{rest}</span>
-                    </h3>
-                  </Link>
-                );
-              })()}
-
-              {/* Large image below the headline */}
-              <Link href={getPostUrl(leadPost, categorySlug)} className="block relative aspect-[4/3] w-full border border-zinc-200 overflow-hidden bg-zinc-50">
-                {leadPost.featuredImage?.node?.sourceUrl ? (
-                  <Image
-                    src={leadPost.featuredImage.node.sourceUrl}
-                    alt={leadPost.title}
-                    fill
-                    className="object-cover group-hover:scale-102 transition-transform duration-500"
-                    sizes="(max-w-1024px) 100vw, 55vw"
-                    priority
-                  />
-                ) : (
-                  <div className="absolute inset-0 bg-zinc-100 flex items-center justify-center text-zinc-400 font-black text-lg select-none uppercase tracking-widest" style={{ fontFamily: "var(--font-oswald)" }}>
-                    NO IMAGE
-                  </div>
-                )}
-              </Link>
             </div>
           )}
         </div>
