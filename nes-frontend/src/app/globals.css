@@ -1,0 +1,247 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --font-oswald: var(--font-worksans), sans-serif;
+  --font-merriweather: var(--font-playfair), serif;
+  --font-source: var(--font-worksans), sans-serif;
+  --brand-orange: #f99d1b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-samay), sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-oswald), sans-serif;
+}
+
+.font-serif {
+  font-family: var(--font-merriweather), serif;
+}
+
+/* Tabloid Headline font sizing & tracking overrides */
+h1, h2, h3 {
+  letter-spacing: -0.01em;
+}
+
+/* News ticker scroll animation */
+@keyframes ticker-scroll {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.ticker-track {
+  animation: ticker-scroll 80s linear infinite;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+/* Article rich prose custom styling overrides */
+.article-body p {
+  margin-bottom: 1.5rem;
+  line-height: 1.9;
+  color: #1f2937;
+  font-size: 1.0625rem;
+  font-family: var(--font-samay), serif;
+}
+
+.article-body h2 {
+  font-family: var(--font-oswald), sans-serif;
+  font-size: 1.625rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 2.25rem 0 0.875rem;
+  border-bottom: 2px solid #000000;
+  padding-bottom: 4px;
+}
+
+.article-body h3 {
+  font-family: var(--font-oswald), sans-serif;
+  font-size: 1.375rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #111827;
+  margin: 1.75rem 0 0.75rem;
+}
+
+.article-body a {
+  color: var(--brand-orange);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: bold;
+}
+
+.article-body a:hover {
+  color: #000000;
+}
+
+.article-body blockquote {
+  border-left: 6px solid var(--brand-orange);
+  padding: 0.75rem 1.25rem;
+  margin: 1.75rem 0;
+  color: #4b5563;
+  font-style: italic;
+  background-color: #fcfbf9;
+  font-family: var(--font-merriweather), serif;
+}
+
+.article-body img {
+  width: 100%;
+  border-radius: 2px;
+  margin: 1.75rem 0;
+}
+
+/* Elegant drop-cap for editorial print visual identity */
+.article-body p:first-of-type::first-letter {
+  float: left;
+  font-family: var(--font-oswald), sans-serif;
+  font-size: 4rem;
+  line-height: 0.8;
+  font-weight: 900;
+  margin-right: 0.625rem;
+  margin-top: 0.15rem;
+  color: var(--brand-orange);
+}
+
+/* Tabloid list bullet styles */
+.article-body ul {
+  list-style-type: square;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.article-body ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.article-body li {
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+}
+
+/* Tabloid table rendering */
+.article-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.875rem;
+}
+
+.article-body th {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: var(--font-oswald), sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px 12px;
+  border: 1px solid #1f2937;
+  text-align: left;
+}
+
+.article-body td {
+  padding: 8px 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.article-body tr:nth-child(even) {
+  background-color: #f7f6f2;
+}
+
+/* Slide up animation for Toast popups */
+@keyframes slide-in-up {
+  from {
+    transform: translateY(1rem) scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-up {
+  animation: slide-in-up 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Responsive tabloid brand shadow */
+.logo-text-shadow {
+  text-shadow: 2px 2px 0px #000000;
+}
+@media (min-width: 640px) {
+  .logo-text-shadow {
+    text-shadow: 3px 3px 0px #000000;
+  }
+}
+
+/* Hide scrollbar utility for clean horizontal swipe navigation */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Dark mode overrides for article rich prose content */
+.dark .article-body p {
+  color: #e5e7eb; /* Light gray text for readability */
+}
+.dark .article-body h2 {
+  color: #ffffff;
+  border-bottom: 2px solid #27272a; /* matches zinc-800 */
+}
+.dark .article-body h3 {
+  color: #ffffff;
+}
+.dark .article-body blockquote {
+  color: #d1d5db;
+  background-color: #0c0a09; /* dark warm stone bg */
+  border-left-color: var(--brand-orange);
+}
+.dark .article-body td {
+  border-color: #27272a;
+}
+.dark .article-body tr:nth-child(even) {
+  background-color: #0c0a09;
+}
+.dark .article-body a:hover {
+  color: #ffffff;
+}
+
+/* Mobile headings overrides for article detail pages to match print layout mockup */
+@media (max-width: 767px) {
+  .article-body h2 {
+    font-family: var(--font-merriweather), serif !important;
+    font-size: 1.5rem !important;
+    font-weight: bold !important;
+    text-transform: none !important;
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+    margin: 1.75rem 0 0.75rem !important;
+  }
+  .article-body h3 {
+    font-family: var(--font-merriweather), serif !important;
+    font-size: 1.25rem !important;
+    font-weight: bold !important;
+    text-transform: none !important;
+    margin: 1.5rem 0 0.5rem !important;
+  }
+}
+
