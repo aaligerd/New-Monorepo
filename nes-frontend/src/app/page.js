@@ -34,8 +34,43 @@ async function getHomeData() {
 }
 
 export const metadata = {
-  title: "News Eisamay | Bold Tabloid News",
-  description: "Get the latest breaking regional updates, political affairs, business reporting, and stories from News Eisamay.",
+  title: "News Eisamay | Latest regional updates, political affairs, business & sports news",
+  description: "Read bold, breaking regional news, politics, cricket updates, business reports, entertainment and lifestyle stories on News Eisamay.",
+  keywords: [
+    "News Eisamay",
+    "breaking news",
+    "regional updates",
+    "politics",
+    "cricket news",
+    "business updates",
+    "entertainment",
+    "lifestyle"
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "News Eisamay | Latest regional updates, political affairs, business & sports news",
+    description: "Read bold, breaking regional news, politics, cricket updates, business reports, entertainment and lifestyle stories on News Eisamay.",
+    url: "/",
+    siteName: "News Eisamay",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/images/en-logo-light.webp",
+        width: 1200,
+        height: 630,
+        alt: "News Eisamay Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "News Eisamay | Latest regional updates, political affairs, business & sports news",
+    description: "Read bold, breaking regional news, politics, cricket updates, business reports, entertainment and lifestyle stories on News Eisamay.",
+    images: ["/images/en-logo-light.webp"],
+  },
 };
 
 export default async function HomePage() {
@@ -70,59 +105,73 @@ export default async function HomePage() {
   const heroTitle = heroPost?.title || "";
   const heroLink = heroPost ? getPostUrl(heroPost) : "#";
 
-  const indiaSec = dynamicSections.find(s => s.slug === "india");
-  const wbSec = dynamicSections.find(s => s.slug === "west-bengal");
-  const sportsSec = dynamicSections.find(s => s.slug === "sports");
-  const entertainmentSec = dynamicSections.find(s => s.slug === "entertainment" || s.slug === "entertainment-news");
-  const businessSec = dynamicSections.find(s => s.slug === "business" || s.slug === "business-news");
-  const lifestyleSec = dynamicSections.find(s => s.slug === "lifestyle" || s.slug === "lifestyle-news");
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "NewsMediaOrganization",
+    "name": "News Eisamay",
+    "alternateName": "NewsEisamay",
+    "url": "http://localhost:3000",
+    "logo": "http://localhost:3000/images/en-logo-light.webp",
+    "description": "Read bold, breaking regional news, politics, cricket updates, business reports, entertainment and lifestyle stories on News Eisamay.",
+    "sameAs": [
+      "https://www.facebook.com",
+      "https://twitter.com"
+    ]
+  };
 
   return (
-    <main className="min-h-screen bg-white dark:bg-black px-4 lg:px-[10%] mx-auto py-6 flex flex-col gap-6">
-      {/* Top Stories Bar Component - 10 posts (Desktop only, mobile uses header PostTicker) */}
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <main className="min-h-screen bg-white dark:bg-black px-4 lg:px-[10%] mx-auto py-6 flex flex-col gap-6">
+        <h1 className="sr-only">News Eisamay | Latest regional updates, political affairs, business & sports news</h1>
+        {/* Top Stories Bar Component - rest of the latest posts (Desktop only, mobile uses header PostTicker) */}
       <div className="hidden lg:block ">
-        <TopStoriesBar posts={latestPosts.slice(0, 10)} />
+        <TopStoriesBar posts={latestPosts.slice(7)} />
       </div>
 
       {/* Hero Carousel Component - 7 posts */}
       <HeroCarousel posts={latestPosts.slice(0, 7)} />
 
-      {/* Section 1 (India & West Bengal Layout) */}
+      {/* Section 1 (First two dynamic sections, e.g., India & West Bengal Layout) */}
       <Section1
-        leftTitle="India"
-        leftPosts={indiaSec?.posts?.slice(1, 5) || []}
-        middlePost={indiaSec?.posts?.[0] || null}
-        rightTitle="West Bengal"
-        rightPosts={wbSec?.posts?.slice(0, 4) || []}
+        leftTitle={dynamicSections[0]?.name || "India"}
+        leftPosts={dynamicSections[0]?.posts?.slice(1, 5) || []}
+        middlePost={dynamicSections[0]?.posts?.[0] || null}
+        rightTitle={dynamicSections[1]?.name || "West Bengal"}
+        rightPosts={dynamicSections[1]?.posts?.slice(0, 4) || []}
       />
 
-      {/* Section 2 (National Trend Carousel) */}
+      {/* Section 2 (Third dynamic section, e.g., National Trend Carousel) */}
       <Section2
-        title="National Trend"
-        posts={indiaSec?.posts?.slice(0, 8) || []}
+        title={dynamicSections[2]?.name || "National Trend"}
+        posts={dynamicSections[2]?.posts?.slice(0, 8) || []}
       />
 
       {/* YouTube Channel Video Carousel */}
       <YoutubeCarousel />
 
-      {/* Section 3 (World & Sports Layout) */}
+      {/* Section 3 (Fourth & Fifth dynamic sections, e.g., World & Sports Layout) */}
       <Section3
-        leftTitle="World"
-        leftPosts={[]} // Since World isn't in API, fallback to mockup data
-        middleTitle="Sports"
-        middlePosts={sportsSec?.posts?.slice(1, 5) || []}
-        rightPost={sportsSec?.posts?.[0] || null}
+        leftTitle={dynamicSections[3]?.name || "World"}
+        leftPosts={dynamicSections[3]?.posts || []}
+        middleTitle={dynamicSections[4]?.name || "Sports"}
+        middlePosts={dynamicSections[4]?.posts?.slice(1, 6) || []}
+        rightPost={dynamicSections[4]?.posts?.[0] || null}
       />
 
-      {/* Section 4 (Entertainment, Business, Lifestyle Layout) */}
+      {/* Section 4 (Sixth, Seventh, & Eighth dynamic sections, e.g., Entertainment, Business, Lifestyle Layout) */}
       <Section4
-        col1Title="Entertainment"
-        col1Posts={entertainmentSec?.posts || []}
-        col2Title="Business"
-        col2Posts={businessSec?.posts || []}
-        col3Title="Lifestyle"
-        col3Posts={lifestyleSec?.posts || []}
+        col1Title={dynamicSections[5]?.name || "Entertainment"}
+        col1Posts={dynamicSections[5]?.posts || []}
+        col2Title={dynamicSections[6]?.name || "Business"}
+        col2Posts={dynamicSections[6]?.posts || []}
+        col3Title={dynamicSections[7]?.name || "Lifestyle"}
+        col3Posts={dynamicSections[7]?.posts || []}
       />
     </main>
+    </>
   );
 }

@@ -130,5 +130,5 @@ export default function WpContentRenderer({ html }) {
     },
   };
 
-  return <div className="article-body font-serif">{parse(html, parserOptions)}</div>;
+  return <div className="article-body">{parse(html, parserOptions)}</div>;
 }

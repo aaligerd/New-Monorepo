@@ -224,7 +224,7 @@ export default function Section1({
           {/* Header */}
           <Link
             href={`/${rightTitle.toLowerCase().replace(/\s+/g, "-")}`}
-            className="flex items-center gap-1.5 text-xl tracking-wider uppercase mb-4 text-black dark:text-white border-t border-[#e9e9e9] pt-3 dark:border-zinc-900 pb-2.5 group"
+            className="flex items-center gap-1.5 text-xl tracking-wider uppercase mb-4 text-black font-black dark:text-white border-t border-[#e9e9e9] pt-3 dark:border-zinc-900 pb-2.5 group"
           >
             <span>{rightTitle}</span>
             <FontAwesomeIcon

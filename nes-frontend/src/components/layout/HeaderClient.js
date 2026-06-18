@@ -181,7 +181,7 @@ function PostTicker({ posts }) {
   );
 }
 
-export default function HeaderClient({ primaryMenuItems = [], secondaryMenuItems = [], latestPosts = [] }) {
+export default function HeaderClient({ primaryMenuItems = [], secondaryMenuItems = [], latestPosts = [], newsTicker = "" }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [theme, setTheme] = useState("light");
   const [hoveredItem, setHoveredItem] = useState(null);
@@ -213,13 +213,13 @@ export default function HeaderClient({ primaryMenuItems = [], secondaryMenuItems
   }, [mobileOpen]);
 
   // Find dynamic children matching hovered item
-  const hoveredCategory = MENU_WITH_SUBMENUS.find(item => item.label === hoveredItem);
+  const hoveredCategory = primaryMenuItems.find(item => item.label === hoveredItem);
   const activeChildren = hoveredCategory?.children || [];
 
   return (
     <>
       {/* 1. Breaking News Red Ticker at the absolute top */}
-      <NewsTicker />
+      <NewsTicker newsTicker={newsTicker} />
 
       {/* 2. Desktop Category Navbar with Dropdown Sub-menus */}
       <div
@@ -234,7 +234,7 @@ export default function HeaderClient({ primaryMenuItems = [], secondaryMenuItems
                 <FontAwesomeIcon icon={faBuildingColumns} className="text-lg" />
               </Link>
               <ul className="flex items-center gap-6 xl:gap-8 text-[13px] font-bold tracking-wide text-black dark:text-white font-sans h-14">
-                {MENU_WITH_SUBMENUS.map((item, index) => (
+                {primaryMenuItems.map((item, index) => (
                   <li
                     key={index}
                     className="hover:text-[#f99d1b] transition-colors whitespace-nowrap h-full flex items-center cursor-pointer text-sm"
@@ -284,15 +284,15 @@ export default function HeaderClient({ primaryMenuItems = [], secondaryMenuItems
               <span className="w-5 h-[2.5px] bg-black dark:bg-white rounded-full"></span>
             </button>
 
-            <Link href="/shorts" className="flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-black text-black dark:text-white hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-colors select-none">
+            {/* <Link href="/shorts" className="flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-black text-black dark:text-white hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-colors select-none">
               <span className="w-2 h-2 rounded-full bg-red-400"></span>
               <span className="text-xs font-bold font-sans">Shorts</span>
-            </Link>
+            </Link> */}
 
-            <Link href="/breaking" className="flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-black text-black dark:text-white hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-colors select-none">
+            {/* <Link href="/breaking" className="flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-black text-black dark:text-white hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-colors select-none">
               <span className="w-2 h-2 rounded-full bg-red-400"></span>
               <span className="text-xs font-bold font-sans">Breaking News</span>
-            </Link>
+            </Link> */}
           </div>
 
           {/* Center Brand Logo */}
@@ -415,9 +415,11 @@ export default function HeaderClient({ primaryMenuItems = [], secondaryMenuItems
 
       {/* 6. Mobile Side Menu Drawer Overlay */}
       <MobileMenu
-        menuItems={secondaryMenuItems}
+        menuItems={primaryMenuItems}
         open={mobileOpen}
         onClose={() => setMobileOpen(false)}
+        theme={theme}
+        toggleTheme={toggleTheme}
       />
     </>
   );

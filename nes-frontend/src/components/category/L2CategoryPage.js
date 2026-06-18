@@ -8,7 +8,7 @@ export default function L2CategoryPage({ l1slug, l2slug, data }) {
 
   return (
     <main className="max-w-7xl mx-auto px-4 lg:px-[10%] py-8 font-sans bg-white dark:bg-black text-black dark:text-white transition-colors duration-200">
-      <nav className="flex items-center gap-1 text-xs text-zinc-400 font-bold uppercase tracking-wider mb-6">
+      <nav className="flex items-center gap-1 text-xs text-zinc-400 font-bold  tracking-wider mb-6">
         <Link href="/" className="hover:text-[#f99d1b] transition-colors">Home</Link>
         <span>/</span>
         <Link href={`/${l1slug}`} className="hover:text-[#f99d1b] transition-colors capitalize">

@@ -1,0 +1,2507 @@
+{
+    "success": true,
+    "data": {
+        "latestPosts": [
+            {
+                "title": "Smriti Mandhana earns spot in TIME’s top 100 sports influencers list, joins Messi, Ronaldo and Alcaraz",
+                "slug": "smriti-mandhana-earns-spot-in-times-top-100-sports-influencers-list-joins-messi-ronaldo-and-alcaraz",
+                "excerpt": "<p>Indian cricket star Smriti Mandhana has been named in TIME’s 100 Most Influential People in Sports 2026, joining global icons Lionel Messi, Cristiano Ronaldo and Carlos Alcaraz.</p>\n",
+                "date": "2026-06-18T13:19:52",
+                "author": {
+                    "node": {
+                        "firstName": null,
+                        "lastName": null
+                    }
+                },
+                "featuredImage": {
+                    "node": {
+                        "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18131701/c4314ccbc0210ab82e7656e169dc0f59.webp"
+                    }
+                },
+                "categories": {
+                    "nodes": [
+                        {
+                            "id": "dGVybToyMg==",
+                            "slug": "cricket",
+                            "name": "Cricket",
+                            "ancestors": {
+                                "nodes": [
+                                    {
+                                        "id": "dGVybToyMQ==",
+                                        "slug": "sports",
+                                        "name": "Sports"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "dGVybToyMQ==",
+                            "slug": "sports",
+                            "name": "Sports",
+                            "ancestors": null
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "What Bengal’s return to PMFBY means for farmers and why Bihar may follow?",
+                "slug": "what-bengals-return-to-pmfby-means-for-farmers-and-why-bihar-may-follow",
+                "excerpt": "<p>Amid a weak monsoon forecast, West Bengal will rejoin PMFBY this kharif season, with Bihar likely to follow in rabi, expanding India&#8217;s crop insurance coverage. West Bengal, India’s biggest rice-producing state, will re-enter the Pradhan Mantri Fasal Bima Yojana (PMFBY) from the current kharif season. constraints. Sources told the paper that Prime Minister Narendra Modi [&hellip;]</p>\n",
+                "date": "2026-06-18T12:33:54",
+                "author": {
+                    "node": {
+                        "firstName": null,
+                        "lastName": null
+                    }
+                },
+                "featuredImage": {
+                    "node": {
+                        "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18123318/b837c865e8322430bcb88572aeca5ecf.webp"
+                    }
+                },
+                "categories": {
+                    "nodes": [
+                        {
+                            "id": "dGVybToxMw==",
+                            "slug": "others-west-bengal",
+                            "name": "Others",
+                            "ancestors": {
+                                "nodes": [
+                                    {
+                                        "id": "dGVybTo4",
+                                        "slug": "west-bengal",
+                                        "name": "West Bengal"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "dGVybTo4",
+                            "slug": "west-bengal",
+                            "name": "West Bengal",
+                            "ancestors": null
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Coffee, hookah and Rs 8,500 bill: Kolkata man’s Bumble date goes viral",
+                "slug": "coffee-hookah-and-rs-8500-bill-kolkata-mans-bumble-date-goes-viral",
+                "excerpt": "<p>A routine meet-up in Kolkata turned into a shocking experience when a man claimed he was pressured into paying a high cafe bill during a Bumble date. A dating experience in Kolkata has triggered widespread discussion online after a man alleged he was caught in a billing scam during a meeting arranged through Bumble. The [&hellip;]</p>\n",
+                "date": "2026-06-18T12:29:59",
+                "author": {
+                    "node": {
+                        "firstName": null,
+                        "lastName": null
+                    }
+                },
+                "featuredImage": {
+                    "node": {
+                        "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18122919/9754eb0b6af112fb80fc9d2a71a93d6d.webp"
+                    }
+                },
+                "categories": {
+                    "nodes": [
+                        {
+                            "id": "dGVybTo2",
+                            "slug": "crime",
+                            "name": "Crime",
+                            "ancestors": {
+                                "nodes": [
+                                    {
+                                        "id": "dGVybToz",
+                                        "slug": "india",
+                                        "name": "India"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "dGVybToz",
+                            "slug": "india",
+                            "name": "India",
+                            "ancestors": null
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Can NCPI reshape Bengal politics after claiming support of 20 MPs? Party stakes claim to Bengal’s biggest bloc",
+                "slug": "can-ncpi-reshape-bengal-politics-after-claiming-support-of-20-mps-party-stakes-claim-to-bengals-biggest-bloc",
+                "excerpt": "<p>NCPI says it has become West Bengal&#8217;s largest parliamentary bloc after 20 rebel Trinamool Congress MPs joined the little-known Tripura-based party. The Nationalist Citizens Party of India (NCPI), a registered but unrecognized outfit, said on Monday that it had become the “largest parliamentary bloc from West Bengal” after the merger of 20 rebel Trinamool Congress [&hellip;]</p>\n",
+                "date": "2026-06-18T12:26:09",
+                "author": {
+                    "node": {
+                        "firstName": null,
+                        "lastName": null
+                    }
+                },
+                "featuredImage": {
+                    "node": {
+                        "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18122450/5e4a1bd532f017f18ef153b58a12f4d2.webp"
+                    }
+                },
+                "categories": {
+                    "nodes": [
+                        {
+                            "id": "dGVybToxMQ==",
+                            "slug": "politics-west-bengal",
+                            "name": "Politics",
+                            "ancestors": {
+                                "nodes": [
+                                    {
+                                        "id": "dGVybTo4",
+                                        "slug": "west-bengal",
+                                        "name": "West Bengal"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "dGVybTo4",
+                            "slug": "west-bengal",
+                            "name": "West Bengal",
+                            "ancestors": null
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "‘No toto on GT Road’: BJP MLA Dipanjan Chakraborty announces tough measures to ease congestion in Konnagar, Uttarpara",
+                "slug": "no-toto-on-gt-road-bjp-mla-dipanjan-chakraborty-announces-tough-measures-to-ease-congestion-in-konnagar-uttarpara",
+                "excerpt": "<p>BJP MLA Dipanjan Chakraborty announced strict measures to regulate e-rickshaws in Uttarpara and Konnagar. BJP MLA Dipanjan Chakraborty announced a series of measures to regulate e-rickshaw movement in Uttarpara and Konnagar, citing growing traffic congestion and recent reports of clashes among drivers. The decisions were taken jointly by the police, the Regional Transport Office (RTO), [&hellip;]</p>\n",
+                "date": "2026-06-18T12:21:10",
+                "author": {
+                    "node": {
+                        "firstName": null,
+                        "lastName": null
+                    }
+                },
+                "featuredImage": {
+                    "node": {
+                        "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18122019/35eb3e664eeb4c3520a495b6d0011120-1.webp"
+                    }
+                },
+                "categories": {
+                    "nodes": [
+                        {
+                            "id": "dGVybToxMA==",
+                            "slug": "district",
+                            "name": "District",
+                            "ancestors": {
+                                "nodes": [
+                                    {
+                                        "id": "dGVybTo4",
+                                        "slug": "west-bengal",
+                                        "name": "West Bengal"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "dGVybTo4",
+                            "slug": "west-bengal",
+                            "name": "West Bengal",
+                            "ancestors": null
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Kolkata sizzles at 36°C as North Bengal braces for heavy rain; relief likely from June 20",
+                "slug": "kolkata-sizzles-at-36c-as-north-bengal-braces-for-heavy-rain-relief-likely-from-june-20",
+                "excerpt": "<p>North Bengal faces heavy rain and thunderstorm alerts, while South Bengal continues to battle heat and humidity; weather conditions may improve with rain from June 20. The monsoon appears to have split West Bengal into two contrasting weather zones. While North Bengal continues to receive widespread rainfall, residents across South Bengal are still waiting for [&hellip;]</p>\n",
+                "date": "2026-06-18T12:17:46",
+                "author": {
+                    "node": {
+                        "firstName": null,
+                        "lastName": null
+                    }
+                },
+                "featuredImage": {
+                    "node": {
+                        "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18121658/35eb3e664eeb4c3520a495b6d0011120.webp"
+                    }
+                },
+                "categories": {
+                    "nodes": [
+                        {
+                            "id": "dGVybTo5",
+                            "slug": "kolkata",
+                            "name": "Kolkata",
+                            "ancestors": {
+                                "nodes": [
+                                    {
+                                        "id": "dGVybTo4",
+                                        "slug": "west-bengal",
+                                        "name": "West Bengal"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "dGVybTo4",
+                            "slug": "west-bengal",
+                            "name": "West Bengal",
+                            "ancestors": null
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "‘Trade will be cheaper, quicker and easier’: India-UK free trade deal to take effect on July 15",
+                "slug": "trade-will-be-cheaper-quicker-and-easier-india-uk-free-trade-deal-to-take-effect-on-july-15",
+                "excerpt": "<p>India and the UK will implement their landmark Free Trade Agreement from July 15, paving the way for lower tariffs, stronger trade ties, and fresh opportunities for businesses and India and the United Kingdom (UK) have confirmed that their long-awaited Comprehensive Economic and Trade Agreement (CETA) will officially take effect from July 15, 2026. The [&hellip;]</p>\n",
+                "date": "2026-06-18T12:14:10",
+                "author": {
+                    "node": {
+                        "firstName": null,
+                        "lastName": null
+                    }
+                },
+                "featuredImage": {
+                    "node": {
+                        "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18121339/9d4aa470a09e2b97930943a494b74b0b.webp"
+                    }
+                },
+                "categories": {
+                    "nodes": [
+                        {
+                            "id": "dGVybToz",
+                            "slug": "india",
+                            "name": "India",
+                            "ancestors": null
+                        },
+                        {
+                            "id": "dGVybTo0",
+                            "slug": "national-trend",
+                            "name": "National Trend",
+                            "ancestors": {
+                                "nodes": [
+                                    {
+                                        "id": "dGVybToz",
+                                        "slug": "india",
+                                        "name": "India"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Delhi records below-normal temperatures; IMD issues rain, thunderstorm alerts for Himachal and Rajasthan",
+                "slug": "delhi-records-below-normal-temperatures-imd-issues-rain-thunderstorm-alerts-for-himachal-and-rajasthan-2",
+                "excerpt": "<p>Delhi enjoys below-normal temperatures and satisfactory air quality, while IMD issues rain, thunderstorm and hail alerts for Himachal Pradesh and Rajasthan. Residents of Delhi experienced relatively comfortable weather on Wednesday as temperatures stayed below the seasonal average across most parts of the city. The rise in daytime heat was modest, coming a day after the [&hellip;]</p>\n",
+                "date": "2026-06-18T12:10:53",
+                "author": {
+                    "node": {
+                        "firstName": null,
+                        "lastName": null
+                    }
+                },
+                "featuredImage": {
+                    "node": {
+                        "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18121023/c0e57bc736261b6e2920cd1c50e0832d-1.webp"
+                    }
+                },
+                "categories": {
+                    "nodes": [
+                        {
+                            "id": "dGVybToz",
+                            "slug": "india",
+                            "name": "India",
+                            "ancestors": null
+                        },
+                        {
+                            "id": "dGVybTo0",
+                            "slug": "national-trend",
+                            "name": "National Trend",
+                            "ancestors": {
+                                "nodes": [
+                                    {
+                                        "id": "dGVybToz",
+                                        "slug": "india",
+                                        "name": "India"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "EPFO 3.0 may launch by June-end with UPI and ATM withdrawals; here’s how it could work",
+                "slug": "epfo-3-0-may-launch-by-june-end-with-upi-and-atm-withdrawals-heres-how-it-could-work",
+                "excerpt": "<p>EPFO subscribers may soon be able to withdraw provident fund money instantly using UPI apps and EPF-linked ATMs under the upcoming EPFO 3.0 platform. India&#8217;s retirement savings system is on the verge of a major digital transformation as the Employees&#8217; Provident Fund Organisation prepares to launch EPFO 3.0 by the end of June.The upgraded platform [&hellip;]</p>\n",
+                "date": "2026-06-18T12:08:28",
+                "author": {
+                    "node": {
+                        "firstName": null,
+                        "lastName": null
+                    }
+                },
+                "featuredImage": {
+                    "node": {
+                        "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18120735/1265bfd6313ed80cdc17ec3cda80c607-1.webp"
+                    }
+                },
+                "categories": {
+                    "nodes": [
+                        {
+                            "id": "dGVybToz",
+                            "slug": "india",
+                            "name": "India",
+                            "ancestors": null
+                        },
+                        {
+                            "id": "dGVybTo0",
+                            "slug": "national-trend",
+                            "name": "National Trend",
+                            "ancestors": {
+                                "nodes": [
+                                    {
+                                        "id": "dGVybToz",
+                                        "slug": "india",
+                                        "name": "India"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Petrol and diesel prices on June 18: Will fuel rates come down after the US-Iran peace deal? Check city-wise rates",
+                "slug": "petrol-and-diesel-prices-on-june-18-will-fuel-rates-come-down-after-the-us-iran-peace-deal-check-city-wise-rates-2",
+                "excerpt": "<p>Petrol and diesel prices remained unchanged on June 18 despite a drop in crude oil prices after the US-Iran peace deal, with consumers awaiting possible fuel relief Despite a sharp decline in global crude oil prices following the US-Iran peace agreement, petrol and diesel rates across major Indian cities remained unchanged on June 18. Fuel [&hellip;]</p>\n",
+                "date": "2026-06-18T12:04:26",
+                "author": {
+                    "node": {
+                        "firstName": null,
+                        "lastName": null
+                    }
+                },
+                "featuredImage": {
+                    "node": {
+                        "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18120339/175fbb653f91d70a94be65584523481e-1.webp"
+                    }
+                },
+                "categories": {
+                    "nodes": [
+                        {
+                            "id": "dGVybToz",
+                            "slug": "india",
+                            "name": "India",
+                            "ancestors": null
+                        },
+                        {
+                            "id": "dGVybTo0",
+                            "slug": "national-trend",
+                            "name": "National Trend",
+                            "ancestors": {
+                                "nodes": [
+                                    {
+                                        "id": "dGVybToz",
+                                        "slug": "india",
+                                        "name": "India"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "God of football sheds a tear: Leo Messi’s heroics followed by emotional gesture at Argentina’s title defence opener",
+                "slug": "god-of-football-sheds-a-tear-leo-messis-heroics-followed-by-emotional-gesture-at-argentinas-title-defence-opener",
+                "excerpt": "<p>Lionel Messi began Argentina’s World Cup journey with a hat-trick against Algeria, but he revealed that the tears he shed after scoring were tied to personal struggles.</p>\n",
+                "date": "2026-06-18T12:02:11",
+                "author": {
+                    "node": {
+                        "firstName": null,
+                        "lastName": null
+                    }
+                },
+                "featuredImage": {
+                    "node": {
+                        "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18115854/1e5366dd63504f1e60e8d667167150b4.webp"
+                    }
+                },
+                "categories": {
+                    "nodes": [
+                        {
+                            "id": "dGVybToyMw==",
+                            "slug": "football",
+                            "name": "Football",
+                            "ancestors": {
+                                "nodes": [
+                                    {
+                                        "id": "dGVybToyMQ==",
+                                        "slug": "sports",
+                                        "name": "Sports"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "dGVybToyMQ==",
+                            "slug": "sports",
+                            "name": "Sports",
+                            "ancestors": null
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "What is Shigella? Kerala reports 146 cases and five deaths in six months",
+                "slug": "what-is-shigella-kerala-reports-146-cases-and-five-deaths-in-six-months",
+                "excerpt": "<p>Kerala has reported 146 Shigella cases and five deaths in six months. Know the symptoms, causes, treatment and preventive measures against the highly contagious bacterial infection As per PTI reports, Minister of State for Health K. Muraleedharan informed that there has been a sudden spike in the number of cases during the month of June [&hellip;]</p>\n",
+                "date": "2026-06-18T12:00:51",
+                "author": {
+                    "node": {
+                        "firstName": null,
+                        "lastName": null
+                    }
+                },
+                "featuredImage": {
+                    "node": {
+                        "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18120019/b66c45535f7d60f55d088e8a86bcc3ba.webp"
+                    }
+                },
+                "categories": {
+                    "nodes": [
+                        {
+                            "id": "dGVybToz",
+                            "slug": "india",
+                            "name": "India",
+                            "ancestors": null
+                        },
+                        {
+                            "id": "dGVybTo3",
+                            "slug": "others",
+                            "name": "Others",
+                            "ancestors": {
+                                "nodes": [
+                                    {
+                                        "id": "dGVybToz",
+                                        "slug": "india",
+                                        "name": "India"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "dGVybTox",
+                            "slug": "uncategorized",
+                            "name": "Uncategorized",
+                            "ancestors": null
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Cristiano Ronaldo misses golden chance as Portugal held to 1-1 draw by DR Congo in World Cup opener",
+                "slug": "cristiano-ronaldo-misses-golden-chance-as-portugal-held-to-1-1-draw-by-dr-congo-in-world-cup-opener",
+                "excerpt": "<p>Portugal were forced to settle for a 1-1 draw against DR Congo in their opening FIFA World Cup 2026 match after Yoane Wissa cancelled out Joao Neves&#8217; early strike.</p>\n",
+                "date": "2026-06-18T11:57:32",
+                "author": {
+                    "node": {
+                        "firstName": null,
+                        "lastName": null
+                    }
+                },
+                "featuredImage": {
+                    "node": {
+                        "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18115409/44cef703d8ee1fe4ab594091dd454b9a.webp"
+                    }
+                },
+                "categories": {
+                    "nodes": [
+                        {
+                            "id": "dGVybToyMw==",
+                            "slug": "football",
+                            "name": "Football",
+                            "ancestors": {
+                                "nodes": [
+                                    {
+                                        "id": "dGVybToyMQ==",
+                                        "slug": "sports",
+                                        "name": "Sports"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "dGVybToyMQ==",
+                            "slug": "sports",
+                            "name": "Sports",
+                            "ancestors": null
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Indian-origin man dies after brutal London stabbing; 7 detained in murder probe",
+                "slug": "indian-origin-man-dies-after-brutal-london-stabbing-7-detained-in-murder-probe",
+                "excerpt": "<p>A 26-year-old Indian-origin man was killed in a London stabbing, triggering a murder investigation as police appeal for witnesses and CCTV footage.</p>\n",
+                "date": "2026-06-18T11:50:44",
+                "author": {
+                    "node": {
+                        "firstName": null,
+                        "lastName": null
+                    }
+                },
+                "featuredImage": {
+                    "node": {
+                        "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18114828/cc1cebfaeb3381fcd1ca38c4c8805987.webp"
+                    }
+                },
+                "categories": {
+                    "nodes": [
+                        {
+                            "id": "dGVybToxNw==",
+                            "slug": "uk-news",
+                            "name": "UK News",
+                            "ancestors": {
+                                "nodes": [
+                                    {
+                                        "id": "dGVybToxNQ==",
+                                        "slug": "world",
+                                        "name": "World"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "dGVybToxNQ==",
+                            "slug": "world",
+                            "name": "World",
+                            "ancestors": null
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Hormuz choke point: Ship traffic plunges over 90%, 500 vessels remain in limbo",
+                "slug": "hormuz-choke-point-ship-traffic-plunges-over-90-500-vessels-remain-in-limbo",
+                "excerpt": "<p>Around 500 vessels remain backed up around the Strait of Hormuz, with experts warning trade recovery could take months as cargo delays and shipping costs mount.</p>\n",
+                "date": "2026-06-18T11:46:49",
+                "author": {
+                    "node": {
+                        "firstName": null,
+                        "lastName": null
+                    }
+                },
+                "featuredImage": {
+                    "node": {
+                        "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18114457/372c47a5093b45a310082e7ea884eb79.webp"
+                    }
+                },
+                "categories": {
+                    "nodes": [
+                        {
+                            "id": "dGVybToxOQ==",
+                            "slug": "gulf-news",
+                            "name": "Gulf News",
+                            "ancestors": {
+                                "nodes": [
+                                    {
+                                        "id": "dGVybToxNQ==",
+                                        "slug": "world",
+                                        "name": "World"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "dGVybToxNQ==",
+                            "slug": "world",
+                            "name": "World",
+                            "ancestors": null
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Karan Johar announces first Malayalam film Odiyan with Prithviraj and Manju Warrier",
+                "slug": "karan-johar-announces-first-malayalam-film-odiyan-with-prithviraj-and-manju-warrier",
+                "excerpt": "<p>Karan Johar enters Malayalam cinema with Odiyan, starring Prithviraj Sukumaran and Manju Warrier. The film will be directed by Rahul Sadasivan and marks Dharma Productions&#8217; regiona</p>\n",
+                "date": "2026-06-18T11:43:04",
+                "author": {
+                    "node": {
+                        "firstName": null,
+                        "lastName": null
+                    }
+                },
+                "featuredImage": {
+                    "node": {
+                        "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18114139/0b09164ab4bd73e54126b638b182a48e.webp"
+                    }
+                },
+                "categories": {
+                    "nodes": [
+                        {
+                            "id": "dGVybToyNg==",
+                            "slug": "entertainment",
+                            "name": "Entertainment",
+                            "ancestors": null
+                        },
+                        {
+                            "id": "dGVybTozMA==",
+                            "slug": "south",
+                            "name": "South",
+                            "ancestors": {
+                                "nodes": [
+                                    {
+                                        "id": "dGVybToyNg==",
+                                        "slug": "entertainment",
+                                        "name": "Entertainment"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Retirement on the horizon? Pritam’s statement fuels debate",
+                "slug": "retirement-on-the-horizon-pritams-statement-fuels-debate",
+                "excerpt": "<p>A recent statement by music composer Pritam has triggered speculation about his future in Bollywood, leaving fans wondering .</p>\n",
+                "date": "2026-06-18T11:40:24",
+                "author": {
+                    "node": {
+                        "firstName": null,
+                        "lastName": null
+                    }
+                },
+                "featuredImage": {
+                    "node": {
+                        "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18113735/b25433e4cfec2a918231e40a93259297.webp"
+                    }
+                },
+                "categories": {
+                    "nodes": [
+                        {
+                            "id": "dGVybToyNg==",
+                            "slug": "entertainment",
+                            "name": "Entertainment",
+                            "ancestors": null
+                        },
+                        {
+                            "id": "dGVybTozMQ==",
+                            "slug": "others-entertainment",
+                            "name": "Others",
+                            "ancestors": {
+                                "nodes": [
+                                    {
+                                        "id": "dGVybToyNg==",
+                                        "slug": "entertainment",
+                                        "name": "Entertainment"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ],
+        "dynamicSections": [
+            {
+                "id": "dGVybToz",
+                "name": "India",
+                "slug": "india",
+                "posts": [
+                    {
+                        "title": "Coffee, hookah and Rs 8,500 bill: Kolkata man’s Bumble date goes viral",
+                        "slug": "coffee-hookah-and-rs-8500-bill-kolkata-mans-bumble-date-goes-viral",
+                        "date": "2026-06-18T12:29:59",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18122919/9754eb0b6af112fb80fc9d2a71a93d6d.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybTo2",
+                                    "slug": "crime",
+                                    "name": "Crime",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybToz",
+                                                "slug": "india",
+                                                "name": "India"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "id": "dGVybToz",
+                                    "slug": "india",
+                                    "name": "India",
+                                    "ancestors": null
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "‘Trade will be cheaper, quicker and easier’: India-UK free trade deal to take effect on July 15",
+                        "slug": "trade-will-be-cheaper-quicker-and-easier-india-uk-free-trade-deal-to-take-effect-on-july-15",
+                        "date": "2026-06-18T12:14:10",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18121339/9d4aa470a09e2b97930943a494b74b0b.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybToz",
+                                    "slug": "india",
+                                    "name": "India",
+                                    "ancestors": null
+                                },
+                                {
+                                    "id": "dGVybTo0",
+                                    "slug": "national-trend",
+                                    "name": "National Trend",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybToz",
+                                                "slug": "india",
+                                                "name": "India"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "Delhi records below-normal temperatures; IMD issues rain, thunderstorm alerts for Himachal and Rajasthan",
+                        "slug": "delhi-records-below-normal-temperatures-imd-issues-rain-thunderstorm-alerts-for-himachal-and-rajasthan-2",
+                        "date": "2026-06-18T12:10:53",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18121023/c0e57bc736261b6e2920cd1c50e0832d-1.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybToz",
+                                    "slug": "india",
+                                    "name": "India",
+                                    "ancestors": null
+                                },
+                                {
+                                    "id": "dGVybTo0",
+                                    "slug": "national-trend",
+                                    "name": "National Trend",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybToz",
+                                                "slug": "india",
+                                                "name": "India"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "EPFO 3.0 may launch by June-end with UPI and ATM withdrawals; here’s how it could work",
+                        "slug": "epfo-3-0-may-launch-by-june-end-with-upi-and-atm-withdrawals-heres-how-it-could-work",
+                        "date": "2026-06-18T12:08:28",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18120735/1265bfd6313ed80cdc17ec3cda80c607-1.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybToz",
+                                    "slug": "india",
+                                    "name": "India",
+                                    "ancestors": null
+                                },
+                                {
+                                    "id": "dGVybTo0",
+                                    "slug": "national-trend",
+                                    "name": "National Trend",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybToz",
+                                                "slug": "india",
+                                                "name": "India"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "Petrol and diesel prices on June 18: Will fuel rates come down after the US-Iran peace deal? Check city-wise rates",
+                        "slug": "petrol-and-diesel-prices-on-june-18-will-fuel-rates-come-down-after-the-us-iran-peace-deal-check-city-wise-rates-2",
+                        "date": "2026-06-18T12:04:26",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18120339/175fbb653f91d70a94be65584523481e-1.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybToz",
+                                    "slug": "india",
+                                    "name": "India",
+                                    "ancestors": null
+                                },
+                                {
+                                    "id": "dGVybTo0",
+                                    "slug": "national-trend",
+                                    "name": "National Trend",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybToz",
+                                                "slug": "india",
+                                                "name": "India"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "What is Shigella? Kerala reports 146 cases and five deaths in six months",
+                        "slug": "what-is-shigella-kerala-reports-146-cases-and-five-deaths-in-six-months",
+                        "date": "2026-06-18T12:00:51",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18120019/b66c45535f7d60f55d088e8a86bcc3ba.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybToz",
+                                    "slug": "india",
+                                    "name": "India",
+                                    "ancestors": null
+                                },
+                                {
+                                    "id": "dGVybTo3",
+                                    "slug": "others",
+                                    "name": "Others",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybToz",
+                                                "slug": "india",
+                                                "name": "India"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "id": "dGVybTox",
+                                    "slug": "uncategorized",
+                                    "name": "Uncategorized",
+                                    "ancestors": null
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "What was hidden inside an IndiGo lavatory speaker? Customs finds Rs 4.26 crore gold",
+                        "slug": "what-was-hidden-inside-an-indigo-lavatory-speaker-customs-finds-rs-4-26-crore-gold",
+                        "date": "2026-06-18T11:36:47",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18113606/cdc0a06853a73b06826d8b06a9641b90.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybTo2",
+                                    "slug": "crime",
+                                    "name": "Crime",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybToz",
+                                                "slug": "india",
+                                                "name": "India"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "id": "dGVybToz",
+                                    "slug": "india",
+                                    "name": "India",
+                                    "ancestors": null
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "dGVybTo4",
+                "name": "West Bengal",
+                "slug": "west-bengal",
+                "posts": [
+                    {
+                        "title": "What Bengal’s return to PMFBY means for farmers and why Bihar may follow?",
+                        "slug": "what-bengals-return-to-pmfby-means-for-farmers-and-why-bihar-may-follow",
+                        "date": "2026-06-18T12:33:54",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18123318/b837c865e8322430bcb88572aeca5ecf.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybToxMw==",
+                                    "slug": "others-west-bengal",
+                                    "name": "Others",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybTo4",
+                                                "slug": "west-bengal",
+                                                "name": "West Bengal"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "id": "dGVybTo4",
+                                    "slug": "west-bengal",
+                                    "name": "West Bengal",
+                                    "ancestors": null
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "Can NCPI reshape Bengal politics after claiming support of 20 MPs? Party stakes claim to Bengal’s biggest bloc",
+                        "slug": "can-ncpi-reshape-bengal-politics-after-claiming-support-of-20-mps-party-stakes-claim-to-bengals-biggest-bloc",
+                        "date": "2026-06-18T12:26:09",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18122450/5e4a1bd532f017f18ef153b58a12f4d2.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybToxMQ==",
+                                    "slug": "politics-west-bengal",
+                                    "name": "Politics",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybTo4",
+                                                "slug": "west-bengal",
+                                                "name": "West Bengal"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "id": "dGVybTo4",
+                                    "slug": "west-bengal",
+                                    "name": "West Bengal",
+                                    "ancestors": null
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "‘No toto on GT Road’: BJP MLA Dipanjan Chakraborty announces tough measures to ease congestion in Konnagar, Uttarpara",
+                        "slug": "no-toto-on-gt-road-bjp-mla-dipanjan-chakraborty-announces-tough-measures-to-ease-congestion-in-konnagar-uttarpara",
+                        "date": "2026-06-18T12:21:10",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18122019/35eb3e664eeb4c3520a495b6d0011120-1.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybToxMA==",
+                                    "slug": "district",
+                                    "name": "District",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybTo4",
+                                                "slug": "west-bengal",
+                                                "name": "West Bengal"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "id": "dGVybTo4",
+                                    "slug": "west-bengal",
+                                    "name": "West Bengal",
+                                    "ancestors": null
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "Kolkata sizzles at 36°C as North Bengal braces for heavy rain; relief likely from June 20",
+                        "slug": "kolkata-sizzles-at-36c-as-north-bengal-braces-for-heavy-rain-relief-likely-from-june-20",
+                        "date": "2026-06-18T12:17:46",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18121658/35eb3e664eeb4c3520a495b6d0011120.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybTo5",
+                                    "slug": "kolkata",
+                                    "name": "Kolkata",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybTo4",
+                                                "slug": "west-bengal",
+                                                "name": "West Bengal"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "id": "dGVybTo4",
+                                    "slug": "west-bengal",
+                                    "name": "West Bengal",
+                                    "ancestors": null
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "dGVybTo0",
+                "name": "National Trend",
+                "slug": "national-trend",
+                "posts": [
+                    {
+                        "title": "‘Trade will be cheaper, quicker and easier’: India-UK free trade deal to take effect on July 15",
+                        "slug": "trade-will-be-cheaper-quicker-and-easier-india-uk-free-trade-deal-to-take-effect-on-july-15",
+                        "date": "2026-06-18T12:14:10",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18121339/9d4aa470a09e2b97930943a494b74b0b.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybToz",
+                                    "slug": "india",
+                                    "name": "India",
+                                    "ancestors": null
+                                },
+                                {
+                                    "id": "dGVybTo0",
+                                    "slug": "national-trend",
+                                    "name": "National Trend",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybToz",
+                                                "slug": "india",
+                                                "name": "India"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "Delhi records below-normal temperatures; IMD issues rain, thunderstorm alerts for Himachal and Rajasthan",
+                        "slug": "delhi-records-below-normal-temperatures-imd-issues-rain-thunderstorm-alerts-for-himachal-and-rajasthan-2",
+                        "date": "2026-06-18T12:10:53",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18121023/c0e57bc736261b6e2920cd1c50e0832d-1.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybToz",
+                                    "slug": "india",
+                                    "name": "India",
+                                    "ancestors": null
+                                },
+                                {
+                                    "id": "dGVybTo0",
+                                    "slug": "national-trend",
+                                    "name": "National Trend",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybToz",
+                                                "slug": "india",
+                                                "name": "India"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "EPFO 3.0 may launch by June-end with UPI and ATM withdrawals; here’s how it could work",
+                        "slug": "epfo-3-0-may-launch-by-june-end-with-upi-and-atm-withdrawals-heres-how-it-could-work",
+                        "date": "2026-06-18T12:08:28",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18120735/1265bfd6313ed80cdc17ec3cda80c607-1.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybToz",
+                                    "slug": "india",
+                                    "name": "India",
+                                    "ancestors": null
+                                },
+                                {
+                                    "id": "dGVybTo0",
+                                    "slug": "national-trend",
+                                    "name": "National Trend",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybToz",
+                                                "slug": "india",
+                                                "name": "India"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "Petrol and diesel prices on June 18: Will fuel rates come down after the US-Iran peace deal? Check city-wise rates",
+                        "slug": "petrol-and-diesel-prices-on-june-18-will-fuel-rates-come-down-after-the-us-iran-peace-deal-check-city-wise-rates-2",
+                        "date": "2026-06-18T12:04:26",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18120339/175fbb653f91d70a94be65584523481e-1.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybToz",
+                                    "slug": "india",
+                                    "name": "India",
+                                    "ancestors": null
+                                },
+                                {
+                                    "id": "dGVybTo0",
+                                    "slug": "national-trend",
+                                    "name": "National Trend",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybToz",
+                                                "slug": "india",
+                                                "name": "India"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "India isn’t a G7 member, so why is it always at the summit?",
+                        "slug": "india-isnt-a-g7-member-so-why-is-it-always-at-the-summit",
+                        "date": "2026-06-18T11:23:29",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18112147/b15e1ce01881e5c1bdab425080521818.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybToz",
+                                    "slug": "india",
+                                    "name": "India",
+                                    "ancestors": null
+                                },
+                                {
+                                    "id": "dGVybTo0",
+                                    "slug": "national-trend",
+                                    "name": "National Trend",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybToz",
+                                                "slug": "india",
+                                                "name": "India"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "Petrol and diesel prices on June 18: Will fuel rates come down after the US-Iran peace deal? Check city-wise rates",
+                        "slug": "petrol-and-diesel-prices-on-june-18-will-fuel-rates-come-down-after-the-us-iran-peace-deal-check-city-wise-rates",
+                        "date": "2026-06-18T10:03:22",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18100249/175fbb653f91d70a94be65584523481e.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybToz",
+                                    "slug": "india",
+                                    "name": "India",
+                                    "ancestors": null
+                                },
+                                {
+                                    "id": "dGVybTo0",
+                                    "slug": "national-trend",
+                                    "name": "National Trend",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybToz",
+                                                "slug": "india",
+                                                "name": "India"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "Delhi records below-normal temperatures; IMD issues rain, thunderstorm alerts for Himachal and Rajasthan",
+                        "slug": "delhi-records-below-normal-temperatures-imd-issues-rain-thunderstorm-alerts-for-himachal-and-rajasthan",
+                        "date": "2026-06-18T09:43:03",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18091727/c0e57bc736261b6e2920cd1c50e0832d.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybToz",
+                                    "slug": "india",
+                                    "name": "India",
+                                    "ancestors": null
+                                },
+                                {
+                                    "id": "dGVybTo0",
+                                    "slug": "national-trend",
+                                    "name": "National Trend",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybToz",
+                                                "slug": "india",
+                                                "name": "India"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "dGVybToxNQ==",
+                "name": "World",
+                "slug": "world",
+                "posts": [
+                    {
+                        "title": "Indian-origin man dies after brutal London stabbing; 7 detained in murder probe",
+                        "slug": "indian-origin-man-dies-after-brutal-london-stabbing-7-detained-in-murder-probe",
+                        "date": "2026-06-18T11:50:44",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18114828/cc1cebfaeb3381fcd1ca38c4c8805987.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybToxNw==",
+                                    "slug": "uk-news",
+                                    "name": "UK News",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybToxNQ==",
+                                                "slug": "world",
+                                                "name": "World"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "id": "dGVybToxNQ==",
+                                    "slug": "world",
+                                    "name": "World",
+                                    "ancestors": null
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "Hormuz choke point: Ship traffic plunges over 90%, 500 vessels remain in limbo",
+                        "slug": "hormuz-choke-point-ship-traffic-plunges-over-90-500-vessels-remain-in-limbo",
+                        "date": "2026-06-18T11:46:49",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18114457/372c47a5093b45a310082e7ea884eb79.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybToxOQ==",
+                                    "slug": "gulf-news",
+                                    "name": "Gulf News",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybToxNQ==",
+                                                "slug": "world",
+                                                "name": "World"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "id": "dGVybToxNQ==",
+                                    "slug": "world",
+                                    "name": "World",
+                                    "ancestors": null
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "Everest’s ‘Green Boots’ may finally return home as ITBP plans recovery mission after 30 years",
+                        "slug": "everests-green-boots-may-finally-return-home-as-itbp-plans-recovery-mission-after-30-years",
+                        "date": "2026-06-18T09:55:22",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18095801/bca772ff338041328c36c9a0b2342f86.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybToyMA==",
+                                    "slug": "others-world",
+                                    "name": "Others",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybToxNQ==",
+                                                "slug": "world",
+                                                "name": "World"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "id": "dGVybToxNQ==",
+                                    "slug": "world",
+                                    "name": "World",
+                                    "ancestors": null
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "‘We passed beneath power lines’: Iran shares account of mission targeting US base in Kuwait",
+                        "slug": "we-passed-beneath-power-lines-iran-shares-account-of-mission-targeting-us-base-in-kuwait",
+                        "date": "2026-06-18T09:54:15",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18095340/2db04e59f887d69ffddab3a923935872.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybToxNg==",
+                                    "slug": "us-news",
+                                    "name": "US News",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybToxNQ==",
+                                                "slug": "world",
+                                                "name": "World"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "id": "dGVybToxNQ==",
+                                    "slug": "world",
+                                    "name": "World",
+                                    "ancestors": null
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "‘You got the best’: Trump says Israel is ‘very happy’ with new US-Iran agreement",
+                        "slug": "you-got-the-best-trump-says-israel-is-very-happy-with-new-us-iran-agreement",
+                        "date": "2026-06-18T09:51:38",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18094819/2ae2a4942ac8a31d8d6411ba430985a8.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybToxNg==",
+                                    "slug": "us-news",
+                                    "name": "US News",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybToxNQ==",
+                                                "slug": "world",
+                                                "name": "World"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "id": "dGVybToxNQ==",
+                                    "slug": "world",
+                                    "name": "World",
+                                    "ancestors": null
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "dGVybToyMQ==",
+                "name": "Sports",
+                "slug": "sports",
+                "posts": [
+                    {
+                        "title": "Smriti Mandhana earns spot in TIME’s top 100 sports influencers list, joins Messi, Ronaldo and Alcaraz",
+                        "slug": "smriti-mandhana-earns-spot-in-times-top-100-sports-influencers-list-joins-messi-ronaldo-and-alcaraz",
+                        "date": "2026-06-18T13:19:52",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18131701/c4314ccbc0210ab82e7656e169dc0f59.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybToyMg==",
+                                    "slug": "cricket",
+                                    "name": "Cricket",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybToyMQ==",
+                                                "slug": "sports",
+                                                "name": "Sports"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "id": "dGVybToyMQ==",
+                                    "slug": "sports",
+                                    "name": "Sports",
+                                    "ancestors": null
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "God of football sheds a tear: Leo Messi’s heroics followed by emotional gesture at Argentina’s title defence opener",
+                        "slug": "god-of-football-sheds-a-tear-leo-messis-heroics-followed-by-emotional-gesture-at-argentinas-title-defence-opener",
+                        "date": "2026-06-18T12:02:11",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18115854/1e5366dd63504f1e60e8d667167150b4.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybToyMw==",
+                                    "slug": "football",
+                                    "name": "Football",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybToyMQ==",
+                                                "slug": "sports",
+                                                "name": "Sports"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "id": "dGVybToyMQ==",
+                                    "slug": "sports",
+                                    "name": "Sports",
+                                    "ancestors": null
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "Cristiano Ronaldo misses golden chance as Portugal held to 1-1 draw by DR Congo in World Cup opener",
+                        "slug": "cristiano-ronaldo-misses-golden-chance-as-portugal-held-to-1-1-draw-by-dr-congo-in-world-cup-opener",
+                        "date": "2026-06-18T11:57:32",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18115409/44cef703d8ee1fe4ab594091dd454b9a.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybToyMw==",
+                                    "slug": "football",
+                                    "name": "Football",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybToyMQ==",
+                                                "slug": "sports",
+                                                "name": "Sports"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "id": "dGVybToyMQ==",
+                                    "slug": "sports",
+                                    "name": "Sports",
+                                    "ancestors": null
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "World Cup backlash: FIFA forced to issue clarification following Qatar-Switzerland VAR scandal",
+                        "slug": "world-cup-backlash-fifa-forced-to-issue-clarification-following-qatar-switzerland-var-scandal",
+                        "date": "2026-06-18T10:24:44",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18102136/d673f95e1b9caccceedc04cbdfd56015.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybToyMw==",
+                                    "slug": "football",
+                                    "name": "Football",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybToyMQ==",
+                                                "slug": "sports",
+                                                "name": "Sports"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "id": "dGVybToyMQ==",
+                                    "slug": "sports",
+                                    "name": "Sports",
+                                    "ancestors": null
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "Shreyanka Patil suffers injury scare after being stretchered off in World Cup clash",
+                        "slug": "shreyanka-patil-suffers-injury-scare-after-being-stretchered-off-in-world-cup-clash",
+                        "date": "2026-06-18T10:19:30",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18101804/3b212b988331c404f5188f124d5da6eb.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybToyMg==",
+                                    "slug": "cricket",
+                                    "name": "Cricket",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybToyMQ==",
+                                                "slug": "sports",
+                                                "name": "Sports"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "id": "dGVybToyMQ==",
+                                    "slug": "sports",
+                                    "name": "Sports",
+                                    "ancestors": null
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "Gill, Kishan centuries power India to dominant series-clinching win over Afghanistan",
+                        "slug": "gill-kishan-centuries-power-india-to-dominant-series-clinching-win-over-afghanistan",
+                        "date": "2026-06-18T10:16:08",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18101416/6dbd9681156ce59622cd1aeea230eb75.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybToyMg==",
+                                    "slug": "cricket",
+                                    "name": "Cricket",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybToyMQ==",
+                                                "slug": "sports",
+                                                "name": "Sports"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "id": "dGVybToyMQ==",
+                                    "slug": "sports",
+                                    "name": "Sports",
+                                    "ancestors": null
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "dGVybToyNg==",
+                "name": "Entertainment",
+                "slug": "entertainment",
+                "posts": [
+                    {
+                        "title": "Karan Johar announces first Malayalam film Odiyan with Prithviraj and Manju Warrier",
+                        "slug": "karan-johar-announces-first-malayalam-film-odiyan-with-prithviraj-and-manju-warrier",
+                        "date": "2026-06-18T11:43:04",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18114139/0b09164ab4bd73e54126b638b182a48e.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybToyNg==",
+                                    "slug": "entertainment",
+                                    "name": "Entertainment",
+                                    "ancestors": null
+                                },
+                                {
+                                    "id": "dGVybTozMA==",
+                                    "slug": "south",
+                                    "name": "South",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybToyNg==",
+                                                "slug": "entertainment",
+                                                "name": "Entertainment"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "Retirement on the horizon? Pritam’s statement fuels debate",
+                        "slug": "retirement-on-the-horizon-pritams-statement-fuels-debate",
+                        "date": "2026-06-18T11:40:24",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18113735/b25433e4cfec2a918231e40a93259297.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybToyNg==",
+                                    "slug": "entertainment",
+                                    "name": "Entertainment",
+                                    "ancestors": null
+                                },
+                                {
+                                    "id": "dGVybTozMQ==",
+                                    "slug": "others-entertainment",
+                                    "name": "Others",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybToyNg==",
+                                                "slug": "entertainment",
+                                                "name": "Entertainment"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "Mumbai to host Christopher Nolan, Matt Damon and Tom Holland for ‘The Odyssey’ premiere",
+                        "slug": "mumbai-to-host-christopher-nolan-matt-damon-and-tom-holland-for-the-odyssey-premiere",
+                        "date": "2026-06-18T10:11:28",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18101030/ce31d4529f678674f6d2841101715413.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybToyNg==",
+                                    "slug": "entertainment",
+                                    "name": "Entertainment",
+                                    "ancestors": null
+                                },
+                                {
+                                    "id": "dGVybToyOQ==",
+                                    "slug": "hollywood",
+                                    "name": "Hollywood",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybToyNg==",
+                                                "slug": "entertainment",
+                                                "name": "Entertainment"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "Tom Holland seemingly confirms marriage to Zendaya after months of speculation",
+                        "slug": "tom-holland-seemingly-confirms-marriage-to-zendaya-after-months-of-speculation",
+                        "date": "2026-06-18T10:08:49",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18100745/d6ec37541675967d462c696f71a620b3.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybToyNg==",
+                                    "slug": "entertainment",
+                                    "name": "Entertainment",
+                                    "ancestors": null
+                                },
+                                {
+                                    "id": "dGVybToyOQ==",
+                                    "slug": "hollywood",
+                                    "name": "Hollywood",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybToyNg==",
+                                                "slug": "entertainment",
+                                                "name": "Entertainment"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "Alpha trailer out: Alia Bhatt and Sharvari face off against Bobby Deol; mystery cameo turns heads",
+                        "slug": "alpha-trailer-out-alia-bhatt-and-sharvari-face-off-against-bobby-deol-mystery-cameo-turns-heads",
+                        "date": "2026-06-18T10:06:35",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18100444/13fc7f21651ed732b4e2b0447f130808.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybToyNw==",
+                                    "slug": "bollywood",
+                                    "name": "Bollywood",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybToyNg==",
+                                                "slug": "entertainment",
+                                                "name": "Entertainment"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "id": "dGVybToyNg==",
+                                    "slug": "entertainment",
+                                    "name": "Entertainment",
+                                    "ancestors": null
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "dGVybTozNw==",
+                "name": "Business",
+                "slug": "business",
+                "posts": [
+                    {
+                        "title": "Foreign Disclosure Scheme 2026 explained: Who can apply and what it offers",
+                        "slug": "foreign-disclosure-scheme-2026-explained-who-can-apply-and-what-it-offers",
+                        "date": "2026-06-18T11:34:10",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18113220/3ed6f19095d3b5d304533bac91a4ae77.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybTozNw==",
+                                    "slug": "business",
+                                    "name": "Business",
+                                    "ancestors": null
+                                },
+                                {
+                                    "id": "dGVybTozOA==",
+                                    "slug": "industry",
+                                    "name": "Industry",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybTozNw==",
+                                                "slug": "business",
+                                                "name": "Business"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "Filing ITR this year? Here’s how to know whether your deadline is July, August or October",
+                        "slug": "filing-itr-this-year-heres-how-to-know-whether-your-deadline-is-july-august-or-october",
+                        "date": "2026-06-18T11:30:27",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18112915/884799ec396204ea445510c0e61e9939.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybTozNw==",
+                                    "slug": "business",
+                                    "name": "Business",
+                                    "ancestors": null
+                                },
+                                {
+                                    "id": "dGVybTozOQ==",
+                                    "slug": "investment-and-mutual-funds",
+                                    "name": "Investment and Mutual Funds",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybTozNw==",
+                                                "slug": "business",
+                                                "name": "Business"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "EPFO subscribers may get 8.25% interest credit this month after govt nod: Here’s what you should know",
+                        "slug": "epfo-subscribers-may-get-8-25-interest-credit-this-month-after-govt-nod-heres-what-you-should-know",
+                        "date": "2026-06-18T11:27:57",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18112708/1265bfd6313ed80cdc17ec3cda80c607.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybTozNw==",
+                                    "slug": "business",
+                                    "name": "Business",
+                                    "ancestors": null
+                                },
+                                {
+                                    "id": "dGVybTozOQ==",
+                                    "slug": "investment-and-mutual-funds",
+                                    "name": "Investment and Mutual Funds",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybTozNw==",
+                                                "slug": "business",
+                                                "name": "Business"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "Strait of Hormuz reopens: What the Iran-US peace deal means for India’s oil imports, rupee and inflation",
+                        "slug": "strait-of-hormuz-reopens-what-the-iran-us-peace-deal-means-for-indias-oil-imports-rupee-and-inflation",
+                        "date": "2026-06-18T10:30:46",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18102846/78bf54209fc6c6e157fda5e8e3b09fc9.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybTozNw==",
+                                    "slug": "business",
+                                    "name": "Business",
+                                    "ancestors": null
+                                },
+                                {
+                                    "id": "dGVybTozOA==",
+                                    "slug": "industry",
+                                    "name": "Industry",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybTozNw==",
+                                                "slug": "business",
+                                                "name": "Business"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "Jio’s market debut nears? Listing ‘fairly imminent’, says executive; IPO papers may be filed within days",
+                        "slug": "jios-market-debut-nears-listing-fairly-imminent-says-executive-ipo-papers-may-be-filed-within-days",
+                        "date": "2026-06-18T10:27:23",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18102553/7a0bcdee4697c6a96ab91be07ff783b5.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybTozNw==",
+                                    "slug": "business",
+                                    "name": "Business",
+                                    "ancestors": null
+                                },
+                                {
+                                    "id": "dGVybTo0MA==",
+                                    "slug": "stock-markets",
+                                    "name": "Stock Markets",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybTozNw==",
+                                                "slug": "business",
+                                                "name": "Business"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "dGVybTozMg==",
+                "name": "Lifestyle",
+                "slug": "lifestyle",
+                "posts": [
+                    {
+                        "title": "What is ‘solo-maxxing’? The dating trend driven by rising costs",
+                        "slug": "what-is-solo-maxxing-the-dating-trend-driven-by-rising-costs",
+                        "date": "2026-06-18T11:22:23",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18112016/c23870796de77c3fb62e59d3395e699e.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybTozMg==",
+                                    "slug": "lifestyle",
+                                    "name": "Lifestyle",
+                                    "ancestors": null
+                                },
+                                {
+                                    "id": "dGVybTozNg==",
+                                    "slug": "relationships",
+                                    "name": "Relationships",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybTozMg==",
+                                                "slug": "lifestyle",
+                                                "name": "Lifestyle"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "Horoscope today, June 17: Career success, business gains & financial caution for several zodiac signs",
+                        "slug": "horoscope-today-june-17-career-success-business-gains-financial-caution-for-several-zodiac-signs",
+                        "date": "2026-06-18T11:19:05",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18111812/004dc9611c8b6db5609b3cbf9e44da96.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybTozNA==",
+                                    "slug": "astrology",
+                                    "name": "Astrology",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybTozMg==",
+                                                "slug": "lifestyle",
+                                                "name": "Lifestyle"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "id": "dGVybTozMg==",
+                                    "slug": "lifestyle",
+                                    "name": "Lifestyle",
+                                    "ancestors": null
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "What happened today (June 17) in history? Key events to look back on",
+                        "slug": "what-happened-today-june-17-in-history-key-events-to-look-back-on",
+                        "date": "2026-06-18T11:16:16",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18111513/b31f0602aab394851f413c68d0890ac8.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybTozMg==",
+                                    "slug": "lifestyle",
+                                    "name": "Lifestyle",
+                                    "ancestors": null
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "Wordle answer today (June 18): Check hints, solution and more",
+                        "slug": "wordle-answer-today-june-18-check-hints-solution-and-more",
+                        "date": "2026-06-18T11:13:27",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18111218/ef8cb046bd24ebf1d175a9971b1794bf.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybTozMg==",
+                                    "slug": "lifestyle",
+                                    "name": "Lifestyle",
+                                    "ancestors": null
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "title": "Horoscope today, June 18: Career progress, financial gains & relationship changes likely",
+                        "slug": "horoscope-today-june-18-career-progress-financial-gains-relationship-changes-likely",
+                        "date": "2026-06-18T11:09:43",
+                        "author": {
+                            "node": {
+                                "firstName": null,
+                                "lastName": null
+                            }
+                        },
+                        "featuredImage": {
+                            "node": {
+                                "sourceUrl": "http://dev-bucket-subhro.s3.ap-south-1.amazonaws.com/wp-content/nes/uploads/2026/06/18110848/af1bd547a11d32cf9cb3e9bb56bfe3ea.webp"
+                            }
+                        },
+                        "categories": {
+                            "nodes": [
+                                {
+                                    "id": "dGVybTozNA==",
+                                    "slug": "astrology",
+                                    "name": "Astrology",
+                                    "ancestors": {
+                                        "nodes": [
+                                            {
+                                                "id": "dGVybTozMg==",
+                                                "slug": "lifestyle",
+                                                "name": "Lifestyle"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "id": "dGVybTozMg==",
+                                    "slug": "lifestyle",
+                                    "name": "Lifestyle",
+                                    "ancestors": null
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        ],
+        "newsTicker": "India's groundwater crisis deepens: Why Hyderabad, Punjab and Karnataka are running out of water? | 'India is fully prepared to...': After Oman attack, PM Modi calls for safer sea routes in front of Trump | Heavy rain alert across 21 states as IMD warns of thunderstorms, lightning and powerful winds | Trade will be cheaper, quicker and easier': India-UK free trade deal to take effect on July 15 | Petrol and diesel prices on June 18: Will fuel rates come down after the US-Iran peace deal? Check city-wise rates | Can NCPI reshape Bengal politics after claiming support of 20 MPs? Party stakes claim to Bengal's biggest bloc | Kolkata sizzles at 36°C as North Bengal braces for heavy rain; relief likely from June 20 | What Bengal's return to PMFBY means for farmers and why Bihar may follow? | Kolkata feels tremors as earthquake rocks Bhutan near Assam border | Major split brewing in TMC? Sources claim 90% of Lok Sabha MPs might be in rebellion | Abhishek Banerjee ordered to appear before CID by 6 pm today, gets High Court relief | Ivory Coast World Cup star under investigation over suspected spot-fixing case | Cristiano Ronaldo misses golden chance as Portugal held to 1-1 draw by DR Congo in World Cup opener | 'World must accept Messi is the GOAT': Brazil legend Ronaldo's remark reignites debate after World Cup hat-trick |  Shreyanka Patil suffers injury scare after being stretchered off in World Cup clash | Gill, Kishan centuries power India to dominant series-clinching win over Afghanistan"
+    }
+}

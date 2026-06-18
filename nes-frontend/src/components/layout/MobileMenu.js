@@ -4,121 +4,9 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faXmark, faMagnifyingGlass, faBuildingColumns } from "@fortawesome/free-solid-svg-icons";
+import { faXmark, faMagnifyingGlass, faBuildingColumns, faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 
-const MENU_ITEMS = [
-  {
-    label: "India",
-    path: "/india",
-    children: [
-      { label: "Politics", path: "/india/politics" },
-      { label: "Crime", path: "/india/crime" },
-      { label: "National Trends", path: "/india/national-trends" },
-      { label: "Others", path: "/india/others" }
-    ]
-  },
-  {
-    label: "West Bengal",
-    path: "/west-bengal",
-    children: [
-      { label: "Kolkata", path: "/west-bengal/kolkata" },
-      { label: "District", path: "/west-bengal/district-news" },
-      { label: "Politics", path: "/west-bengal/politics" },
-      { label: "Crime", path: "/west-bengal/crime" },
-      { label: "Others", path: "/west-bengal/others" },
-      { label: "WB Elections 2026", path: "/west-bengal/wb-elections-2026" }
-    ]
-  },
-  {
-    label: "FIFA World Cup 2026 ⚽",
-    path: "/fifa-world-cup-2026",
-    children: []
-  },
-  {
-    label: "World",
-    path: "/world",
-    children: [
-      { label: "Americas", path: "/world/americas" },
-      { label: "Europe", path: "/world/europe" },
-      { label: "Middle East", path: "/world/middle-east" },
-      { label: "Asia", path: "/world/asia" }
-    ]
-  },
-  {
-    label: "Sports",
-    path: "/sports",
-    children: [
-      { label: "Cricket", path: "/sports/cricket" },
-      { label: "Football", path: "/sports/football" },
-      { label: "Tennis", path: "/sports/tennis" },
-      { label: "Other Sports", path: "/sports/other-sports" }
-    ]
-  },
-  {
-    label: "Entertainment",
-    path: "/entertainment",
-    children: [
-      { label: "Bollywood", path: "/entertainment/bollywood" },
-      { label: "Hollywood", path: "/entertainment/hollywood" },
-      { label: "Television", path: "/entertainment/television" },
-      { label: "Music", path: "/entertainment/music" }
-    ]
-  },
-  {
-    label: "Lifestyle",
-    path: "/lifestyle",
-    children: [
-      { label: "Fashion & Skincare", path: "/lifestyle/fashion-skincare" },
-      { label: "Astrology", path: "/astrology" },
-      { label: "Travel & Fitness", path: "/lifestyle/travel-fitness" },
-      { label: "Relationships", path: "/lifestyle/relationships" }
-    ]
-  },
-  {
-    label: "Business",
-    path: "/business",
-    children: [
-      { label: "Industry", path: "/business/industry" },
-      { label: "Stock Market", path: "/business/stock-market" },
-      { label: "Personal Finance", path: "/business/personal-finance" },
-      { label: "Tech Business", path: "/business/tech-business" }
-    ]
-  },
-  {
-    label: "Technology",
-    path: "/technology",
-    children: [
-      { label: "Mobiles", path: "/technology/mobiles" },
-      { label: "Gadgets", path: "/technology/gadgets" },
-      { label: "Software", path: "/technology/software" },
-      { label: "Internet", path: "/technology/internet" }
-    ]
-  },
-  {
-    label: "Videos",
-    path: "/videos",
-    children: []
-  },
-  {
-    label: "Education",
-    path: "/education",
-    children: []
-  },
-  {
-    label: "Trending",
-    path: "/trending",
-    children: []
-  },
-  {
-    label: "Jobs",
-    path: "/jobs",
-    children: [
-      { label: "Government Jobs", path: "/jobs/government" },
-      { label: "Private Jobs", path: "/jobs/private" },
-      { label: "IT Jobs", path: "/jobs/it" }
-    ]
-  }
-];
+// Static menu items removed in favor of dynamic menuItems prop
 
 function MobileNavItem({ item, onClose }) {
   const [expanded, setExpanded] = useState(false);
@@ -164,9 +52,9 @@ function MobileNavItem({ item, onClose }) {
   );
 }
 
-export default function MobileMenu({ menuItems = [], open, onClose, edition = "EN", setEdition }) {
-  // Use our customized list matching the screenshots exactly
-  const finalMenuItems = MENU_ITEMS;
+export default function MobileMenu({ menuItems = [], open, onClose, edition = "EN", setEdition, theme = "light", toggleTheme }) {
+  // Use dynamically fetched menuItems from the prop
+  const finalMenuItems = menuItems;
 
   useEffect(() => {
     const handler = (e) => { if (e.key === "Escape") onClose(); };
@@ -220,8 +108,8 @@ export default function MobileMenu({ menuItems = [], open, onClose, edition = "E
         </div>
 
         {/* Drawer search bar */}
-        <div className="px-5 pb-4 bg-white dark:bg-black flex-shrink-0">
-          <form action="/search" method="GET" className="relative w-full flex items-center">
+        <div className="px-5 pb-4 bg-white dark:bg-black flex-shrink-0 flex items-center gap-3">
+          <form action="/search" method="GET" className="relative flex-grow flex items-center">
             <FontAwesomeIcon
               icon={faMagnifyingGlass}
               className="absolute left-3.5 text-zinc-400 dark:text-zinc-500 w-4 h-4 pointer-events-none"
@@ -233,6 +121,16 @@ export default function MobileMenu({ menuItems = [], open, onClose, edition = "E
               className="w-full bg-white dark:bg-zinc-900 text-black dark:text-white placeholder-zinc-400 dark:placeholder-zinc-500 text-sm pl-10 pr-4 py-2.5 rounded-lg border border-zinc-200 dark:border-zinc-800 outline-none focus:border-[#f99d1b] transition-colors font-sans"
             />
           </form>
+          {toggleTheme && (
+            <button
+              onClick={toggleTheme}
+              className="w-10 h-10 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-zinc-650 dark:text-[#f99d1b] flex items-center justify-center cursor-pointer shadow-sm active:scale-95 transition-all shrink-0 focus:outline-none"
+              title="Toggle Theme"
+              aria-label="Toggle theme"
+            >
+              <FontAwesomeIcon icon={theme === "light" ? faMoon : faSun} className="text-sm" />
+            </button>
+          )}
         </div>
 
         {/* Navigation - scrollable list */}

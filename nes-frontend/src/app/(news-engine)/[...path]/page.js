@@ -8,7 +8,7 @@ export const revalidate = 120;
 async function getPostDetail(slug) {
   try {
     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/posts/detail/${slug}`, {
-      next: { revalidate: 120 }
+      next: { revalidate: 60 }
     });
     if (!res.ok) return null;
     const json = await res.json();

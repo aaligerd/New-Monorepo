@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClock, faEnvelope, faLink, faCheck, faShareNodes, faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+import { faClock, faEnvelope, faLink, faCheck, faShareNodes } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faTwitter, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { getPostUrl, stripHtml, getAuthorName, formatPostDate } from "../../lib/util";
 import WpContentRenderer from "../wordpress/WpContentRenderer";
@@ -34,37 +34,12 @@ export default function ArticlePage({ post, l1slug, l2slug }) {
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
   const [latestPosts, setLatestPosts] = useState([]);
-  const [theme, setTheme] = useState("light");
 
   const readingTime = getReadingTime(post.content);
 
   useEffect(() => {
     setCurrentUrl(window.location.href);
   }, []);
-
-  // Theme observer to sync with global header theme toggle
-  useEffect(() => {
-    const isDark = document.documentElement.classList.contains("dark");
-    setTheme(isDark ? "dark" : "light");
-
-    const observer = new MutationObserver(() => {
-      const currentlyDark = document.documentElement.classList.contains("dark");
-      setTheme(currentlyDark ? "dark" : "light");
-    });
-    observer.observe(document.documentElement, { attributes: true });
-    return () => observer.disconnect();
-  }, []);
-
-  const toggleTheme = () => {
-    const nextTheme = theme === "light" ? "dark" : "light";
-    setTheme(nextTheme);
-    localStorage.setItem("theme", nextTheme);
-    if (nextTheme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -143,32 +118,31 @@ export default function ArticlePage({ post, l1slug, l2slug }) {
         />
       </div> */}
 
-      <main className="max-w-7xl mx-auto px-4 py-6 md:py-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          {/* LEFT COLUMN: Main Article Body */}
-          <article className="lg:col-span-8 bg-white dark:bg-zinc-950 p-0 sm:p-8 border-0 sm:border-2 border-zinc-200 dark:border-zinc-900 transition-colors duration-200">
+      <main className="max-w-7xl mx-auto px-0 py-6 md:py-10">
+        {/* Main Article Body */}
+        <article className="w-[80%] mx-auto bg-white dark:bg-zinc-950 p-0 sm:p-8 border-0 sm:border-2 border-zinc-200 dark:border-zinc-900 transition-colors duration-200">
             
             {/* Breadcrumb */}
-            <nav className="flex flex-col items-center text-center text-[11px] font-bold uppercase tracking-wider text-zinc-450 dark:text-zinc-500 mb-5 select-none md:flex-row md:items-center md:text-left md:flex-wrap md:gap-1.5 justify-center md:justify-start">
+            <nav className="flex flex-col items-center text-center text-[11px] font-bold tracking-wider text-zinc-450 dark:text-zinc-500 mb-5 select-none md:flex-row md:items-center md:text-left md:flex-wrap md:gap-1.5 justify-center md:justify-start">
               <div className="flex items-center gap-1.5 flex-wrap justify-center mb-1 md:mb-0">
                 <Link href="/" className="hover:text-[#f99d1b] transition-colors">Home</Link>
-                <span className="text-zinc-350 dark:text-zinc-800 text-[8px] font-normal">&gt;</span>
+                <span className="text-zinc-350 dark:text-zinc-355 text-[10px] font-normal">&gt;</span>
                 <Link href={`/${l1slug}`} className="hover:text-[#f99d1b] transition-colors capitalize">
                   {l1slug.replace(/-/g, " ")}
                 </Link>
                 {l2slug && (
                   <>
-                    <span className="text-zinc-355 dark:text-zinc-800 text-[8px] font-normal">&gt;</span>
+                    <span className="text-zinc-355 dark:text-zinc-355 text-[10px] font-normal">&gt;</span>
                     <Link href={`/${l1slug}/${l2slug}`} className="hover:text-[#f99d1b] transition-colors capitalize">
                       {l2slug.replace(/-/g, " ")}
                     </Link>
                   </>
                 )}
-                <span className="text-zinc-355 dark:text-zinc-800 text-[8px] font-normal">&gt;</span>
+                <span className="text-zinc-355 dark:text-zinc-355 text-[10px] font-normal">&gt;</span>
               </div>
-              <span className="text-zinc-650 dark:text-zinc-400 normal-case font-normal leading-normal text-xs px-2 md:px-0 max-w-full truncate md:overflow-visible md:whitespace-normal">
+              {/* <span className="text-zinc-650 dark:text-zinc-400 normal-case font-normal leading-normal text-xs px-2 md:px-0 max-w-full truncate md:overflow-visible md:whitespace-normal">
                 {post.title}
-              </span>
+              </span> */}
             </nav>
 
             {/* Title */}
@@ -183,9 +157,9 @@ export default function ArticlePage({ post, l1slug, l2slug }) {
               </div>
             )}
 
-            {/* Author, Date, and Theme Toggle Row */}
-            <div className="flex flex-row items-center justify-between py-2 mb-6 border-y border-zinc-150 dark:border-zinc-900 px-4 font-sans md:border-y-2">
-              <div className="flex-grow flex flex-col items-center md:items-start text-center md:text-left gap-1">
+            {/* Author and Date Row */}
+            <div className="py-2 mb-6   px-4 font-sans">
+              <div className="flex flex-col items-center md:items-start text-center md:text-left gap-1">
                 <div className="text-sm font-semibold text-zinc-600 dark:text-zinc-400">
                   By <span className="text-[#f99d1b] italic font-bold hover:underline cursor-pointer">{authorName}</span>
                 </div>
@@ -198,14 +172,6 @@ export default function ArticlePage({ post, l1slug, l2slug }) {
                   </span>
                 </div>
               </div>
-              
-              <button
-                onClick={toggleTheme}
-                className="w-9 h-9 rounded-full border border-zinc-200 dark:border-zinc-805 bg-white dark:bg-zinc-900 text-zinc-650 dark:text-[#f99d1b] flex items-center justify-center cursor-pointer shadow-sm active:scale-95 transition-all shrink-0 ml-3"
-                title="Toggle Theme"
-              >
-                <FontAwesomeIcon icon={theme === "light" ? faMoon : faSun} className="text-sm" />
-              </button>
             </div>
 
             {/* Social Share Buttons */}
@@ -387,85 +353,10 @@ export default function ArticlePage({ post, l1slug, l2slug }) {
             )}
 
             {/* Bottom Content Ad */}
-            <div className="mt-8 pt-6 border-t border-zinc-200 dark:border-zinc-900">
+            {/* <div className="mt-8 pt-6 border-t border-zinc-200 dark:border-zinc-900">
               <AdSlot type="leaderboard" id="article-bottom" />
-            </div>
+            </div> */}
           </article>
-
-          {/* RIGHT COLUMN: Sidebar (Hidden on Mobile/Tablet) */}
-          <aside className="hidden lg:block lg:col-span-4 space-y-6 lg:sticky lg:top-24 self-start pb-8 lg:pb-0 font-sans">
-            <AdSlot type="sidebar" id="article-sidebar" />
-
-            {/* Newsletter Block */}
-            <div className="bg-black text-white p-6 border-4 border-[#f99d1b] shadow-lg relative overflow-hidden">
-              <div className="flex items-center gap-2 mb-3.5">
-                <div className="w-8 h-8 bg-[#f99d1b] text-black flex items-center justify-center rounded-sm">
-                  <FontAwesomeIcon icon={faEnvelope} />
-                </div>
-                <h3 className="text-sm font-black uppercase tracking-wider font-display" style={{ fontFamily: "var(--font-oswald)" }}>EISAMAY BULLETIN</h3>
-              </div>
-              <p className="text-xs text-zinc-400 mb-4 leading-relaxed font-bold">
-                Get the most critical news and regional alerts delivered straight to your inbox daily.
-              </p>
-              {subscribed ? (
-                <div className="bg-[#f99d1b] text-black p-3 text-xs font-black uppercase flex items-center gap-2">
-                  <FontAwesomeIcon icon={faCheck} />
-                  SUBSCRIBED SUCCESSFULLY!
-                </div>
-              ) : (
-                <form onSubmit={handleSubscribe} className="space-y-2">
-                  <input
-                    type="email"
-                    required
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="ENTER YOUR EMAIL ADDRESS"
-                    className="w-full bg-zinc-900 border border-zinc-700 rounded-sm px-3.5 py-2.5 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-[#f99d1b] transition-all font-bold"
-                  />
-                  <button
-                    type="submit"
-                    className="w-full bg-[#f99d1b] text-black text-xs font-black uppercase tracking-wider py-2.5 transition-all shadow-md active:scale-95 cursor-pointer hover:bg-white"
-                  >
-                    SUBSCRIBE NOW
-                  </button>
-                </form>
-              )}
-            </div>
-
-            {/* Trending Stories List */}
-            {trendingStories.length > 0 && (
-              <div className="bg-white p-5 border-2 border-zinc-200">
-                <h3 className="text-sm font-black uppercase tracking-widest text-black border-b-4 border-black pb-2 mb-4 font-display" style={{ fontFamily: "var(--font-oswald)" }}>
-                  MOST POPULAR
-                </h3>
-                <div className="divide-y divide-zinc-200">
-                  {trendingStories.map((item, index) => (
-                    <Link
-                      key={item.slug}
-                      href={getPostUrl(item)}
-                      className="group flex gap-3.5 py-3.5 first:pt-0 last:pb-0"
-                    >
-                      <span className="text-3xl font-black text-[#f99d1b] w-8 text-center shrink-0 font-display" style={{ fontFamily: "var(--font-oswald)" }}>
-                        {index + 1}
-                      </span>
-                      <div className="space-y-1">
-                        <h4 className="text-sm font-bold text-zinc-900 group-hover:text-[#f99d1b] transition-colors leading-snug line-clamp-2">
-                          {item.title}
-                        </h4>
-                        <span className="text-[10px] text-zinc-550 font-bold uppercase block">
-                          {new Date(item.date).toLocaleDateString("en-IN", {
-                            day: "numeric",
-                            month: "short",
-                          })}
-                        </span>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            )}
-          </aside>
-        </div>
       </main>
 
       {/* Toast popup */}

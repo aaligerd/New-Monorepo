@@ -10,7 +10,7 @@ export default function L1CategoryPage({ l1slug, data }) {
     <main className="max-w-7xl mx-auto px-4 lg:px-[10%] py-8 font-sans bg-white dark:bg-black text-black dark:text-white transition-colors duration-200">
       
       {/* Breadcrumb */}
-      <nav className="flex items-center gap-1 text-xs text-zinc-400 font-bold uppercase tracking-wider mb-6">
+      <nav className="flex items-center gap-1 text-xs text-zinc-400 font-bold tracking-wider mb-6">
         <Link href="/" className="hover:text-[#f99d1b] transition-colors">Home</Link>
         <span>/</span>
         <span className="text-zinc-600 dark:text-zinc-400 capitalize">{l1slug.replace(/-/g, " ")}</span>
