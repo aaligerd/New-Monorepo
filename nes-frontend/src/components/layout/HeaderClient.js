@@ -7,7 +7,7 @@ import MobileMenu from "./MobileMenu";
 import NewsTicker from "./NewsTicker";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faBars, faSun, faMoon, faBuildingColumns } from "@fortawesome/free-solid-svg-icons";
-import { getPostUrl } from "../../lib/util";
+import { getPostUrl, getCloudFrontUrl } from "../../lib/util";
 
 const MENU_WITH_SUBMENUS = [
   {
@@ -149,7 +149,7 @@ function PostTicker({ posts }) {
               {image ? (
                 <div className="w-12 h-12 relative shrink-0 bg-zinc-50 overflow-hidden rounded">
                   <Image
-                    src={image}
+                    src={getCloudFrontUrl(image)}
                     alt={title}
                     fill
                     className="object-cover"

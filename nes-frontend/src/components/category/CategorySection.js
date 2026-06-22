@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { getPostUrl } from "../../lib/util";
+import { getPostUrl, getCloudFrontUrl } from "../../lib/util";
 
 export default function CategorySection({ title, categorySlug, posts = [] }) {
   if (!posts || posts.length === 0) return null;
@@ -31,7 +31,7 @@ export default function CategorySection({ title, categorySlug, posts = [] }) {
             >
               {leadPost.featuredImage?.node?.sourceUrl ? (
                 <Image
-                  src={leadPost.featuredImage.node.sourceUrl}
+                  src={getCloudFrontUrl(leadPost.featuredImage.node.sourceUrl)}
                   alt={leadPost.title}
                   fill
                   className="object-cover opacity-85 group-hover:scale-[1.02] transition-transform duration-700"
@@ -83,7 +83,7 @@ export default function CategorySection({ title, categorySlug, posts = [] }) {
                   <div className="relative w-20 h-20 sm:w-24 sm:h-24 bg-zinc-50 border border-zinc-200 shrink-0 overflow-hidden">
                     {post.featuredImage?.node?.sourceUrl ? (
                       <Image
-                        src={post.featuredImage.node.sourceUrl}
+                        src={getCloudFrontUrl(post.featuredImage.node.sourceUrl)}
                         alt={post.title}
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-500"

@@ -68,3 +68,32 @@ export const formatPostDate = (dateString) => {
   
   return `${month} ${day.padStart(2, "0")}, ${year} ${hours.padStart(2, "0")}:${minutes.padStart(2, "0")} IST`;
 };
+
+/**
+ * Swaps S3 bucket hostname with CloudFront domain name from environment variables
+ */
+export function getCloudFrontUrl(wpSourceUrl) {
+  if (!wpSourceUrl) return '';
+  
+  const cloudfrontDomain = process.env.NEXT_PUBLIC_CLOUDFRONT_DOMAIN || 'd1yr7ysliv0ys4.cloudfront.net';
+  
+  if (wpSourceUrl.includes('cloudfront.net') || wpSourceUrl.includes(cloudfrontDomain)) {
+    return wpSourceUrl;
+  }
+
+  try {
+    const url = new URL(wpSourceUrl);
+    // Safety check: do not rewrite YouTube or Unsplash domains
+    if (url.hostname.includes('youtube.com') || url.hostname.includes('unsplash.com') || url.hostname.includes('youtu.be')) {
+      return wpSourceUrl;
+    }
+    
+    url.hostname = cloudfrontDomain;
+    url.protocol = 'https:'; 
+    
+    return url.toString();
+  } catch (e) {
+    return wpSourceUrl;
+  }
+}
+

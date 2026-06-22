@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { getPostUrl, formatPostDate } from "../../lib/util";
+import { getPostUrl, formatPostDate, getCloudFrontUrl } from "../../lib/util";
 
 const MOCK_ENTERTAINMENT = [
   {
@@ -170,7 +170,7 @@ export default function Section4({
               {leadPost.featuredImage?.node?.sourceUrl && (
                 <div className="relative w-full aspect-[16/10] md:absolute md:inset-0 md:aspect-auto">
                   <Image
-                    src={leadPost.featuredImage.node.sourceUrl}
+                    src={getCloudFrontUrl(leadPost.featuredImage.node.sourceUrl)}
                     alt={leadPost.title || ""}
                     fill
                     className="object-cover group-hover:scale-[1.02] transition-transform duration-300 z-0"
@@ -217,7 +217,7 @@ export default function Section4({
                 {image && (
                   <div className="w-20 h-20 relative shrink-0 bg-zinc-50 dark:bg-zinc-900 overflow-hidden">
                     <Image
-                      src={image}
+                      src={getCloudFrontUrl(image)}
                       alt={title}
                       fill
                       className="object-cover"

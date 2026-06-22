@@ -6,7 +6,7 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faEnvelope, faLink, faCheck, faShareNodes } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faTwitter, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import { getPostUrl, stripHtml, getAuthorName, formatPostDate } from "../../lib/util";
+import { getPostUrl, stripHtml, getAuthorName, formatPostDate, getCloudFrontUrl } from "../../lib/util";
 import WpContentRenderer from "../wordpress/WpContentRenderer";
 import AdSlot from "../ads/AdSlot";
 
@@ -217,7 +217,7 @@ export default function ArticlePage({ post, l1slug, l2slug }) {
               <figure className="mb-6 bg-transparent">
                 <div className="relative w-full aspect-video rounded-lg overflow-hidden">
                   <Image
-                    src={post.featuredImage.node.sourceUrl}
+                    src={getCloudFrontUrl(post.featuredImage.node.sourceUrl)}
                     alt={post.featuredImage.node.altText || post.title}
                     fill
                     className="object-cover hover:scale-[1.01] transition-transform duration-500"
@@ -291,7 +291,7 @@ export default function ArticlePage({ post, l1slug, l2slug }) {
                   {nextArticle.featuredImage?.node?.sourceUrl && (
                     <div className="w-24 h-16 sm:w-28 sm:h-20 relative shrink-0 rounded overflow-hidden bg-zinc-50 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-850">
                       <Image
-                        src={nextArticle.featuredImage.node.sourceUrl}
+                        src={getCloudFrontUrl(nextArticle.featuredImage.node.sourceUrl)}
                         alt={nextArticle.title}
                         fill
                         className="object-cover group-hover:scale-102 transition-transform duration-300"
@@ -325,7 +325,7 @@ export default function ArticlePage({ post, l1slug, l2slug }) {
                         {image ? (
                           <div className="relative w-full aspect-square bg-zinc-50 dark:bg-zinc-900 rounded overflow-hidden shrink-0">
                             <Image
-                              src={image}
+                              src={getCloudFrontUrl(image)}
                               alt={title}
                               fill
                               className="object-cover group-hover:scale-[1.02] transition-transform duration-500"

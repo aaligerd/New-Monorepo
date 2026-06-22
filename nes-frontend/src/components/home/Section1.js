@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight, faBullhorn } from "@fortawesome/free-solid-svg-icons";
-import { getPostUrl, formatPostDate } from "../../lib/util";
+import { getPostUrl, formatPostDate, getCloudFrontUrl } from "../../lib/util";
 
 const MOCK_LEFT_POSTS = [
   {
@@ -160,7 +160,7 @@ export default function Section1({
                   {image && (
                     <div className="w-20 h-14 sm:w-24 sm:h-16 relative shrink-0 bg-zinc-50 dark:bg-zinc-900 rounded overflow-hidden">
                       <Image
-                        src={image}
+                        src={getCloudFrontUrl(image)}
                         alt={title}
                         fill
                         className="object-cover"
@@ -196,7 +196,7 @@ export default function Section1({
               {finalMiddlePost.featuredImage?.node?.sourceUrl && (
                 <div className="relative w-full aspect-[16/10] md:absolute md:inset-0 md:aspect-auto">
                   <Image
-                    src={finalMiddlePost.featuredImage.node.sourceUrl}
+                    src={getCloudFrontUrl(finalMiddlePost.featuredImage.node.sourceUrl)}
                     alt={finalMiddlePost.title || ""}
                     fill
                     className="object-cover group-hover:scale-[1.02] transition-transform duration-300 z-0"
@@ -255,7 +255,7 @@ export default function Section1({
                       {image && (
                         <div className="relative w-full aspect-[16/10] rounded overflow-hidden mb-3">
                           <Image
-                            src={image}
+                            src={getCloudFrontUrl(image)}
                             alt={title}
                             fill
                             className="object-cover group-hover:scale-[1.02] transition-transform duration-300"
@@ -301,7 +301,7 @@ export default function Section1({
                       {image && (
                         <div className="w-20 h-14 sm:w-24 sm:h-16 relative shrink-0 bg-zinc-50 dark:bg-zinc-900 rounded overflow-hidden">
                           <Image
-                            src={image}
+                            src={getCloudFrontUrl(image)}
                             alt={title}
                             fill
                             className="object-cover"
@@ -337,7 +337,7 @@ export default function Section1({
                   {image && (
                     <div className="w-20 h-14 sm:w-24 sm:h-16 relative shrink-0 bg-zinc-50 dark:bg-zinc-900 rounded overflow-hidden">
                       <Image
-                        src={image}
+                        src={getCloudFrontUrl(image)}
                         alt={title}
                         fill
                         className="object-cover"

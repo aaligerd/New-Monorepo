@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { getPostUrl } from "../../lib/util";
+import { getPostUrl, getCloudFrontUrl } from "../../lib/util";
 
 export default function CategoryLayout3({ title, categorySlug, posts = [] }) {
   if (!posts || posts.length === 0) return null;
@@ -34,7 +34,7 @@ export default function CategoryLayout3({ title, categorySlug, posts = [] }) {
                     <Link href={postLink} className="block relative aspect-[16/10] w-full border border-zinc-100 bg-zinc-50 overflow-hidden">
                       {postImage ? (
                         <Image
-                          src={postImage}
+                          src={getCloudFrontUrl(postImage)}
                           alt={postTitle}
                           fill
                           className="object-cover group-hover:scale-102 transition-transform duration-300"
@@ -78,7 +78,7 @@ export default function CategoryLayout3({ title, categorySlug, posts = [] }) {
               <Link href={getPostUrl(leadPost, categorySlug)} className="block relative aspect-[4/3] w-full border border-zinc-200 overflow-hidden bg-zinc-50">
                 {leadPost.featuredImage?.node?.sourceUrl ? (
                   <Image
-                    src={leadPost.featuredImage.node.sourceUrl}
+                    src={getCloudFrontUrl(leadPost.featuredImage.node.sourceUrl)}
                     alt={leadPost.title}
                     fill
                     className="object-cover group-hover:scale-102 transition-transform duration-500"

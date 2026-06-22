@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { getPostUrl, formatPostDate } from "../../lib/util";
+import { getPostUrl, formatPostDate, getCloudFrontUrl } from "../../lib/util";
 
 const MOCK_WORLD_POSTS = [
   {
@@ -147,13 +147,13 @@ export default function Section3({
                     >
                       {image && (
                         <div className="relative w-full aspect-[16/10] rounded overflow-hidden mb-3">
-                          <Image
-                            src={image}
-                            alt={title}
-                            fill
-                            className="object-cover group-hover:scale-[1.02] transition-transform duration-300"
-                            sizes="(max-width: 1024px) 100vw, 33vw"
-                          />
+                            <Image
+                              src={getCloudFrontUrl(image)}
+                              alt={title}
+                              fill
+                              className="object-cover group-hover:scale-[1.02] transition-transform duration-300"
+                              sizes="(max-width: 1024px) 100vw, 33vw"
+                            />
                         </div>
                       )}
                       <div className="flex flex-col">
@@ -181,13 +181,13 @@ export default function Section3({
                       </div>
                       {image && (
                         <div className="w-20 h-20 relative shrink-0 bg-zinc-50 dark:bg-zinc-900 overflow-hidden">
-                          <Image
-                            src={image}
-                            alt={title}
-                            fill
-                            className="object-cover"
-                            sizes="80px"
-                          />
+                           <Image
+                             src={getCloudFrontUrl(image)}
+                             alt={title}
+                             fill
+                             className="object-cover"
+                             sizes="80px"
+                           />
                         </div>
                       )}
                     </Link>
@@ -211,14 +211,14 @@ export default function Section3({
                   </div>
                   {image && (
                     <div className="w-20 h-20 relative shrink-0 bg-zinc-50 dark:bg-zinc-900 overflow-hidden">
-                      <Image
-                        src={image}
-                        alt={title}
-                        fill
-                        className="object-cover"
-                        sizes="80px"
-                      />
-                    </div>
+                        <Image
+                         src={getCloudFrontUrl(image)}
+                         alt={title}
+                         fill
+                         className="object-cover"
+                         sizes="80px"
+                       />
+                      </div>
                   )}
                 </Link>
               );
@@ -266,7 +266,7 @@ export default function Section3({
                     {image && (
                       <div className="w-20 h-20 relative shrink-0 bg-zinc-50 dark:bg-zinc-900 overflow-hidden">
                         <Image
-                          src={image}
+                          src={getCloudFrontUrl(image)}
                           alt={title}
                           fill
                           className="object-cover"
@@ -289,7 +289,7 @@ export default function Section3({
                   {finalRightPost.featuredImage?.node?.sourceUrl && (
                     <div className="relative w-full aspect-[16/10] md:absolute md:inset-0 md:aspect-auto">
                       <Image
-                        src={finalRightPost.featuredImage.node.sourceUrl}
+                        src={getCloudFrontUrl(finalRightPost.featuredImage.node.sourceUrl)}
                         alt={finalRightPost.title || ""}
                         fill
                         className="object-cover group-hover:scale-[1.02] transition-transform duration-300 z-0"

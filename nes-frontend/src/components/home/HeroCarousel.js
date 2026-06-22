@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import { getPostUrl, getHierarchicalCategories } from "../../lib/util";
+import { getPostUrl, getHierarchicalCategories, getCloudFrontUrl } from "../../lib/util";
 
 export default function HeroCarousel({ posts = [] }) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -48,7 +48,7 @@ export default function HeroCarousel({ posts = [] }) {
             <div key={post.slug || index} className="w-full h-full shrink-0 relative">
               {post.featuredImage?.node?.sourceUrl ? (
                 <Image
-                  src={post.featuredImage.node.sourceUrl}
+                  src={getCloudFrontUrl(post.featuredImage.node.sourceUrl)}
                   alt={post.title}
                   fill
                   className="object-cover"

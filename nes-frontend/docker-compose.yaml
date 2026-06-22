@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  frontend:
+    image: aaligerd/newseisamay-njsf:0.0.1
+    ports:
+      - "8586:8586"
+    restart: always

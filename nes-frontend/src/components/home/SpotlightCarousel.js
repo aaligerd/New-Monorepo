@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { getCloudFrontUrl } from "../../lib/util";
 
 export default function SpotlightCarousel({ items = [] }) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -47,7 +48,7 @@ export default function SpotlightCarousel({ items = [] }) {
             >
               {currentItem.image ? (
                 <Image
-                  src={currentItem.image}
+                  src={getCloudFrontUrl(currentItem.image)}
                   alt={currentItem.text || "Spotlight Image"}
                   fill
                   className="object-cover"

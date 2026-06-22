@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import { getPostUrl, formatPostDate } from "../../lib/util";
+import { getPostUrl, formatPostDate, getCloudFrontUrl } from "../../lib/util";
 
 const MOCK_TRENDS = [
   {
@@ -173,7 +173,7 @@ export default function Section2({ title = "National Trend", posts = [] }) {
                 {image ? (
                   <div className="relative w-full aspect-[16/9] overflow-hidden rounded-md bg-zinc-50 dark:bg-zinc-900 transition-colors">
                     <Image
-                      src={image}
+                      src={getCloudFrontUrl(image)}
                       alt={post.title || ""}
                       fill
                       className="object-cover group-hover:scale-[1.02] transition-transform duration-300"

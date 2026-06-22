@@ -1,7 +1,7 @@
 // src/components/category/L2CategoryPage.js
 import Link from "next/link";
 import Image from "next/image";
-import { getPostUrl, formatPostDate } from "../../lib/util";
+import { getPostUrl, formatPostDate, getCloudFrontUrl } from "../../lib/util";
 
 export default function L2CategoryPage({ l1slug, l2slug, data }) {
   const posts = data?.posts?.nodes ?? [];
@@ -53,7 +53,7 @@ export default function L2CategoryPage({ l1slug, l2slug, data }) {
                 {image ? (
                   <div className="relative w-full aspect-square bg-zinc-50 dark:bg-zinc-900 rounded-sm overflow-hidden shrink-0">
                     <Image
-                      src={image}
+                      src={getCloudFrontUrl(image)}
                       alt={title}
                       fill
                       className="object-cover group-hover:scale-[1.02] transition-transform duration-500"

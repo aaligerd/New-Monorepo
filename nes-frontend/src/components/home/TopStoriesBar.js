@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import { getPostUrl } from "../../lib/util";
+import { getPostUrl, getCloudFrontUrl } from "../../lib/util";
 
 export default function TopStoriesBar({ posts = [] }) {
   const containerRef = useRef(null);
@@ -82,7 +82,7 @@ export default function TopStoriesBar({ posts = [] }) {
               {image ? (
                 <div className="w-14 h-14 relative shrink-0 bg-zinc-50 dark:bg-zinc-900 rounded-md overflow-hidden transition-colors">
                   <Image
-                    src={image}
+                    src={getCloudFrontUrl(image)}
                     alt={title}
                     fill
                     className="object-cover"
