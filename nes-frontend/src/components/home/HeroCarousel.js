@@ -17,7 +17,7 @@ export default function HeroCarousel({ posts = [] }) {
       setActiveIndex((prev) => (prev + 1) % posts.length);
     }, 6000);
     return () => clearInterval(interval);
-  }, [posts.length]);
+  }, [posts.length, activeIndex]);
 
   if (!posts || posts.length === 0) return null;
 
@@ -35,7 +35,7 @@ export default function HeroCarousel({ posts = [] }) {
   };
 
   return (
-    <div className="relative w-full aspect-[16/10] md:aspect-[21/9] overflow-hidden bg-zinc-950 font-sans shadow-sm group">
+    <div className="relative w-full max-w-5xl mx-auto aspect-[16/10] md:aspect-[21/9] overflow-hidden bg-zinc-950 font-sans shadow-md rounded-2xl border border-zinc-200/50 dark:border-zinc-800/60 group">
       
       {/* 1. Slides Track (Horizontal Slider) */}
       <div

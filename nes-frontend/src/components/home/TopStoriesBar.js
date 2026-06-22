@@ -44,13 +44,13 @@ export default function TopStoriesBar({ posts = [] }) {
 
   const scroll = (direction) => {
     if (containerRef.current) {
-      const offset = direction === "left" ? -320 : 320;
+      const offset = direction === "left" ? -360 : 360;
       containerRef.current.scrollBy({ left: offset, behavior: "smooth" });
     }
   };
 
   return (
-    <div className="relative w-full bg-white dark:bg-black py-3.5 transition-colors duration-200 select-none ">
+    <div className="relative w-full bg-white dark:bg-black py-4 transition-colors duration-200 select-none">
       {/* Left scroll chevron */}
       {canScrollLeft && (
         <button
@@ -65,7 +65,7 @@ export default function TopStoriesBar({ posts = [] }) {
       {/* Scrollable Container */}
       <div
         ref={containerRef}
-        className="w-full overflow-x-auto scrollbar-none flex flex-row items-center gap-6 px-1 scroll-smooth"
+        className="w-full overflow-x-auto scrollbar-none flex flex-row items-center gap-6 px-1 py-1.5 scroll-smooth"
       >
         {posts.map((post, index) => {
           const image = post.featuredImage?.node?.sourceUrl;
@@ -76,27 +76,27 @@ export default function TopStoriesBar({ posts = [] }) {
             <Link
               key={post.slug || index}
               href={link}
-              className="flex flex-row items-center gap-3 min-w-[280px] max-w-[320px] shrink-0 group"
+              className="flex flex-row items-center gap-4 w-[340px] shrink-0 p-3 rounded-xl bg-zinc-50 dark:bg-zinc-900/40 border border-zinc-200/80 dark:border-zinc-800/85 hover:bg-zinc-100/70 dark:hover:bg-zinc-900/80 hover:border-[#f99d1b] dark:hover:border-[#f99d1b] hover:shadow-md dark:hover:shadow-zinc-950/50 transition-all duration-300 group"
             >
               {/* Thumbnail image */}
               {image ? (
-                <div className="w-14 h-14 relative shrink-0 bg-zinc-50 dark:bg-zinc-900 rounded-md overflow-hidden transition-colors">
+                <div className="w-20 h-20 relative shrink-0 bg-zinc-100 dark:bg-zinc-800 rounded-lg overflow-hidden transition-colors border border-zinc-200/50 dark:border-zinc-700/50">
                   <Image
                     src={getCloudFrontUrl(image)}
                     alt={title}
                     fill
-                    className="object-cover"
-                    sizes="56px"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    sizes="80px"
                   />
                 </div>
               ) : (
-                <div className="w-14 h-14 bg-zinc-100 dark:bg-zinc-900 flex items-center justify-center shrink-0 rounded-md transition-colors">
-                  <span className="text-[9px] text-zinc-400 font-bold uppercase font-sans">No Image</span>
+                <div className="w-20 h-20 bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center shrink-0 rounded-lg transition-colors border border-zinc-200/50 dark:border-zinc-700/50">
+                  <span className="text-[10px] text-zinc-400 font-bold uppercase font-sans">No Image</span>
                 </div>
               )}
 
               {/* Story Title */}
-              <span className="font-serif font-bold text-xs sm:text-[13px] leading-snug line-clamp-2 text-zinc-900 dark:text-zinc-100 group-hover:text-[#f99d1b] dark:group-hover:text-[#f99d1b] transition-colors duration-200">
+              <span className="flex-1 min-w-0 font-serif font-bold text-sm leading-snug line-clamp-3 text-zinc-900 dark:text-zinc-100 group-hover:text-[#f99d1b] dark:group-hover:text-[#f99d1b] transition-colors duration-200">
                 {title}
               </span>
             </Link>

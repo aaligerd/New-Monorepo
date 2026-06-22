@@ -10,7 +10,6 @@ import SpotlightCarousel from "@/components/home/SpotlightCarousel";
 import NewsletterForm from "@/components/home/NewsletterForm";
 import HeroCarousel from "@/components/home/HeroCarousel";
 import TopStoriesBar from "@/components/home/TopStoriesBar";
-import Section1 from "@/components/home/Section1";
 import Section2 from "@/components/home/Section2";
 import YoutubeCarousel from "@/components/home/YoutubeCarousel";
 import Section3 from "@/components/home/Section3";
@@ -135,41 +134,45 @@ export default async function HomePage() {
       {/* Hero Carousel Component - 7 posts */}
       <HeroCarousel posts={latestPosts.slice(0, 7)} />
 
-      {/* Section 1 (First two dynamic sections, e.g., India & West Bengal Layout) */}
-      <Section1
-        leftTitle={dynamicSections[0]?.name || "India"}
-        leftPosts={dynamicSections[0]?.posts?.slice(1, 5) || []}
-        middlePost={dynamicSections[0]?.posts?.[0] || null}
-        rightTitle={dynamicSections[1]?.name || "West Bengal"}
-        rightPosts={dynamicSections[1]?.posts?.slice(0, 4) || []}
+      {/* Section 1 (First three dynamic sections: India, West Bengal, National Trend using Section4 layout) */}
+      <Section4
+        col1Title={dynamicSections[0]?.name || "India"}
+        col1Posts={dynamicSections[0]?.posts || []}
+        col2Title={dynamicSections[1]?.name || "West Bengal"}
+        col2Posts={dynamicSections[1]?.posts || []}
+        col3Title={dynamicSections[2]?.name || "National Trend"}
+        col3Posts={dynamicSections[2]?.posts || []}
       />
 
-      {/* Section 2 (Third dynamic section, e.g., National Trend Carousel) */}
-      <Section2
-        title={dynamicSections[2]?.name || "National Trend"}
-        posts={dynamicSections[2]?.posts?.slice(0, 8) || []}
-      />
-
-      {/* YouTube Channel Video Carousel */}
+          {/* YouTube Channel Video Carousel */}
       <YoutubeCarousel />
 
-      {/* Section 3 (Fourth & Fifth dynamic sections, e.g., World & Sports Layout) */}
-      <Section3
-        leftTitle={dynamicSections[3]?.name || "World"}
-        leftPosts={dynamicSections[3]?.posts || []}
-        middleTitle={dynamicSections[4]?.name || "Sports"}
-        middlePosts={dynamicSections[4]?.posts?.slice(1, 6) || []}
-        rightPost={dynamicSections[4]?.posts?.[0] || null}
+
+      {/* Section 2 (Fourth dynamic section, e.g., World Carousel) */}
+      <Section2
+        title={dynamicSections[3]?.name || "World"}
+        posts={dynamicSections[3]?.posts?.slice(0, 8) || []}
       />
 
-      {/* Section 4 (Sixth, Seventh, & Eighth dynamic sections, e.g., Entertainment, Business, Lifestyle Layout) */}
+
+
+      {/* Section 3 (Fifth & Sixth dynamic sections, e.g., Sports & Entertainment Layout) */}
+      <Section3
+        leftTitle={dynamicSections[4]?.name || "Sports"}
+        leftPosts={dynamicSections[4]?.posts || []}
+        middleTitle={dynamicSections[5]?.name || "Entertainment"}
+        middlePosts={dynamicSections[5]?.posts?.slice(1, 6) || []}
+        rightPost={dynamicSections[5]?.posts?.[0] || null}
+      />
+
+      {/* Section 4 (Seventh, Eighth, & Ninth dynamic sections, e.g., Business, Lifestyle, Others Layout) */}
       <Section4
-        col1Title={dynamicSections[5]?.name || "Entertainment"}
-        col1Posts={dynamicSections[5]?.posts || []}
-        col2Title={dynamicSections[6]?.name || "Business"}
-        col2Posts={dynamicSections[6]?.posts || []}
-        col3Title={dynamicSections[7]?.name || "Lifestyle"}
-        col3Posts={dynamicSections[7]?.posts || []}
+        col1Title={dynamicSections[6]?.name || "Business"}
+        col1Posts={dynamicSections[6]?.posts || []}
+        col2Title={dynamicSections[7]?.name || "Lifestyle"}
+        col2Posts={dynamicSections[7]?.posts || []}
+        col3Title={dynamicSections[8]?.name || "Others"}
+        col3Posts={dynamicSections[8]?.posts || []}
       />
     </main>
     </>

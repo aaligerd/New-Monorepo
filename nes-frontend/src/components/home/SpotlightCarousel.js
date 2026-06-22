@@ -15,7 +15,7 @@ export default function SpotlightCarousel({ items = [] }) {
       setActiveIndex((prev) => (prev + 1) % items.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, [items.length]);
+  }, [items.length, activeIndex]);
 
   if (!items || items.length === 0) return null;
 

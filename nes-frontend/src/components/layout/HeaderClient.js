@@ -114,14 +114,14 @@ function PostTicker({ posts }) {
   const scrollContainer = (direction) => {
     const el = document.getElementById("post-ticker-container");
     if (!el) return;
-    const offset = direction === "left" ? -300 : 300;
+    const offset = direction === "left" ? -320 : 320;
     el.scrollBy({ left: offset, behavior: "smooth" });
   };
 
   if (!posts || posts.length === 0) return null;
 
   return (
-    <div className="bg-white border-b border-zinc-200 py-2.5 relative flex items-center font-sans dark:bg-black dark:border-zinc-900">
+    <div className="bg-white border-b border-zinc-200 py-3.5 relative flex items-center font-sans dark:bg-black dark:border-zinc-900">
       {/* Left scroll button */}
       <button
         onClick={() => scrollContainer("left")}
@@ -134,7 +134,7 @@ function PostTicker({ posts }) {
       {/* Ticker items */}
       <div
         id="post-ticker-container"
-        className="flex flex-row items-center gap-6 overflow-x-auto scrollbar-none px-12 w-full select-none"
+        className="flex flex-row items-center gap-6 overflow-x-auto scrollbar-none px-12 py-1.5 w-full select-none"
       >
         {posts.map((post) => {
           const image = post.featuredImage?.node?.sourceUrl;
@@ -144,24 +144,24 @@ function PostTicker({ posts }) {
             <Link
               key={post.slug}
               href={link}
-              className="flex flex-row items-center gap-3 min-w-[280px] max-w-[320px] shrink-0 group"
+              className="flex flex-row items-center gap-3 w-[290px] sm:w-[320px] shrink-0 p-2.5 rounded-xl bg-zinc-50 dark:bg-zinc-900/40 border border-zinc-200/80 dark:border-zinc-800/85 hover:bg-zinc-100/70 dark:hover:bg-zinc-900/80 hover:border-[#f99d1b] dark:hover:border-[#f99d1b] hover:shadow-sm transition-all duration-300 group"
             >
               {image ? (
-                <div className="w-12 h-12 relative shrink-0 bg-zinc-50 overflow-hidden rounded">
+                <div className="w-16 h-16 relative shrink-0 bg-zinc-100 dark:bg-zinc-800 rounded-lg overflow-hidden transition-colors border border-zinc-200/50 dark:border-zinc-750">
                   <Image
                     src={getCloudFrontUrl(image)}
                     alt={title}
                     fill
-                    className="object-cover"
-                    sizes="48px"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    sizes="64px"
                   />
                 </div>
               ) : (
-                <div className="w-12 h-12 bg-zinc-100 flex items-center justify-center shrink-0 dark:bg-zinc-900 rounded">
-                  <span className="text-[8px] text-zinc-400 font-bold uppercase">No Image</span>
+                <div className="w-16 h-16 bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center shrink-0 rounded-lg transition-colors border border-zinc-200/50 dark:border-zinc-750">
+                  <span className="text-[9px] text-zinc-400 font-bold uppercase">No Image</span>
                 </div>
               )}
-              <span className="text-[11px] sm:text-xs font-bold text-zinc-855 group-hover:text-[#f99d1b] transition-colors leading-tight line-clamp-2 dark:text-zinc-300">
+              <span className="flex-1 min-w-0 font-serif font-bold text-[11px] sm:text-xs leading-snug line-clamp-3 text-zinc-900 dark:text-zinc-300 group-hover:text-[#f99d1b] dark:group-hover:text-[#f99d1b] transition-colors duration-200">
                 {title}
               </span>
             </Link>
